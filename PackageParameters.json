@@ -1,6 +1,12 @@
 {
-  "WWEventTrigger": "WWEvent",
-  "WWWebhookSecret": "l0ttkoa1iede4aawfk9v5rpkyo7w9x99",
-  "WWAppSecret": "70JVGKdzWFveJ7Rs6mbT6u5_gG0g",
-  "WWAppId": "b2d36088-f58c-4bb8-b206-0a8889247f4f"
+  "WatsonWorkspace":
+  {
+    "AppInfo":
+    {
+      "AppId": <paste app id here>,
+      "AppSecret": <paste app secret here>,
+      "WebhookSecret": <Paste webhook secret here>
+    },
+    "EventTrigger": "WWEvent"
+  }
 }

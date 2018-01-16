@@ -29,8 +29,8 @@ function refresh(params) {
   return new Promise((resolve, reject) => {
     request.post('https://api.watsonwork.ibm.com/oauth/token', {
       auth: {
-        user: params.WWAppId,
-        pass: params.WWAppSecret
+        user: params.WatsonWorkspace.AppInfo.AppId,
+        pass: params.WatsonWorkspace.AppInfo.AppSecret
       },
       json: true,
       form: {
@@ -42,7 +42,7 @@ function refresh(params) {
       } else {
         currentToken = res.body.access_token;
         tokenExpiration = expires(currentToken);
-        resolve(_.merge(_.omit(params, ["WWEventTrigger", "WWWebhookSecret", "WWAppId", "WWAppSecret"]), {
+        resolve(_.merge(_.omit(params, "WatsonWorkspace"), {
           jwt: currentToken
         }));
       }

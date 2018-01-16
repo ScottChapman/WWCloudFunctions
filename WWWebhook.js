@@ -35,7 +35,7 @@
                response: req.body.challenge
            };
            var strBody = JSON.stringify(body);
-           var validationToken = crypto.createHmac('sha256', params.WWWebhookSecret).update(strBody).digest('hex');
+           var validationToken = crypto.createHmac('sha256', params.WatsonWorkspace.AppInfo.WebhookSecret).update(strBody).digest('hex');
            resolve({
                statusCode: 200,
                headers: {
@@ -48,9 +48,9 @@
        else {
            if (req.body.hasOwnProperty("content") && req.body.content.length > 0) {
                console.dir(req.body);
-               req.body.myEvent = req.body.userId === params.WWAppId;
+               req.body.myEvent = req.body.userId === params.WatsonWorkspace.AppInfo.AppId;
                ow.triggers.invoke({
-                   name: params.WWEventTrigger,
+                   name: params.WatsonWorkspace.EventTrigger,
                    params: req.body})
                .then(result => {
                    resolve({
@@ -84,6 +84,6 @@
 
  function validateSender(params,req) {
      var ob_token = req.headers['x-outbound-token'];
-     var calculated = crypto.createHmac('sha256',params.WWWebhookSecret).update(req.rawBody).digest('hex')
+     var calculated = crypto.createHmac('sha256',params.WatsonWorkspace.AppInfo.WebhookSecret).update(req.rawBody).digest('hex')
      return ob_token == calculated;
  }

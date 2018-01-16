@@ -20,11 +20,11 @@ function main(params) {
     return ow.actions.invoke({
        name: '/whisk.system/messaging/messageHubProduce',
        params: {
-           topic: EventTopic,
+           topic: params.IBMMessageHub.EventTopic,
            value: JSON.stringify(params),
-           kafka_brokers_sasl: credentials.kafka_brokers_sasl,
-           user: credentials.user,
-           password: credentials.password,
+           kafka_brokers_sasl: params.IBMMessageHub.Credentials.kafka_brokers_sasl,
+           user: params.IBMMessageHub.Credentials.user,
+           password: params.IBMMessageHub.Credentials.password,
            blocking: false
        }
     });
