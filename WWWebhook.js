@@ -11,79 +11,140 @@
  * WWEventTopic - The name of the topic to send events to
  */
 
- var crypto = require('crypto');
- var openwhisk = require('openwhisk');
+var crypto = require("crypto");
+var openwhisk = require("openwhisk");
+var util = require("util");
+var _ = require("lodash");
+var mustache = require("mustache");
+var annotationGQL = {
+	GraphQLExpansion: `
+   query {
+     message(id: "{{messageId}}") {
+       content
+       id
+       created
+       createdBy {
+         displayName
+         id
+         emailAddresses
+         photoUrl
+       }
+     }
+   }`
+};
 
- function main(params) {
-     return new Promise((resolve,reject) => {
-       console.dir(params);
-       var ow = openwhisk();
-       var req = {
-           rawBody: Buffer.from(params.__ow_body,'base64').toString(),
-           body: JSON.parse(Buffer.from(params.__ow_body,'base64').toString()),
-           headers: params.__ow_headers
-       }
-       console.dir(req);
-       if (!validateSender(params,req)) {
-           reject({
-               statusCode: 401,
-               body: "Invalid Request Signature"
-           });
-       }
-       if (req.body.hasOwnProperty("type") && req.body.type === 'verification') {
-           var body = {
-               response: req.body.challenge
-           };
-           var strBody = JSON.stringify(body);
-           var validationToken = crypto.createHmac('sha256', params.WatsonWorkspace.AppInfo.WebhookSecret).update(strBody).digest('hex');
-           resolve({
-               statusCode: 200,
-               headers: {
-                   'Content-Type': 'text/plain; charset=utf-8',
-                   'X-OUTBOUND-TOKEN': validationToken
-               },
-               body: strBody
-           });
-       }
-       else {
-           if (req.body.hasOwnProperty("content") && req.body.content.length > 0) {
-               console.dir(req.body);
-               req.body.myEvent = req.body.userId === params.WatsonWorkspace.AppInfo.AppId;
-               ow.triggers.invoke({
-                   name: params.WatsonWorkspace.EventTrigger,
-                   params: req.body})
-               .then(result => {
-                   resolve({
-                     statusCode: 200,
-                     headers: {
-                         'Content-Type': 'application/json'
-                     },
-                     body: {status: "OK!"}
-                   });
-                 })
-               .catch(err => {
-                 reject({
-                     statusCode: 401,
-                     body: "Error firing trigger"
-                 });
-               });
-           }
-           else {
-             resolve({
-                 statusCode: 200,
-                     headers: {
-                     'Content-Type': 'application/json'
-                 },
-                 body: {status: "Nothing to process"}
-             });
-           }
-       }
-     })
- }
+var expansion = {
+	"message-annotation-added": annotationGQL,
+	"message-annotation-edited": annotationGQL,
+	"message-annotation-removed": annotationGQL,
+};
+
+function expandEvent(body, ow) {
+	return new Promise((resolve, reject) => {
+
+		// expand annotationPayload into JSON obejct if it exists.
+		if (body.hasOwnProperty("annotationPayload") && typeof body.annotationPayload === "string")
+			body.annotationPayload = JSON.parse(body.annotationPayload);
+
+		// Check to see if there is an expansion GraphQL expression to run
+		if (body.hasOwnProperty("type") && expansion.hasOwnProperty(body.type)) {
+			var exp = expansion[body.type];
+			ow.actions.invoke({
+				name: "WatsonWorkspace/WWGraphQL",
+				blocking: true,
+				params: {
+					string: mustache.render(exp.GraphQLExpansion, body)
+				}
+			}).then(resp => {
+				var data = body;
+				if (exp.hasOwnProperty("asProperty")) {
+					data[exp.asProperty] = resp.response.result.data;
+				} else {
+					data = _.merge(data, resp.response.result.data);
+				}
+				resolve(data);
+			}).catch(err => {
+				reject(err);
+			});
+		} else {
+			resolve(body);
+		}
+	});
+}
+
+function main(params) {
+	return new Promise((resolve, reject) => {
+		var ow = openwhisk();
+		var req = {
+			rawBody: Buffer.from(params.__ow_body, "base64").toString(),
+			body: JSON.parse(Buffer.from(params.__ow_body, "base64").toString()),
+			headers: params.__ow_headers
+		};
+		if (!validateSender(params, req)) {
+			reject({
+				statusCode: 401,
+				body: "Invalid Request Signature"
+			});
+		}
+		if (req.body.hasOwnProperty("type") && req.body.type === "verification") {
+			var body = {
+				response: req.body.challenge
+			};
+			var strBody = JSON.stringify(body);
+			var validationToken = crypto.createHmac("sha256", params.WatsonWorkspace.AppInfo.WebhookSecret).update(strBody).digest("hex");
+			resolve({
+				statusCode: 200,
+				headers: {
+					"Content-Type": "text/plain; charset=utf-8",
+					"X-OUTBOUND-TOKEN": validationToken
+				},
+				body: strBody
+			});
+		} else {
+
+			// Cleanup time field
+			if (req.body.hasOwnProperty("time"))
+				req.body.time = Date(req.body.time).toString();
+
+			// Was this event generated by my app?
+			req.body.myEvent = req.body.userId === params.WatsonWorkspace.AppInfo.AppId;
+
+			// Expand Event
+			expandEvent(req.body, ow).then(body => {
+
+				// Send event to topic
+				ow.triggers.invoke({
+					name: params.WatsonWorkspace.EventTrigger,
+					params: body
+				}).then(result => {
+					resolve({
+						statusCode: 200,
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: {
+							status: "OK!"
+						}
+					});
+				}).catch(err => {
+					reject({
+						statusCode: 401,
+						body: "Error firing trigger"
+					});
+				});
+			}).catch(err => {
+				reject({
+					statusCode: 401,
+					body: "Error expanding event"
+				});
+			});
+		}
+	});
+}
 
 
- function validateSender(params,req) {
-     var ob_token = req.headers['x-outbound-token'];
-     var calculated = crypto.createHmac('sha256',params.WatsonWorkspace.AppInfo.WebhookSecret).update(req.rawBody).digest('hex')
-     return ob_token == calculated;
- }
+function validateSender(params, req) {
+	var ob_token = req.headers["x-outbound-token"];
+	var calculated = crypto.createHmac("sha256", params.WatsonWorkspace.AppInfo.WebhookSecret).update(req.rawBody).digest("hex");
+	return ob_token == calculated;
+}
