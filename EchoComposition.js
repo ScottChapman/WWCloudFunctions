@@ -11,5 +11,5 @@ composer.if(params =>
 			title: "From Composer Bot",
 			text: "Of course I can!"
 		};
-	},"WatsonWork/WWSendMessage")
+	},"WatsonWorkspace/WWSendMessage")
 );
