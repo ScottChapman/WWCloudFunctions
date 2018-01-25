@@ -12,7 +12,8 @@ To create a very basic application, one that will simple recieve events from Wat
 - Edit the the PackageParameters.json file with your app's values. For now just put in your Application ID and Secret; we'll add to it later with the Webhook Secret.
 - Next you'll want to create the package for the Watson Workspace actions along with parameters for your Watson Workspace App information
   - `bx wsk package create WatsonWorkspace -P PackageParameters.json`
-  - if you need to change any of the values simply run `bx wsk package update WatsonWorkspace -P PackageParameters.json`
+  - if you need to change any of the values simply run
+    - `bx wsk package update WatsonWorkspace -P PackageParameters.json`
 - Create the main WebHook action
   - `bx wsk action create WatsonWorkspace/WebHook WebHook.js --web raw --kind nodejs:8`
 - Get the Web Action URL
