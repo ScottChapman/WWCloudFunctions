@@ -16,7 +16,7 @@ You can deploy this code using a number of different methods. I've provided inst
 - [**Using the CLI**](#basic-webhook-and-event-topic-deployment) - you can use this to gail familiarity with IBM Cloud Functions and the CLI itself.
 - [**Using wskdeploy**](#wskdeploy-deployment) - You can also use `wskdeploy` to get simple single command (almost!) deployment.
 
-## Basic Webhook and Event Topic Deployment
+### Basic Webhook and Event Topic Deployment
 To create a very basic application, one that will simple recieve events from Watson Workspace and make them available to IBM Cloud Functions via a trigger follow these steps:
 - Create your application in [Watson Workspace Developer](https://developer.watsonwork.ibm.com/apps)> Be sure to copy your Application ID and Application Secret.
 - Edit the the PackageParameters.json file with your app's values. For now just put in your Application ID and Secret; we'll add to it later with the Webhook Secret.
@@ -36,7 +36,7 @@ To create a very basic application, one that will simple recieve events from Wat
   - `bx wsk trigger create WWActionSelected`
   - `bx wsk trigger create WWButtonSelected`
 
-## Complete Application Framework
+### Complete Application Framework
 This example also includes IBM Cloud Functions for sending messages and running GraphQL commands for more advanced applications. To deploy those follow these steps:
 - First deploy the WWToken action
   - `bx wsk action create WatsonWorkspace/Token Token.js --kind nodejs:8`
@@ -55,3 +55,4 @@ Once installed you can install all the functions and triggers in the basic examp
 - You will then need to go into the IBM Cloud Functions UI and edit the `WatsonWorkspace/Webhook` action. Select the endpoint definition for the action, and enable `raw HTTP`.
 
 That's it. You will have everything you need already deployed and configured.
+![Framework](Images/Framework.png)
