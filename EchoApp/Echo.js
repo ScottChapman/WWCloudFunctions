@@ -16,24 +16,17 @@
  */
 
 function main(params) {
-  return new Promise((resolve, reject) => {
-    console.dir(params);
-    if (params.myEvent)
-      reject({
-        status: "Ignoring my own events"
-      });
-    if (params.hasOwnProperty("content") &&
-      params.content.toLowerCase().startsWith("can you echo") &&
-      params.hasOwnProperty("spaceId")) {
-      resolve({
-        spaceId: params.spaceId,
-        title: "From Echo Bot",
-        text: "Why yes I can!"
-      })
-    } else {
-      reject({
-        status: "nothing to see here"
-      })
+  if (params.hasOwnProperty("content") &&
+    params.content.toLowerCase().startsWith("can you echo") &&
+    params.hasOwnProperty("spaceId")) {
+    return {
+      spaceId: params.spaceId,
+      title: "From Echo Bot",
+      text: "Why yes I can!"
     }
-  })
+  } else {
+    return Promise.reject({
+      status: "nothing to see here"
+    })
+  }
 }
