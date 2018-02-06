@@ -6,10 +6,12 @@ To get started you might want to create a new space in your organization. Here a
   - `bx cf create-space WatsonWorkspaceEchoApp`
 - It will return a `cf` command to set your target to your new space. You'll just want to add `bx` to the front of it since `cf` is a subcommand of `bx`
 
+You can use the [Dumper](Dumper) deployment to assist in your application development. It creates simple functions that just dump their input contents to a log. This is useful for understanding the events that are being published by this application.
+
 ## Deployment
 You can deploy this code using a number of different methods. I've provided instructions for the following:
-- [*Using the CLI*](#basic_webhook_and_event_topic_deployment) - you can use this to gail familiarity with IBM Cloud Functions and the CLI itself.
-- [*Using wskdeploy*](#wskdeploy_deployment) - You can also use `wskdeploy` to get simple single command (almost!) deployment.
+- [**Using the CLI**](#basic-webhook-and-event-topic-deployment) - you can use this to gail familiarity with IBM Cloud Functions and the CLI itself.
+- [**Using wskdeploy**](#wskdeploy-deployment) - You can also use `wskdeploy` to get simple single command (almost!) deployment.
 
 ## Basic Webhook and Event Topic Deployment
 To create a very basic application, one that will simple recieve events from Watson Workspace and make them available to IBM Cloud Functions via a trigger follow these steps:
@@ -41,7 +43,7 @@ This example also includes IBM Cloud Functions for sending messages and running 
   - `bx wsk action create WatsonWorkspace/GraphQL GraphQL.js --kind nodejs:8`
 
 ## Wskdeploy deployment
-*wskdeploy* provides a simple way to deploy your apps. You define a manifest using standard YAML notation, and then use the `wskdeploy` application to deploy it. You can read more about [*wskdeploy*](https://github.com/apache/incubator-openwhisk-wskdeploy).
+**wskdeploy** provides a simple way to deploy your apps. You define a manifest using standard YAML notation, and then use the `wskdeploy` application to deploy it. You can read more about [**wskdeploy**](https://github.com/apache/incubator-openwhisk-wskdeploy).
 Once installed you can install all the functions and triggers in the basic example you simply:
 - First update the [manifest](Manifest.yml) with your Watson Workspace Application information.
 - run `wskdeploy` - this will deploy everything in the [manifest](Manifest.yml) in this directory.

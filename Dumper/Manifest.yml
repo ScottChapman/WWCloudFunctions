@@ -1,0 +1,28 @@
+packages:
+  WatsonWorkspaceDumper: #this is a package name
+    actions:
+      OwnEventDumper:
+        function: dumper.js
+        runtime: nodejs:8
+      OthersEventDumper:
+        function: dumper.js
+        runtime: nodejs:8
+      ActionSelectedDumper:
+        function: dumper.js
+        runtime: nodejs:8
+      ButtonSelectedDumper:
+        function: dumper.js
+        runtime: nodejs:8
+    rules:
+      OwnEventRule:
+        trigger: WWOwnEvent
+        action: OwnEventDumper
+      OthersEventRule:
+        trigger: WWOthersEvent
+        action: OthersEventDumper
+      ActionSelectedRule:
+        trigger: WWActionSelected
+        action: ActionSelectedDumper
+      ButtonSelectedEventRule:
+        trigger: WWButtonSelected
+        action: ButtonSelectedDumper
