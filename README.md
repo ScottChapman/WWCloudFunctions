@@ -41,6 +41,8 @@ This example also includes IBM Cloud Functions for sending messages and running 
   - `bx wsk action create WatsonWorkspace/SendMessage SendMessage.js --kind nodejs:8`
 - To deploy the GraphQL function
   - `bx wsk action create WatsonWorkspace/GraphQL GraphQL.js --kind nodejs:8`
+- To deploy the TargetedMessage function
+  - `bx wsk action create WatsonWorkspace/TargetedMessage TargetedMessage.js --kind nodejs:8`
 
 ## Wskdeploy deployment
 **wskdeploy** provides a simple way to deploy your apps. You define a manifest using standard YAML notation, and then use the `wskdeploy` application to deploy it. You can read more about [**wskdeploy**](https://github.com/apache/incubator-openwhisk-wskdeploy).
