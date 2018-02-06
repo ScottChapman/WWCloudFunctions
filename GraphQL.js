@@ -16,7 +16,7 @@ function main(query) {
   return new Promise(function(success, failure) {
     var ow = openwhisk();
     ow.actions.invoke({
-      name: 'WatsonWorkspace/WWToken',
+      name: 'WatsonWorkspace/Token',
       blocking: true
     }).then(token => {
       request.post(
@@ -24,7 +24,7 @@ function main(query) {
           headers: {
             'Content-Type': 'application/graphql',
             'Authorization': 'Bearer ' + token.response.result.jwt,
-            'x-graphql-view': 'ACTIONS,PUBLIC'
+            'x-graphql-view': 'TYPED_ANNOTATIONS,BETA,PUBLIC'
           },
           body: query.string
         }, (err, response) => {

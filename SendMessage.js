@@ -18,7 +18,7 @@ function main(message) {
   return new Promise(function(success, failure) {
     var ow = openwhisk();
     ow.actions.invoke({
-      name: 'WatsonWorkspace/WWToken',
+      name: 'WatsonWorkspace/Token',
       blocking: true
     }).then(token => {
       request.post(

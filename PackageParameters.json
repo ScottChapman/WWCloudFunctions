@@ -3,10 +3,14 @@
   {
     "AppInfo":
     {
-      "AppId": <paste app id here>,
-      "AppSecret": <paste app secret here>,
-      "WebhookSecret": <Paste webhook secret here>
+      "AppId": "<Your App Id>",
+       "AppSecret": "<Your App Secret>",
+       "WebhookSecret": "<Your Webhook Secret>"
     },
-    "EventTrigger": "WWEvent"
+    "OwnEventTrigger": "WWOwnEvent",
+    "ActionSelected": "WWActionSelected",
+    "ButtonSelected": "WWButtonSelected",
+    "OthersEventTrigger": "WWOthersEvent",
+    "ButtonSelectedPrefix": "BUTTON_SELECTED: "
   }
 }
