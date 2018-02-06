@@ -1,0 +1,10 @@
+packages:
+  EchoAction: #this is a package name
+    actions:
+      Echo: # this is a action name
+        function: Echo.js
+        runtime: nodejs:8
+    rules:
+      ActionSelectedRule:
+        trigger: WWActionSelected
+        action: Echo
