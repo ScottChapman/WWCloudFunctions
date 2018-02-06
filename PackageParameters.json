@@ -4,8 +4,8 @@
     "AppInfo":
     {
       "AppId": "<Your App Id>",
-       "AppSecret": "<Your App Secret>",
-       "WebhookSecret": "<Your Webhook Secret>"
+      "AppSecret": "<Your App Secret>",
+      "WebhookSecret": "<Your Webhook Secret>"
     },
     "OwnEventTrigger": "WWOwnEvent",
     "ActionSelected": "WWActionSelected",

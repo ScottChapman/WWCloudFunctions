@@ -15,7 +15,6 @@ var EventTopic = "WWEvents";
 var openwhisk = require('openwhisk');
 
 function main(params) {
-    console.dir(params);
     var ow = openwhisk();
     return ow.actions.invoke({
        name: '/whisk.system/messaging/messageHubProduce',
