@@ -23,8 +23,7 @@ import org.scalatest.BeforeAndAfterAll
 import org.scalatest.junit.JUnitRunner
 import common.{TestHelpers, Wsk, WskProps, WskTestHelpers}
 import java.io._
-import spray.json.DefaultJsonProtocol.StringJsonFormat
-import spray.json.pimpAny
+import spray.json._
 
 @RunWith(classOf[JUnitRunner])
 class WatsonWorkTests extends TestHelpers
@@ -39,27 +38,32 @@ class WatsonWorkTests extends TestHelpers
     /**
      * Test the nodejs "Watson Work" template
      */
+       val WatsonWorkspaceParams = JsObject(
+          "WatsonWorkspace" -> JsObject(
+            "AppInfo" -> JsObject(
+              "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
+              "AppSecret" -> JsString("Nkm73mdP1wYmHk2xsVBKoNV3xgtk"),
+              "WebhookSecret" -> JsString("nuqv9td7ohgva2g6ewwolqhkc04hvdep")
+            ),
+           "OwnEventTrigger" -> JsString("WWOwnEvent"),
+           "ActionSelected" -> JsString("WWActionSelected"),
+           "ButtonSelected" -> JsString("WWButtonSelected"),
+           "OthersEventTrigger" -> JsString("WWOthersEvent"),
+           "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
+            )
+          )
+
      it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
        val name = "Token"
        val file = Some(new File(".", "Token.js").toString());
        assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-         action.create(name, file)
+         action.create(
+           name,
+           file,
+           main = Some("main"),
+           kind = Some("nodejs:8"),
+           parameters = Map("WatsonWorkspace" -> WatsonWorkspaceParams))
        }
-
-       // val params = Map("WatsonWorkspace" -> "Red", "name" -> "Kat").mapValues(_.toJson)
-       val params = Map("WatsonWorkspace" ->
-         Map("AppInfo" ->
-            Map("AppId" -> "e798f199-42f2-4323-b96f-63467945e0db",
-                "AppSecret" -> "Nkm73mdP1wYmHk2xsVBKoNV3xgtk",
-                "WebhookSecret" -> "nuqv9td7ohgva2g6ewwolqhkc04hvdep"
-            ),
-           "OwnEventTrigger" -> "WWOwnEvent",
-           "ActionSelected" -> "WWActionSelected",
-           "ButtonSelected" -> "WWButtonSelected",
-           "OthersEventTrigger" -> "WWOthersEvent",
-           "ButtonSelectedPrefix" -> "BUTTON_SELECTED: "
-            )
-          ).mapValues(_.toJson);
 
        withActivation(wsk.activation, wsk.action.invoke(name, params)) {
          System.out.println(_.response.result.get.toString);
