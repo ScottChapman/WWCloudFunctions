@@ -62,7 +62,6 @@ class WatsonWorkTests extends TestHelpers
            name,
            file,
            main = Some("main"),
-           kind = Some("blackbox"),
            docker = Some("ibmfunctions/action-nodejs-ibm-v8"),
            parameters = Map("WatsonWorkspace" -> WatsonWorkspaceParams))
        }
