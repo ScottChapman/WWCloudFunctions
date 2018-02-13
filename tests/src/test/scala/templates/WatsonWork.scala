@@ -54,8 +54,9 @@ class WatsonWorkTests extends TestHelpers
           )
 
      it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
+       println(System.getProperty("user.dir"))
        val name = "Token"
-       val file = Some(new File(".", "Token.js").toString());
+       val file = Some(new File("..", "Token.js").toString());
        assetHelper.withCleaner(wsk.action, name) { (action, _) =>
          action.create(
            name,
