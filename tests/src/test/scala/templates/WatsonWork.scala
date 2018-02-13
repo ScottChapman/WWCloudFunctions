@@ -65,7 +65,7 @@ class WatsonWorkTests extends TestHelpers
            parameters = Map("WatsonWorkspace" -> WatsonWorkspaceParams))
        }
 
-       withActivation(wsk.activation, wsk.action.invoke(name)) {
+       withActivation(wsk.activation, wsk.action.invoke(name)) { activation =>
          val response = activation.response
          response.result.get.fields.get("jwt") should not be empty
          println(response.result.get.fields.get("jwt"))
