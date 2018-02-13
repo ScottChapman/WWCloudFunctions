@@ -65,8 +65,8 @@ class WatsonWorkTests extends TestHelpers
            parameters = Map("WatsonWorkspace" -> WatsonWorkspaceParams))
        }
 
-       withActivation(wsk.activation, wsk.action.invoke(name, params)) {
-         System.out.println(_.response.result.get.toString);
+       withActivation(wsk.activation, wsk.action.invoke(name)) {
+         System.out.println(_.response.result.get.toString)
          _.response.result.get.toString should include("Mindy")
        }
      }
