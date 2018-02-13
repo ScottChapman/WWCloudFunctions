@@ -66,8 +66,9 @@ class WatsonWorkTests extends TestHelpers
        }
 
        withActivation(wsk.activation, wsk.action.invoke(name)) {
-         System.out.println(_.response.result.get.toString)
-         _.response.result.get.toString should include("Mindy")
+         val response = activation.response
+         response.result.get.fields.get("jwt") should not be empty
+         println(response.result.get.fields.get("jwt"))
        }
      }
 }
