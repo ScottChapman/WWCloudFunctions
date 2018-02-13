@@ -27,119 +27,43 @@ import spray.json.DefaultJsonProtocol.StringJsonFormat
 import spray.json.pimpAny
 
 @RunWith(classOf[JUnitRunner])
-class HelloTests extends TestHelpers
+class WatsonWorkTests extends TestHelpers
     with WskTestHelpers
     with BeforeAndAfterAll {
 
     implicit val wskprops = WskProps()
     val wsk = new Wsk()
 
-    //set parameters for deploy tests
-    val nodejsfolder = "../runtimes/nodejs/actions";
-    val phpfolder = "../runtimes/php/actions";
-    val pythonfolder = "../runtimes/python/actions";
-    val swiftfolder = "../runtimes/swift/actions";
-
-    behavior of "Hello World Template"
+    behavior of "Watson Work Template"
 
     /**
-     * Test the nodejs "hello world" template
+     * Test the nodejs "Watson Work" template
      */
-     it should "invoke helloworld.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-       val name = "helloNode"
-       val file = Some(new File(nodejsfolder, "helloworld.js").toString());
+     it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
+       val name = "Token"
+       val file = Some(new File(".", "Token.js").toString());
        assetHelper.withCleaner(wsk.action, name) { (action, _) =>
          action.create(name, file)
        }
 
-       withActivation(wsk.activation, wsk.action.invoke(name, Map("message" -> "Mindy".toJson))) {
+       // val params = Map("WatsonWorkspace" -> "Red", "name" -> "Kat").mapValues(_.toJson)
+       val params = Map("WatsonWorkspace" ->
+         Map("AppInfo" ->
+            Map("AppId" -> "e798f199-42f2-4323-b96f-63467945e0db",
+                "AppSecret" -> "Nkm73mdP1wYmHk2xsVBKoNV3xgtk",
+                "WebhookSecret" -> "nuqv9td7ohgva2g6ewwolqhkc04hvdep"
+            ),
+           "OwnEventTrigger" -> "WWOwnEvent",
+           "ActionSelected" -> "WWActionSelected",
+           "ButtonSelected" -> "WWButtonSelected",
+           "OthersEventTrigger" -> "WWOthersEvent",
+           "ButtonSelectedPrefix" -> "BUTTON_SELECTED: "
+            )
+          ).mapValues(_.toJson);
+
+       withActivation(wsk.activation, wsk.action.invoke(name, params)) {
+         System.out.println(_.response.result.get.toString);
          _.response.result.get.toString should include("Mindy")
        }
      }
-      it should "invoke helloworld.js without input and get stranger" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-        val name = "helloNode"
-        val file = Some(new File(nodejsfolder, "helloworld.js").toString());
-        assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-          action.create(name, file)
-        }
-
-        withActivation(wsk.activation, wsk.action.invoke(name)) {
-          _.response.result.get.toString should include("stranger")
-        }
-      }
-     /**
-      * Test the php "hello world" template
-      */
-      it should "invoke helloworld.php and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-        val name = "helloPhp"
-        val file = Some(new File(phpfolder, "helloworld.php").toString());
-        assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-          action.create(name, file)
-        }
-
-        withActivation(wsk.activation, wsk.action.invoke(name, Map("message" -> "Mindy".toJson))) {
-          _.response.result.get.toString should include("Mindy")
-        }
-      }
-      it should "invoke helloworld.php without input and get stranger" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-        val name = "helloPhp"
-        val file = Some(new File(phpfolder, "helloworld.php").toString());
-        assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-          action.create(name, file)
-        }
-
-        withActivation(wsk.activation, wsk.action.invoke(name)) {
-          _.response.result.get.toString should include("stranger")
-        }
-      }
-      /**
-       * Test the python "hello world" template
-       */
-       it should "invoke helloworld.py and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-         val name = "helloPython"
-         val file = Some(new File(pythonfolder, "helloworld.py").toString());
-         assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-           action.create(name, file)
-         }
-
-         withActivation(wsk.activation, wsk.action.invoke(name, Map("message" -> "Mindy".toJson))) {
-           _.response.result.get.toString should include("Mindy")
-         }
-       }
-       it should "invoke helloworld.py without input and get stranger" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-         val name = "helloPython"
-         val file = Some(new File(pythonfolder, "helloworld.py").toString());
-         assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-           action.create(name, file)
-         }
-
-         withActivation(wsk.activation, wsk.action.invoke(name)) {
-           _.response.result.get.toString should include("stranger")
-         }
-       }
-       /**
-        * Test the swift "hello world" template
-        */
-        it should "invoke helloworld.swift and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-          val name = "helloSwift"
-          val file = Some(new File(swiftfolder, "helloworld.swift").toString());
-          assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-            action.create(name, file)
-          }
-
-          withActivation(wsk.activation, wsk.action.invoke(name, Map("message" -> "Mindy".toJson))) {
-            _.response.result.get.toString should include("Mindy")
-          }
-        }
-        it should "invoke helloworld.swift without input and get stranger" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-          val name = "helloSwift"
-          val file = Some(new File(swiftfolder, "helloworld.swift").toString());
-          assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-            action.create(name, file)
-          }
-
-          withActivation(wsk.activation, wsk.action.invoke(name)) {
-            _.response.result.get.toString should include("stranger")
-          }
-        }
 }
