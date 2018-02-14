@@ -22,9 +22,9 @@ import org.junit.runner.RunWith
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.junit.JUnitRunner
 import common.{TestHelpers, Wsk, WskProps, WskTestHelpers}
+import common.rest.WskRest
 import java.io._
 import spray.json._
-import sys.process._
 
 @RunWith(classOf[JUnitRunner])
 class WatsonWorkTests extends TestHelpers
@@ -33,11 +33,33 @@ class WatsonWorkTests extends TestHelpers
 
     implicit val wskprops = WskProps()
     val wsk = new Wsk()
+    val wskrest = new WskRest
+    val packageName = "WatsonWorkspace"
+
+    behavior of "WatsonWorkspace Package"
+
+    override def beforeAll() {
+      val WatsonWorkspaceParams = JsObject(
+        "AppInfo" -> JsObject(
+          "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
+          "AppSecret" -> JsString("Nkm73mdP1wYmHk2xsVBKoNV3xgtk"),
+          "WebhookSecret" -> JsString("nuqv9td7ohgva2g6ewwolqhkc04hvdep")
+        ),
+       "OwnEventTrigger" -> JsString("WWOwnEvent"),
+       "ActionSelected" -> JsString("WWActionSelected"),
+       "ButtonSelected" -> JsString("WWButtonSelected"),
+       "OthersEventTrigger" -> JsString("WWOthersEvent"),
+         "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
+      )
+
+      wskrest.package.create(packageName, Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+    }
+
+    override def beforeAll() {
+      wskrest.delete(packageName);
+    }
 
     behavior of "Watson Work Template"
-
-    val deploy: String = "wskdeploy" !!
-    println(deploy)
 
     /**
      * Test the nodejs "Watson Work" template
@@ -45,15 +67,21 @@ class WatsonWorkTests extends TestHelpers
 
      it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
        println(System.getProperty("user.dir"))
-
        val name = "WatsonWorkspace/Token"
+       val file = Some(new File("..", "Token.js").toString());
+       assetHelper.withCleaner(wsk.action, name) { (action, _) =>
+         action.create(
+           name,
+           file,
+           main = Some("main"),
+           docker = Some("ibmfunctions/action-nodejs-ibm-v8")
+         )
+       }
+
        withActivation(wsk.activation, wsk.action.invoke(name)) { activation =>
          val response = activation.response
          response.result.get.fields.get("jwt") should not be empty
          println(response.result.get.fields.get("jwt"))
        }
      }
-
-     val undeploy: String = "wskdeploy undeploy" !!
-     println(undeploy);
 }
