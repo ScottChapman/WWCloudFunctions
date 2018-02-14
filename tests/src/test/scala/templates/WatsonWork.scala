@@ -38,20 +38,18 @@ class WatsonWorkTests extends TestHelpers
     /**
      * Test the nodejs "Watson Work" template
      */
-       val WatsonWorkspaceParams = JsObject(
-          "WatsonWorkspace" -> JsObject(
-            "AppInfo" -> JsObject(
-              "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
-              "AppSecret" -> JsString("Nkm73mdP1wYmHk2xsVBKoNV3xgtk"),
-              "WebhookSecret" -> JsString("nuqv9td7ohgva2g6ewwolqhkc04hvdep")
-            ),
-           "OwnEventTrigger" -> JsString("WWOwnEvent"),
-           "ActionSelected" -> JsString("WWActionSelected"),
-           "ButtonSelected" -> JsString("WWButtonSelected"),
-           "OthersEventTrigger" -> JsString("WWOthersEvent"),
-           "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
-            )
-          )
+   val WatsonWorkspaceParams = JsObject(
+      "AppInfo" -> JsObject(
+        "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
+        "AppSecret" -> JsString("Nkm73mdP1wYmHk2xsVBKoNV3xgtk"),
+        "WebhookSecret" -> JsString("nuqv9td7ohgva2g6ewwolqhkc04hvdep")
+      ),
+     "OwnEventTrigger" -> JsString("WWOwnEvent"),
+     "ActionSelected" -> JsString("WWActionSelected"),
+     "ButtonSelected" -> JsString("WWButtonSelected"),
+     "OthersEventTrigger" -> JsString("WWOthersEvent"),
+     "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
+    )
 
      it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
        println(System.getProperty("user.dir"))
