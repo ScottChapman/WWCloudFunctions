@@ -27,6 +27,7 @@ function expires(token) {
 
 function refresh(params) {
   return new Promise((resolve, reject) => {
+    console.log(JSON.stringify(params,null,2));
     request.post('https://api.watsonwork.ibm.com/oauth/token', {
       auth: {
         user: params.WatsonWorkspace.AppInfo.AppId,
@@ -38,6 +39,9 @@ function refresh(params) {
       }
     }, (err, res) => {
       if (err || res.statusCode !== 200) {
+        console.log(res.statusCode);
+        console.dir(err);
+        console.dir(res.body);
         reject(err || res);
       } else {
         currentToken = res.body.access_token;
