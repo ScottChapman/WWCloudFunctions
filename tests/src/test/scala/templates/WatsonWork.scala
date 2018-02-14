@@ -36,7 +36,7 @@ class WatsonWorkTests extends TestHelpers
 
     behavior of "Watson Work Template"
 
-    var deploy = "wskdeploy" !!
+    val deploy = "wskdeploy" !!
     println(deploy)
 
     /**
@@ -54,6 +54,6 @@ class WatsonWorkTests extends TestHelpers
        }
      }
 
-     var undeploy = "wskdeploy undeploy" !!
+     val undeploy = "wskdeploy undeploy" !!
      println(undeploy);
 }
