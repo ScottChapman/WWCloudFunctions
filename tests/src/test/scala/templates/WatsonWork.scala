@@ -33,12 +33,9 @@ class WatsonWorkTests extends TestHelpers
     implicit val wskprops = WskProps()
     val wsk = new Wsk()
 
-    behavior of "Watson Work Template"
+    behavior of "WatsonWorkspace Package"
 
-    /**
-     * Test the nodejs "Watson Work" template
-     */
-   val WatsonWorkspaceParams = JsObject(
+    val WatsonWorkspaceParams = JsObject(
       "AppInfo" -> JsObject(
         "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
         "AppSecret" -> JsString("Nkm73mdP1wYmHk2xsVBKoNV3xgtk"),
@@ -51,23 +48,33 @@ class WatsonWorkTests extends TestHelpers
      "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
     )
 
+    val name = "WatsonWorkspace"
+    assetHelper.withCleaner(wsk.pkg, name) { (pkg, _) =>
+      pkg.create(name, Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+    }
+
+    behavior of "Watson Work Template"
+
+    /**
+     * Test the nodejs "Watson Work" template
+     */
+
      it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-       println(System.getProperty("user.dir"))
-       val name = "Token"
+       // println(System.getProperty("user.dir"))
+       val name = "WatsonWorkspace/Token"
        val file = Some(new File("..", "Token.js").toString());
        assetHelper.withCleaner(wsk.action, name) { (action, _) =>
          action.create(
            name,
            file,
            main = Some("main"),
-           docker = Some("ibmfunctions/action-nodejs-ibm-v8"),
-           parameters = Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+           docker = Some("ibmfunctions/action-nodejs-ibm-v8")
        }
 
        withActivation(wsk.activation, wsk.action.invoke(name)) { activation =>
          val response = activation.response
          response.result.get.fields.get("jwt") should not be empty
-         println(response.result.get.fields.get("jwt"))
+         // println(response.result.get.fields.get("jwt"))
        }
      }
 }
