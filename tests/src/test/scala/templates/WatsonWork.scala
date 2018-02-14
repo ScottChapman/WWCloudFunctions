@@ -69,6 +69,7 @@ class WatsonWorkTests extends TestHelpers
            file,
            main = Some("main"),
            docker = Some("ibmfunctions/action-nodejs-ibm-v8")
+         )
        }
 
        withActivation(wsk.activation, wsk.action.invoke(name)) { activation =>
