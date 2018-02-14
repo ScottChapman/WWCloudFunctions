@@ -56,7 +56,7 @@ class WatsonWorkTests extends TestHelpers
     }
 
     override def afterAll() {
-      wskrest.delete(packageName);
+      wskrest.pkg.delete(packageName);
     }
 
     behavior of "Watson Work Template"
