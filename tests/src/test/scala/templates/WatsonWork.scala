@@ -52,10 +52,10 @@ class WatsonWorkTests extends TestHelpers
          "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
       )
 
-      wskrest.package.create(packageName, Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+      wskrest.pkg.create(packageName, Map("WatsonWorkspace" -> WatsonWorkspaceParams))
     }
 
-    override def beforeAll() {
+    override def afterAll() {
       wskrest.delete(packageName);
     }
 
