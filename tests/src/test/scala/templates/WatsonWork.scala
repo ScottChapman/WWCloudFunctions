@@ -53,12 +53,14 @@ class WatsonWorkTests extends TestHelpers
       )
 
       val resp = wskrest.pkg.create(packageName, Map("WatsonWorkspace" -> WatsonWorkspaceParams))
-      println(resp)
+      println("BeforeAll")
+      println(resp.statusCode)
     }
 
     override def afterAll() {
       val resp = wskrest.pkg.delete(packageName);
-      println(resp)
+      println("AfterAll")
+      println(resp.statusCode)
     }
 
     behavior of "Watson Work Template"
