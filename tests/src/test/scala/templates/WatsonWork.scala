@@ -52,13 +52,13 @@ class WatsonWorkTests extends TestHelpers
          "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
       )
 
-      println("Package Create")
+      println("WatsonWorkspace Package Create")
       val resp = wskrest.pkg.create("WatsonWorkspace", Map("WatsonWorkspace" -> WatsonWorkspaceParams))
       println(resp.statusCode)
 
       println("Token Action Create")
       val tokenFile = Some(new File("..", "Token.js").toString());
-      val resp = wskrest.action.create(
+      resp = wskrest.action.create(
         "WatsonWorkspace/Token",
         tokenFile,
         main = Some("main"),
@@ -68,8 +68,12 @@ class WatsonWorkTests extends TestHelpers
     }
 
     override def afterAll() {
-      val resp = wskrest.pkg.delete(packageName);
-      println("AfterAll")
+      val resp = wskrest.pkg.delete("WatsonWorkspace");
+      println("Delete WatsonWorkspace Package")
+      println(resp.statusCode)
+
+      resp = wskrest.action.delete("WatsonWorkspace/Token");
+      println("Delete Token Action")
       println(resp.statusCode)
     }
 
