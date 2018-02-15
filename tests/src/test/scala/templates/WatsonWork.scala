@@ -34,11 +34,11 @@ class WatsonWorkTests extends TestHelpers
     implicit val wskprops = WskProps()
     val wsk = new Wsk()
     val wskrest = new WskRest
-    val packageName = "WatsonWorkspace"
 
     behavior of "WatsonWorkspace Package"
 
     override def beforeAll() {
+      println(System.getProperty("user.dir"))
       val WatsonWorkspaceParams = JsObject(
         "AppInfo" -> JsObject(
           "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
@@ -52,8 +52,18 @@ class WatsonWorkTests extends TestHelpers
          "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
       )
 
-      val resp = wskrest.pkg.create(packageName, Map("WatsonWorkspace" -> WatsonWorkspaceParams))
-      println("BeforeAll")
+      println("Package Create")
+      val resp = wskrest.pkg.create("WatsonWorkspace", Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+      println(resp.statusCode)
+
+      println("Token Action Create")
+      val tokenFile = Some(new File("..", "Token.js").toString());
+      val resp = wskrest.action.create(
+        "WatsonWorkspace/Token",
+        tokenFile,
+        main = Some("main"),
+        docker = Some("ibmfunctions/action-nodejs-ibm-v8")
+      )
       println(resp.statusCode)
     }
 
@@ -70,7 +80,7 @@ class WatsonWorkTests extends TestHelpers
      */
 
      it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-       println(System.getProperty("user.dir"))
+       /*
        val name = "WatsonWorkspace/Token"
        val file = Some(new File("..", "Token.js").toString());
        assetHelper.withCleaner(wsk.action, name) { (action, _) =>
@@ -81,8 +91,9 @@ class WatsonWorkTests extends TestHelpers
            docker = Some("ibmfunctions/action-nodejs-ibm-v8")
          )
        }
+       */
 
-       withActivation(wsk.activation, wsk.action.invoke(name)) { activation =>
+       withActivation(wsk.activation, wsk.action.invoke("WatsonWorkspace/Token")) { activation =>
          val response = activation.response
          response.result.get.fields.get("jwt") should not be empty
          println(response.result.get.fields.get("jwt"))
