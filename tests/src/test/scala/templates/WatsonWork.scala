@@ -97,9 +97,11 @@ class WatsonWorkTests extends TestHelpers
        }
        */
 
+       println("Running token test")
        withActivation(wsk.activation, wsk.action.invoke("WatsonWorkspace/Token")) { activation =>
          val response = activation.response
          response.result.get.fields.get("jwt") should not be empty
+         println("Got response back")
          println(response.result.get.fields.get("jwt"))
        }
      }
