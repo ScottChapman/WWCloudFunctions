@@ -65,6 +65,16 @@ class WatsonWorkTests extends TestHelpers
         docker = Some("ibmfunctions/action-nodejs-ibm-v8")
       )
       println(resp.statusCode)
+
+      println("SendMessage Action Create")
+      val sendMessageFile = Some(new File("..", "SendMessage.js").toString());
+      resp = wskrest.action.create(
+        "WatsonWorkspace/SendMessage",
+        sendMessageFile,
+        main = Some("main"),
+        docker = Some("ibmfunctions/action-nodejs-ibm-v8")
+      )
+      println(resp.statusCode)
     }
 
     override def afterAll() {
@@ -75,34 +85,38 @@ class WatsonWorkTests extends TestHelpers
       resp = wskrest.action.delete("WatsonWorkspace/Token");
       println("Delete Token Action")
       println(resp.statusCode)
+
+      resp = wskrest.action.delete("WatsonWorkspace/SendMessage");
+      println("Delete SendMessage Action")
+      println(resp.statusCode)
     }
 
     behavior of "Watson Work Template"
 
     /**
-     * Test the nodejs "Watson Work" template
+     * Test the Token Action
      */
 
      it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
-       /*
-       val name = "WatsonWorkspace/Token"
-       val file = Some(new File("..", "Token.js").toString());
-       assetHelper.withCleaner(wsk.action, name) { (action, _) =>
-         action.create(
-           name,
-           file,
-           main = Some("main"),
-           docker = Some("ibmfunctions/action-nodejs-ibm-v8")
-         )
-       }
-       */
-
        println("Running token test")
        withActivation(wsk.activation, wsk.action.invoke("WatsonWorkspace/Token")) { activation =>
          val response = activation.response
          response.result.get.fields.get("jwt") should not be empty
          println("Got response back")
          println(response.result.get.fields.get("jwt"))
+       }
+     }
+
+    /**
+     * Test the SendMessage action
+     */
+
+     it should "invoke SendMessage.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
+       println("Running SendMessage test")
+       withActivation(wsk.activation, wsk.action.invoke("WatsonWorkspace/SendMessage")) { activation =>
+         val response = activation.response
+         println("Got response back")
+         println(response.result)
        }
      }
 }
