@@ -53,7 +53,7 @@ class WatsonWorkTests extends TestHelpers
       )
 
       println("WatsonWorkspace Package Create")
-      val resp = wskrest.pkg.create("WatsonWorkspace", Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+      var resp = wskrest.pkg.create("WatsonWorkspace", Map("WatsonWorkspace" -> WatsonWorkspaceParams))
       println(resp.statusCode)
 
       println("Token Action Create")
@@ -68,7 +68,7 @@ class WatsonWorkTests extends TestHelpers
     }
 
     override def afterAll() {
-      val resp = wskrest.pkg.delete("WatsonWorkspace");
+      var resp = wskrest.pkg.delete("WatsonWorkspace");
       println("Delete WatsonWorkspace Package")
       println(resp.statusCode)
 
