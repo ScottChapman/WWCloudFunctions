@@ -52,11 +52,13 @@ class WatsonWorkTests extends TestHelpers
          "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
       )
 
-      wskrest.pkg.create(packageName, Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+      val resp = wskrest.pkg.create(packageName, Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+      println(resp)
     }
 
     override def afterAll() {
-      wskrest.pkg.delete(packageName);
+      val resp = wskrest.pkg.delete(packageName);
+      println(resp)
     }
 
     behavior of "Watson Work Template"
