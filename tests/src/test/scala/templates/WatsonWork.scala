@@ -67,7 +67,7 @@ class WatsonWorkTests extends TestHelpers
       println(resp.statusCode)
 
       println("SendMessage Action Create")
-      val sendMessageFile = Some(new File("..", "SendMessage.js").toString());
+      val sendMessageFile = Some(new File("..", "Token.js").toString());
       resp = wskrest.action.create(
         "WatsonWorkspace/SendMessage",
         sendMessageFile,
