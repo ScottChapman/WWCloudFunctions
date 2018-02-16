@@ -123,7 +123,7 @@ class WatsonWorkTests extends TestHelpers
        withActivation(wsk.activation, wsk.action.invoke("WatsonWorkspace/SendMessage",parameters = message)) { activation =>
          val response = activation.response
          println("Got response back")
-         println(response.result)
+         println(response)
        }
      }
 }
