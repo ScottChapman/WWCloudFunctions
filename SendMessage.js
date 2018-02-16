@@ -18,8 +18,7 @@ function main(message) {
   return new Promise(function(success, failure) {
     console.log(JSON.stringify(message,null,2))
     resolve({status: "OK!"});
-    /*
-    var ow = openwhisk();
+    var ow = openwhisk({ignore_certs: true});
     ow.actions.invoke({
       name: 'WatsonWorkspace/Token',
       blocking: true
@@ -53,6 +52,5 @@ function main(message) {
     }).catch(err => {
       failure(err);
     })
-  */
   })
 }
