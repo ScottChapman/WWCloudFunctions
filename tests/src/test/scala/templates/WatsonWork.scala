@@ -116,7 +116,7 @@ class WatsonWorkTests extends TestHelpers
        val message = JsObject(
         "spaceId" -> JsString("582754d0e4b0037e37b25ff5"),
         "title" -> JsString("From OW Ttest"),
-        "text" -> JsString("This is a sample message!"),
+        "text" -> JsString("This is a sample message!")
        )
        withActivation(wsk.activation, wsk.action.invoke("WatsonWorkspace/SendMessage",message)) { activation =>
          val response = activation.response
