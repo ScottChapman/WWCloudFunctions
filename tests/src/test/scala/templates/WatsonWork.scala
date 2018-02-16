@@ -113,7 +113,7 @@ class WatsonWorkTests extends TestHelpers
 
      it should "invoke SendMessage.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
        println("Running SendMessage test")
-       val message = JsObject(
+       val message = Map(
         "spaceId" -> JsString("582754d0e4b0037e37b25ff5"),
         "title" -> JsString("From OW Ttest"),
         "text" -> JsString("This is a sample message!")
