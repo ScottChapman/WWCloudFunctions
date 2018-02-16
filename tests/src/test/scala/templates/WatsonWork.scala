@@ -97,6 +97,7 @@ class WatsonWorkTests extends TestHelpers
      * Test the Token Action
      */
 
+     /*
      it should "invoke Token.js and get the result" in withAssetCleaner(wskprops) { (wp, assetHelper) =>
        println("Running token test")
        withActivation(wsk.activation, wsk.action.invoke("WatsonWorkspace/Token")) { activation =>
@@ -106,6 +107,7 @@ class WatsonWorkTests extends TestHelpers
          println(response.result.get.fields.get("jwt"))
        }
      }
+     */
 
     /**
      * Test the SendMessage action
