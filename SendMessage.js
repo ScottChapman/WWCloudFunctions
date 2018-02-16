@@ -16,6 +16,7 @@ var openwhisk = require('openwhisk');
 
 function main(message) {
   return new Promise(function(success, failure) {
+    console.log(JSON.stringify(message,null,2))
     var ow = openwhisk();
     ow.actions.invoke({
       name: 'WatsonWorkspace/Token',
