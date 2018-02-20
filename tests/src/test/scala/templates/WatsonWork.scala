@@ -37,59 +37,89 @@ class WatsonWorkTests extends TestHelpers
 
     behavior of "WatsonWorkspace Package"
 
-    override def beforeAll() {
-      println(System.getProperty("user.dir"))
-      val WatsonWorkspaceParams = JsObject(
-        "AppInfo" -> JsObject(
-          "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
-          "AppSecret" -> JsString("Nkm73mdP1wYmHk2xsVBKoNV3xgtk"),
-          "WebhookSecret" -> JsString("nuqv9td7ohgva2g6ewwolqhkc04hvdep")
-        ),
-       "OwnEventTrigger" -> JsString("WWOwnEvent"),
-       "ActionSelected" -> JsString("WWActionSelected"),
-       "ButtonSelected" -> JsString("WWButtonSelected"),
-       "OthersEventTrigger" -> JsString("WWOthersEvent"),
-         "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
-      )
+override def beforeAll() {
+  println(System.getProperty("user.dir"))
 
-      println("WatsonWorkspace Package Create")
-      var resp = wskrest.pkg.create("WatsonWorkspace", Map("WatsonWorkspace" -> WatsonWorkspaceParams))
-      println(resp.statusCode)
+  println("CleanUp First");
+  cleanUp();
 
-      println("Token Action Create")
-      val tokenFile = Some(new File("..", "Token.js").toString());
-      resp = wskrest.action.create(
-        "WatsonWorkspace/Token",
-        tokenFile,
-        main = Some("main"),
-        docker = Some("ibmfunctions/action-nodejs-ibm-v8")
-      )
-      println(resp.statusCode)
+  val WatsonWorkspaceParams = JsObject(
+    "AppInfo" -> JsObject(
+      "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
+      "AppSecret" -> JsString("Nkm73mdP1wYmHk2xsVBKoNV3xgtk"),
+      "WebhookSecret" -> JsString("nuqv9td7ohgva2g6ewwolqhkc04hvdep")
+    ),
+   "OwnEventTrigger" -> JsString("WWOwnEvent"),
+   "ActionSelected" -> JsString("WWActionSelected"),
+   "ButtonSelected" -> JsString("WWButtonSelected"),
+   "OthersEventTrigger" -> JsString("WWOthersEvent"),
+     "ButtonSelectedPrefix" -> JsString("BUTTON_SELECTED: ")
+  )
 
-      println("SendMessage Action Create")
-      val sendMessageFile = Some(new File("..", "Token.js").toString());
-      resp = wskrest.action.create(
-        "WatsonWorkspace/SendMessage",
-        sendMessageFile,
-        main = Some("main"),
-        docker = Some("ibmfunctions/action-nodejs-ibm-v8")
-      )
+  println("WatsonWorkspace Package Create")
+  var resp = wskrest.pkg.create("WatsonWorkspace", Map("WatsonWorkspace" -> WatsonWorkspaceParams))
+  println(resp.statusCode)
+
+  println("Token Action Create")
+  val tokenFile = Some(new File("..", "Token.js").toString());
+  resp = wskrest.action.create(
+    "WatsonWorkspace/Token",
+    tokenFile,
+    main = Some("main"),
+    docker = Some("ibmfunctions/action-nodejs-ibm-v8")
+  )
+  println(resp.statusCode)
+
+  println("SendMessage Action Create")
+  val sendMessageFile = Some(new File("..", "SendMessage.js").toString());
+  resp = wskrest.action.create(
+    "WatsonWorkspace/SendMessage",
+    sendMessageFile,
+    main = Some("main"),
+    docker = Some("ibmfunctions/action-nodejs-ibm-v8")
+  )
+  println(resp.statusCode)
+}
+
+def cleanUp() {
+
+    try {
+      var resp = wskrest.action.delete("WatsonWorkspace/Token");
+      println("Delete Token Action")
       println(resp.statusCode)
     }
+    catch {
+      case e:Exception => {
+        println(e);
+      }
+    }
 
-    override def afterAll() {
+    try {
+      var resp = wskrest.action.delete("WatsonWorkspace/SendMessage");
+      println("Delete SendMessage Action")
+    println(resp.statusCode)
+    }
+    catch {
+      case e:Exception => {
+        println(e);
+      }
+    }
+
+    try {
       var resp = wskrest.pkg.delete("WatsonWorkspace");
       println("Delete WatsonWorkspace Package")
       println(resp.statusCode)
-
-      resp = wskrest.action.delete("WatsonWorkspace/Token");
-      println("Delete Token Action")
-      println(resp.statusCode)
-
-      resp = wskrest.action.delete("WatsonWorkspace/SendMessage");
-      println("Delete SendMessage Action")
-      println(resp.statusCode)
     }
+    catch {
+      case e:Exception => {
+        println(e);
+      }
+    }
+  }
+
+  override def afterAll() {
+    cleanUp();
+  }
 
     behavior of "Watson Work Template"
 
@@ -120,8 +150,9 @@ class WatsonWorkTests extends TestHelpers
        )
        withActivation(wsk.activation, wsk.action.invoke("WatsonWorkspace/SendMessage",parameters = message)) { activation =>
          val response = activation.response
+         activation.response.result.get.fields.get("id") should not be empty
          println("Got response back")
-         println(activation)
+         println(activation.response.result.get.fields.get("id"))
        }
      }
 }
