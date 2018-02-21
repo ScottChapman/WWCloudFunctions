@@ -39,7 +39,7 @@ class WatsonWorkTests extends TestHelpers
 
 override def beforeAll() {
   println(System.getProperty("user.dir"))
-  println("APP_ID: " + System.getProperty("APP_ID"))
+  println("APP_ID: " + System.getenv("APP_ID"))
   println(System.getProperty("user.dir"))
 
   println("CleanUp First");
