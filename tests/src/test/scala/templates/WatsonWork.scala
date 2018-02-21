@@ -47,9 +47,9 @@ override def beforeAll() {
 
   val WatsonWorkspaceParams = JsObject(
     "AppInfo" -> JsObject(
-      "AppId" -> JsString("e798f199-42f2-4323-b96f-63467945e0db"),
-      "AppSecret" -> JsString("Nkm73mdP1wYmHk2xsVBKoNV3xgtk"),
-      "WebhookSecret" -> JsString("nuqv9td7ohgva2g6ewwolqhkc04hvdep")
+      "AppId" -> JsString(System.getenv("APP_ID")),
+      "AppSecret" -> JsString(System.getenv("APP_SECRET")),
+      "WebhookSecret" -> JsString(System.getenv("WEBHOOK_SECRET"))
     ),
    "OwnEventTrigger" -> JsString("WWOwnEvent"),
    "ActionSelected" -> JsString("WWActionSelected"),
