@@ -1,25 +1,17 @@
-# A Travis CI configuration file.
-
 sudo: required
-
 language: scala
 scala:
-   - 2.11.6
-
+- 2.11.6
 services:
-  - docker
-
+- docker
 env:
   global:
-    - TERM=dumb
-
+  - TERM=dumb
+  - secure: F6FrlLAtkx8ZXUsqfTHdPbpEm3zYcWxg/58jeINdVEJOokdAy2frUT8JPw7Goe2Y1k51db+3dg8FVbN+L6FQGwUdmllKhabA5MV57mUp1c0iVkMIBukZFL7tiQ79FggXbn8UYgHdo4/mKR+qLSd9cHQHR5ixMiV1MjnOND9piCkN7HEfKeg881qFq4rKCM7r7GtUc6/mLTIwqoX9t6DKrY3Klg2Y3Z9bUwrlKmzWzWjBoI8i3wMQ/vHC9RRkrIpNpQJ5NHWJR45VzBDiwz6Xd5aWAwHXNU+l8psl+1N/e8ga+D1UAB2eKzhLAHGAIA7nhEbsCJsiVMJE6vv7fjtH0OCax1sFK9CgmXNtlljWF3rTpgzuEGAG7rpcA827Jw315uP5n1s5cvJm1mlTMcqDkwCjYh38CA1MBXWxfWPm9kh2hBtaiHs5YiNER54Ss487n9WKqlk67PKFI3aB3qaDduCgpR8Eyl/J3DNAO4yhwuymnG6nM+N8klqZ+KT2yEl0q4+dA7hAzwONro9UccWXBPxe8s6gWiYxSnpTWjM4Wl2bnhIm909Vhntcm/uLYB+/JKb04JDRTd8ew2g1GSTKrp3WwktN1xwAFUhTj8Sd+bO8RodOjr4l+zngIJ8PnAUieYlHKOua2IGvd9DW/m8/LlML3CYkQCjRADAfZa4yijY=
 notifications:
   email: false
-
 install: true
-
 before_install:
-  - ./tools/travis/setup.sh
-
+- "./tools/travis/setup.sh"
 script:
-  - ./tools/travis/build.sh
+- "./tools/travis/build.sh"
