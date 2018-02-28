@@ -1,5 +1,6 @@
 var util = require('util');
 var openwhisk = require('openwhisk');
+var _ = require ('lodash');
 
 /*
  * takes an array of cards which looks like:
@@ -53,9 +54,11 @@ function generateCards(cards, prefix) {
 }
 
 function main(params) {
-  var cards = generateCards(params.cards,params.WatsonWorkspace.ButtonSelectedPrefix);
+  var cards = generateCards(params.cards,"BUTTON_SELECTED: ");
   var annotation = params.annotation;
-  var ow = openwhisk();
+  var ow = openwhisk(
+    _.get(params,"WatsonWorkspace.OWArgs",{})
+  );
   
   return ow.actions.invoke({
       name: "WatsonWorkspace/GraphQL",

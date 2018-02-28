@@ -9,5 +9,5 @@ packages:
         actions: Echo, WatsonWorkspace/SendMessage
     rules:
       EchoRule:
-        trigger: WWOthersEvent
+        trigger: WWWebhookEvents
         action: EchoAppSequence

@@ -11,10 +11,13 @@
 
 var openwhisk = require('openwhisk');
 var request = require('request');
+var _ = require('lodash');
 
 function main(query) {
   return new Promise(function(success, failure) {
-    var ow = openwhisk();
+    var ow = openwhisk(
+        _.get(query,"WatsonWorkspace.OWArgs",{})
+    );
     ow.actions.invoke({
       name: 'WatsonWorkspace/Token',
       blocking: true

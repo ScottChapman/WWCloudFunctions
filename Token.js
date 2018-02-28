@@ -30,8 +30,8 @@ function refresh(params) {
     console.log(JSON.stringify(params,null,2));
     request.post('https://api.watsonwork.ibm.com/oauth/token', {
       auth: {
-        user: params.WatsonWorkspace.AppInfo.AppId,
-        pass: params.WatsonWorkspace.AppInfo.AppSecret
+        user: params.WatsonWorkspace.AppId,
+        pass: params.WatsonWorkspace.AppSecret
       },
       json: true,
       form: {

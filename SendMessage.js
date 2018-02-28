@@ -13,10 +13,13 @@
  */
 var request = require('request');
 var openwhisk = require('openwhisk');
+var _ = require("lodash");
 
 function main(message) {
   return new Promise(function(success, failure) {
-    var ow = openwhisk({ignore_certs: true});
+    var ow = openwhisk(
+        _.get(message,"WatsonWorkspace.OWArgs",{})
+    );
     ow.actions.invoke({
       name: 'WatsonWorkspace/Token',
       blocking: true

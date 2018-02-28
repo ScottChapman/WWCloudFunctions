@@ -1,13 +1,13 @@
 packages:
-  EchoApp: #this is a package name
+  ToMessageHub: #this is a package name
     actions:
-      Echo: # this is a action name
-        function: Echo.js
+      Send: # this is a action name
+        function: ToMessageHub.js
         runtime: nodejs:8
     sequences:
-      EchoAppSequence:
-        actions: Echo, WatsonWorkspace/SendMessage
+      SendMessageHubSequence:
+        actions: Send, MessageHub/SendMessage
     rules:
       EchoRule:
-        trigger: WWOthersEvent
-        action: EchoAppSequence
+        trigger: WWWebhookEvents
+        action: SendMessageHubSequence

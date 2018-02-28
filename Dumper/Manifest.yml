@@ -15,11 +15,11 @@ packages:
         runtime: nodejs:8
     rules:
       OwnEventRule:
-        trigger: WWOwnEvent
-        action: OwnEventDumper
+        trigger: WWApplicationEvents
+        action: ApplicationEventDumper
       OthersEventRule:
-        trigger: WWOthersEvent
-        action: OthersEventDumper
+        trigger: WWWebhookEvents
+        action: WebhookEventDumper
       ActionSelectedRule:
         trigger: WWActionSelected
         action: ActionSelectedDumper
