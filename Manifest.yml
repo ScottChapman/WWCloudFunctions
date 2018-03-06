@@ -12,6 +12,7 @@ packages:
         function: Webhook.js
         runtime: nodejs:8
         web-export: true
+        # raw-http: true
       Token:
         function: Token.js
         runtime: nodejs:8
