@@ -7,7 +7,7 @@ To put this all together to create a simple Echo application (an application whi
 - Create a sequence that passes the results to the Echo function, and then passes results to the send message action
   - `bx wsk action create WWEchoBot --sequence WWEcho,WatsonWorkspace/SendMessage`
 - Then create a rule that links the events from WWOtherEvent to the WWEchoBot
-  - `bx wsk rule create RunEchoBot WWOtherEvent WWEchoBot`
+  - `bx wsk rule create RunEchoBot WWWebhookEvents WWEchoBot`
 
 ## Wskdeploy
 - Simply run `wskdeploy`

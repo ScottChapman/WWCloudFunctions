@@ -10,8 +10,8 @@
 - Then create the action
   - `bx wsk action create WWMessageHub/ToMessageHub ToMessageHub.js --kind nodejs:8`
 - Create rule to associate trigger with action
-  - `bx wsk rule create PublishToMessageHub WWOwnEvent WWMessageHub/ToMessageHub`
-  - `bx wsk rule create PublishToMessageHub WWOthersEvent WWMessageHub/ToMessageHub`
+  - `bx wsk rule create PublishToMessageHub WWApplicationEvents WWMessageHub/ToMessageHub`
+  - `bx wsk rule create PublishToMessageHub WWWebhookEvents WWMessageHub/ToMessageHub`
 - Don't forget to create the topic (default is WWEvents) in your message hub!
 
 ## Deploy with `wskdeploy`

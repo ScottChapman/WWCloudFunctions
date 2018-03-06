@@ -25,7 +25,7 @@ packages:
         function: TargetedMessage.js
         runtime: nodejs:8
     triggers:
-      WWOwnEvent:
-      WWOthersEvent:
+      WWApplicationEvents:
+      WWWebhookEvents:
       WWActionSelected:
       WWButtonSelected:

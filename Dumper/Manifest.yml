@@ -1,10 +1,10 @@
 packages:
   WatsonWorkspaceDumper: #this is a package name
     actions:
-      OwnEventDumper:
+      ApplicationEventDumper:
         function: dumper.js
         runtime: nodejs:8
-      OthersEventDumper:
+      WebhookEventDumper:
         function: dumper.js
         runtime: nodejs:8
       ActionSelectedDumper:
@@ -14,10 +14,10 @@ packages:
         function: dumper.js
         runtime: nodejs:8
     rules:
-      OwnEventRule:
+      ApplicationEventRule:
         trigger: WWApplicationEvents
         action: ApplicationEventDumper
-      OthersEventRule:
+      WebhookEventRule:
         trigger: WWWebhookEvents
         action: WebhookEventDumper
       ActionSelectedRule:

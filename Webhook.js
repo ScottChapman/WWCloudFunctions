@@ -116,7 +116,6 @@ function closeAction(annotation, params, ow) {
 
 function main(params) {
 	return new Promise((resolve, reject) => {
-		console.log(JSON.stringify(params,null,2));
 		var ow = openwhisk(
 		    _.get(params,"WatsonWorkspace.OWArgs",{})
 		/*
@@ -235,41 +234,3 @@ function validateSender(params, req) {
 	var calculated = crypto.createHmac("sha256", params.WatsonWorkspace.WebhookSecret).update(req.rawBody).digest("hex");
 	return ob_token == calculated;
 }
-
-
-var message =
-{
-  "WatsonWorkspace": {
-    "AppId": "e798f199-42f2-4323-b96f-63467945e0db",
-    "AppSecret": "yE9XgOFjiGPLOSBeiGLN0lnUN-No",
-    "WebhookSecret": "9qzzzci3nwws96ta4ev4rybap2y7s9hc",
-		"OWArgs": {
-			"ignore_certs": true,
-			"apihost": "openwhisk.ng.bluemix.net",
-			"api_key": "0a8d7e29-8e5a-4656-8bd6-34bca738449a:m4Wgedl2znzbFiSP6AJr2PTFDZHbueCIUdw6K6KsVzatulkZgiEC5DHDkbJ1nNpG"
-		}
-  },
-  "__ow_headers": {
-    "x-outbound-token": "c2f5bcadffad4dd88318384ac8ecc81fd3f46d051bf8164032c280ee86195539"
-  },
-  "data": {
-    "annotationPayload": "{\"language\":\"en\",\"taxonomy\":[{\"confident\":false,\"label\":\"/shopping/toys/action figures\",\"score\":0.714851},{\"confident\":false,\"label\":\"/art and entertainment/theatre/theatre awards\",\"score\":0.364781},{\"confident\":false,\"label\":\"/sports/boxing\",\"score\":0.168129}]}",
-    "spaceName": "ScottSpace",
-    "contentType": "text/markdown",
-    "messageId": "5a95abd1e4b01e6e9ce0cee1",
-    "content": "do you know Joe Smith?",
-    "time": 1519758289517,
-    "userId": "toscana-aip-nlc-consumer-client-id",
-    "type": "message-annotation-added",
-    "spaceId": "58822220e4b0192475567c93",
-    "userName": "Scott Chapman",
-    "annotationType": "message-nlp-taxonomy"
-  },
-  "__ow_body": "eyJhbm5vdGF0aW9uUGF5bG9hZCI6IntcImxhbmd1YWdlXCI6XCJlblwiLFwidGF4b25vbXlcIjpbe1wiY29uZmlkZW50XCI6ZmFsc2UsXCJsYWJlbFwiOlwiL3Nob3BwaW5nL3RveXMvYWN0aW9uIGZpZ3VyZXNcIixcInNjb3JlXCI6MC43MTQ4NTF9LHtcImNvbmZpZGVudFwiOmZhbHNlLFwibGFiZWxcIjpcIi9hcnQgYW5kIGVudGVydGFpbm1lbnQvdGhlYXRyZS90aGVhdHJlIGF3YXJkc1wiLFwic2NvcmVcIjowLjM2NDc4MX0se1wiY29uZmlkZW50XCI6ZmFsc2UsXCJsYWJlbFwiOlwiL3Nwb3J0cy9ib3hpbmdcIixcInNjb3JlXCI6MC4xNjgxMjl9XX0iLCJzcGFjZU5hbWUiOiJTY290dFNwYWNlIiwiY29udGVudFR5cGUiOiJ0ZXh0L21hcmtkb3duIiwibWVzc2FnZUlkIjoiNWE5NWFiZDFlNGIwMWU2ZTljZTBjZWUxIiwiY29udGVudCI6ImRvIHlvdSBrbm93IEpvZSBTbWl0aD8iLCJ0aW1lIjoxNTE5NzU4Mjg5NTE3LCJ1c2VySWQiOiJ0b3NjYW5hLWFpcC1ubGMtY29uc3VtZXItY2xpZW50LWlkIiwidHlwZSI6Im1lc3NhZ2UtYW5ub3RhdGlvbi1hZGRlZCIsInNwYWNlSWQiOiI1ODgyMjIyMGU0YjAxOTI0NzU1NjdjOTMiLCJ1c2VyTmFtZSI6IlNjb3R0IENoYXBtYW4iLCJhbm5vdGF0aW9uVHlwZSI6Im1lc3NhZ2UtbmxwLXRheG9ub215In0="
-}
-
-main(message).then(resp => {
-	console.dir(resp);
-}).catch(err => {
-	console.dir(err);
-})

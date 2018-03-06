@@ -3,7 +3,7 @@
 To get started you might want to create a new space in your organization. Here are some steps you can use to prepare for deploying this application. This is optional, if you already have a space you want to use simple use the [Bluemix CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) to set your target. Having a new space gives you a new IBM Cloud Functions namespace to work in; think of it as your project work area.
 - Install [Cloud Functions CLI](https://console.bluemix.net/openwhisk/learn/cli)
 - To create a new space run
-  - `bx cf create-space WatsonWorkspaceEchoApp`
+  - `bx cf create-space WatsonWorkspace`
 - It will return a `cf` command to set your target to your new space. You'll just want to add `bx` to the front of it since `cf` is a subcommand of `bx`
 
 You can use the [Dumper](Dumper) deployment to assist in your application development. It creates simple functions that just dump their input contents to a log. This is useful for understanding the events that are being published by this application.
@@ -30,9 +30,9 @@ To create a very basic application, one that will simple recieve events from Wat
   - `bx wsk action get WatsonWorkspace/Webhook --url`
 - Paste this into your App as your Webhook URL. NOTE: URL decode any coding (e.g. change %40 => @). Add the Webhook Secret to your PackageParmeters.json and update with
   - `bx wsk package update WatsonWorkspace -P PackageParameters.json`.
-- Create the triggers for the events. These are defined in the `PackageParameters.js`.
-  - `bx wsk trigger create WWOwnEvent`
-  - `bx wsk trigger create WWOthersEvent`
+- Create the triggers for the events.
+  - `bx wsk trigger create WWApplicationEvents`
+  - `bx wsk trigger create WWWebhookEvents`
   - `bx wsk trigger create WWActionSelected`
   - `bx wsk trigger create WWButtonSelected`
 
