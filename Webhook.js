@@ -118,12 +118,6 @@ function main(params) {
 	return new Promise((resolve, reject) => {
 		var ow = openwhisk(
 		    _.get(params,"WatsonWorkspace.OWArgs",{})
-		/*
-			{
-        apihost: "openwhisk.ng.bluemix.net",
-        api_key: "0a8d7e29-8e5a-4656-8bd6-34bca738449a:m4Wgedl2znzbFiSP6AJr2PTFDZHbueCIUdw6K6KsVzatulkZgiEC5DHDkbJ1nNpG"
-      }
-        */
 		);
 		var req = {
 			rawBody: Buffer.from(params.__ow_body, "base64").toString(),
@@ -156,10 +150,10 @@ function main(params) {
 			cleanUpEvent(req.body,params.WatsonWorkspace);
 
 			if (_.get(req.body, "annotationType") === "actionSelected" && req.body.ownEvent) {
-				var triggerName = "ActionSelected";
+				var triggerName = "WWActionSelected";
                 var prefix = "BUTTON_SELECTED: ";
 				if (req.body.annotationPayload.actionId.startsWith(prefix)) {
-					triggerName = "ButtonSelected";
+					triggerName = "WWButtonSelected";
 					var action = req.body.annotationPayload.actionId.substr(prefix.length)
 					try {
 						req.body.annotationPayload.actionId = JSON.parse(action);

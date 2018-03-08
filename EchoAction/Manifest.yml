@@ -4,7 +4,10 @@ packages:
       Echo: # this is a action name
         function: Echo.js
         runtime: nodejs:8
+    sequences:
+      EchoActionSequence:
+        actions: Echo, WatsonWorkspace/TargetedMessage
     rules:
-      ActionSelectedRule:
+      EchoRule:
         trigger: WWActionSelected
-        action: Echo
+        action: EchoActionSequence

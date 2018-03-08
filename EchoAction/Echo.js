@@ -1,13 +1,9 @@
-var openwhisk = require('openwhisk');
-
 function main(params) {
-  var ow = openwhisk();
+  return new Promise((resolve,reject) => {
 
   if (params.annotationPayload.actionId.startsWith("/echo")) {
-		return ow.actions.invoke({
-      name: "WatsonWorkspace/TargetedMessage",
-      params: {
-  			annotation: params,
+      resolve({
+        annotation: params,
   			cards: {
           type: 'INFORMATION',
           title: 'My Title',
@@ -32,10 +28,10 @@ function main(params) {
             }
           ]
         }
-  		}
-  	})
-  }
-  else {
-    return Promise.reject();
-  }
+      })
+    }
+    else {
+      reject({status: "Not an echo action"});
+    }
+  })
 };

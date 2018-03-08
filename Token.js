@@ -1,7 +1,6 @@
 /*
  */
 
-var openwhisk = require('openwhisk');
 var request = require('request');
 var _ = require('lodash');
 var currentToken;
