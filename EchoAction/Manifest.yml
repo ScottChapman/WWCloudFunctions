@@ -8,6 +8,6 @@ packages:
       EchoActionSequence:
         actions: Echo, WatsonWorkspace/TargetedMessage
     rules:
-      EchoRule:
+      EchoActionRule:
         trigger: WWActionSelected
         action: EchoActionSequence

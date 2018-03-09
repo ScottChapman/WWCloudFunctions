@@ -14,15 +14,15 @@ packages:
         function: dumper.js
         runtime: nodejs:8
     rules:
-      ApplicationEventRule:
+      ApplicationEventDumpRule:
         trigger: WWApplicationEvents
         action: ApplicationEventDumper
-      WebhookEventRule:
+      WebhookEventDumpRule:
         trigger: WWWebhookEvents
         action: WebhookEventDumper
-      ActionSelectedRule:
+      ActionSelectedDumpRule:
         trigger: WWActionSelected
         action: ActionSelectedDumper
-      ButtonSelectedEventRule:
+      ButtonSelectedEventDumpRule:
         trigger: WWButtonSelected
         action: ButtonSelectedDumper

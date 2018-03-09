@@ -8,6 +8,6 @@ packages:
       EchoAppSequence:
         actions: Echo, WatsonWorkspace/SendMessage
     rules:
-      EchoRule:
+      EchoAppRule:
         trigger: WWWebhookEvents
         action: EchoAppSequence
