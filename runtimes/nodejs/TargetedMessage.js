@@ -53,15 +53,19 @@ function generateCards(cards, prefix) {
   return results;
 }
 
+function samePackage(action) {
+  return (process.env.__OW_ACTION_NAME.replace(/\/[^\/]+$/,"") + "/" + action).replace(/^\/[^\/]+\//,"");
+}
+
 function main(params) {
   var cards = generateCards(params.cards,"BUTTON_SELECTED: ");
   var annotation = params.annotation;
   var ow = openwhisk(
     _.get(params,"WatsonWorkspace.OWArgs",{})
   );
-  
+
   return ow.actions.invoke({
-      name: "WatsonWorkspace/GraphQL",
+      name: samePackage("GraphQL"),
       params: {
         string: util.format(`mutation {
           createTargetedMessage(input: {

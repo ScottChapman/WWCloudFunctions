@@ -39,13 +39,17 @@ var expansion = {
 	"message-annotation-removed": annotationGQL,
 };
 
+function samePackage(action) {
+  return (process.env.__OW_ACTION_NAME.replace(/\/[^\/]+$/,"") + "/" + action).replace(/^\/[^\/]+\//,"");
+}
+
 function expandEvent(body, params, ow) {
 	return new Promise((resolve, reject) => {
 		// Check to see if there is an expansion GraphQL expression to run
 		if (body.hasOwnProperty("type") && expansion.hasOwnProperty(body.type)) {
 			var exp = expansion[body.type];
 			ow.actions.invoke({
-				name: "WatsonWorkspace/GraphQL",
+				name: samePackage("GraphQL"),
 				blocking: true,
 				params: {
 					string: mustache.render(exp.GraphQLExpansion, body)
@@ -98,12 +102,12 @@ function closeAction(annotation, params, ow) {
 		_.merge(card, annotation.annotationPayload.actionId.response);
 	}
 	ow.actions.invoke ({
-		name: "WatsonWorkspace/TargetedMessage",
+		name: samePackage("TargetedMessage"),
 		blocking: true,
 		params: {cards: card, annotation: annotation}
 	}).then(resp => {
 		ow.actions.invoke ({
-			name: "WatsonWorkspace/GraphQL",
+			name: samePackage("GraphQL"),
 			blocking: true,
 			params: resp.response.result
 		}).then(resp => {

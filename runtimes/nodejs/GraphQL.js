@@ -13,13 +13,17 @@ var openwhisk = require('openwhisk');
 var request = require('request');
 var _ = require('lodash');
 
+function samePackage(action) {
+  return (process.env.__OW_ACTION_NAME.replace(/\/[^\/]+$/,"") + "/" + action).replace(/^\/[^\/]+\//,"");
+}
+
 function main(query) {
   return new Promise(function(success, failure) {
     var ow = openwhisk(
         _.get(query,"WatsonWorkspace.OWArgs",{})
     );
     ow.actions.invoke({
-      name: 'WatsonWorkspace/Token',
+      name: samePackage('Token'),
       blocking: true
     }).then(token => {
       request.post(
