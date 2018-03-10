@@ -1,4 +1,4 @@
-# WWCloudFunction[![Build Status](https://travis-ci.org/ScottChapman/WWCloudFunctions.svg?branch=master)](https://travis-ci.org/ScottChapman/WWCloudFunctions)s
+# WWCloudFunctions [![Build Status](https://travis-ci.org/ScottChapman/WWCloudFunctions.svg?branch=master)](https://travis-ci.org/ScottChapman/WWCloudFunctions)
 
 To get started you might want to create a new space in your organization. Here are some steps you can use to prepare for deploying this application. This is optional, if you already have a space you want to use simple use the [Bluemix CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) to set your target. Having a new space gives you a new IBM Cloud Functions namespace to work in; think of it as your project work area.
 - Install [Cloud Functions CLI](https://console.bluemix.net/openwhisk/learn/cli)
