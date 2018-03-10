@@ -66,7 +66,7 @@ override def beforeAll() {
   println(resp.statusCode)
 
   println("Token Action Create")
-  val tokenFile = Some(new File("..", "Token.js").toString());
+  val tokenFile = Some(new File("..", "runtimes/nodejs/Token.js").toString());
   resp = wskrest.action.create(
     "WatsonWorkspace/Token",
     tokenFile,
@@ -76,7 +76,7 @@ override def beforeAll() {
   println(resp.statusCode)
 
   println("SendMessage Action Create")
-  val sendMessageFile = Some(new File("..", "SendMessage.js").toString());
+  val sendMessageFile = Some(new File("..", "runtimes/nodejs/SendMessage.js").toString());
   resp = wskrest.action.create(
     "WatsonWorkspace/SendMessage",
     sendMessageFile,
@@ -86,7 +86,7 @@ override def beforeAll() {
   println(resp.statusCode)
 
   println("Webhook Action Create")
-  val webhookFile = Some(new File("..", "Webhook.js").toString());
+  val webhookFile = Some(new File("..", "runtimes/nodejs/Webhook.js").toString());
   resp = wskrest.action.create(
     "WatsonWorkspace/Webhook",
     webhookFile,
@@ -97,7 +97,7 @@ override def beforeAll() {
   println(resp.statusCode)
 
   println("GraphQL Action Create")
-  val graphQLFile = Some(new File("..", "GraphQL.js").toString());
+  val graphQLFile = Some(new File("..", "runtimes/nodejs/GraphQL.js").toString());
   resp = wskrest.action.create(
     "WatsonWorkspace/GraphQL",
     graphQLFile,
@@ -362,4 +362,3 @@ def cleanUp() {
    }
 
 }
-

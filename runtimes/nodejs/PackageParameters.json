@@ -1,0 +1,8 @@
+{
+  "WatsonWorkspace":
+  {
+    "AppId": "<YOUR APP ID HERE>",
+    "AppSecret": "<YOUR APP SECRET HERE>",
+    "WebhookSecret": "<YOUR WEBHOOK SECRET HERE>"
+  }
+}

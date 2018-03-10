@@ -15,8 +15,14 @@ var request = require('request');
 var openwhisk = require('openwhisk');
 var _ = require("lodash");
 
+function samePackage(path,action) {
+  return (path.replace(/\/[^\/]+$/,"") + "/" + action).replace(/^\/[^\/]+\//,"");
+}
+
 function main(message) {
   return new Promise(function(success, failure) {
+    console.log("message");
+    console.log(JSON.stringify(message,null,2));
     var ow = openwhisk(
         _.get(message,"WatsonWorkspace.OWArgs",{})
     );
