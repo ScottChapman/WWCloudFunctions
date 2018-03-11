@@ -6,18 +6,18 @@ To get started you might want to create a new space in your organization. Here a
   - `bx cf create-space WatsonWorkspace`
 - It will return a `cf` command to set your target to your new space. You'll just want to add `bx` to the front of it since `cf` is a subcommand of `bx`
 
-You can use the [Dumper](Dumper) deployment to assist in your application development. It creates simple functions that just dump their input contents to a log. This is useful for understanding the events that are being published by this application.
+You can use the [Dumper](samples/Dumper) deployment to assist in your application development. It creates simple functions that just dump their input contents to a log. This is useful for understanding the events that are being published by this application.
 
 ## Sample applications
-- [**Echo App**](EchoApp) - Simple application which listens for a message that matches a specific pattern, and replies with a response.
-- [**Echo Action**](EchoAction) - An example application which listens to action selected events, and generates a set of sample cards.
+- [**Echo Action**](samples/EchoAction) - An example application which listens to action selected events, and generates a set of sample cards.
+
 ## Deployment
 You can deploy this code using a number of different methods. I've provided instructions for the following:
 - [**Using the CLI**](#basic-webhook-and-event-topic-deployment) - you can use this to gail familiarity with IBM Cloud Functions and the CLI itself.
 - [**Using wskdeploy**](#wskdeploy-deployment) - You can also use `wskdeploy` to get simple single command (almost!) deployment.
 
 ### Basic Webhook and Event Topic Deployment
-To create a very basic application, one that will simple recieve events from Watson Workspace and make them available to IBM Cloud Functions via a trigger follow these steps:
+The code for the template is located [here](runtimes/nodejs). To create a very basic application, one that will simple recieve events from Watson Workspace and make them available to IBM Cloud Functions via a trigger follow these steps:
 - Create your application in [Watson Workspace Developer](https://developer.watsonwork.ibm.com/apps)> Be sure to copy your Application ID and Application Secret.
 - Edit the the PackageParameters.json file with your app's values. For now just put in your Application ID and Secret; we'll add to it later with the Webhook Secret.
 - Next you'll want to create the package for the Watson Workspace actions along with parameters for your Watson Workspace App information
@@ -48,11 +48,19 @@ This example also includes IBM Cloud Functions for sending messages and running 
   - `bx wsk action create WatsonWorkspace/TargetedMessage TargetedMessage.js --kind nodejs:8`
 
 ## Wskdeploy deployment
-**wskdeploy** provides a simple way to deploy your apps. You define a manifest using standard YAML notation, and then use the `wskdeploy` application to deploy it. You can read more about [**wskdeploy**](https://github.com/apache/incubator-openwhisk-wskdeploy).
+**wskdeploy** provides a simple way to deploy your apps. You define a manifest using standard YAML notation, and then use the `wskdeploy` application to deploy it. You can read more about [**wskdeploy**](https://github.com/apache/incubator-openwhisk-wskdeploy). To install, simply download the current version from the [release folder](https://github.com/apache/incubator-openwhisk-wskdeploy/releases).
 Once installed you can install all the functions and triggers in the basic example you simply:
-- First update the [manifest](Manifest.yml) with your Watson Workspace Application information.
-- run `wskdeploy` - this will deploy everything in the [manifest](Manifest.yml) in this directory.
-- You will then need to go into the IBM Cloud Functions UI and edit the `WatsonWorkspace/Webhook` action. Select the endpoint definition for the action, and enable `raw HTTP`.
+- Change directory to the [template runtime](runtimes/nodejs)
+- Set the following environment variables from your Watson Workspace Application:
+- - WW_APP_ID - Application ID.
+- - WW_APP_SECRET - Application Secret.
+- - WW_WEBHOOK_SECRET - Webhook Secret.
+- run `wskdeploy` - this will deploy everything in the [manifest](runtimes/nodejs/Manifest.yml) in this directory.
+- Get the Web Action URL
+  - `bx wsk action get WatsonWorkspace/Webhook --url`
+- Paste this into your App as your Webhook URL. NOTE: URL decode any coding (e.g. change %40 => @).
+
+Once installed you will have the entire template installed and configured. Plus a simple [Echo App](runtimes/nodejs/Echo.js) that you can use as a starting point for your app.
 
 That's it. You will have everything you need already deployed and configured.
 ![Framework](Images/Framework.png)
