@@ -9,7 +9,7 @@ To get started you might want to create a new space in your organization. Here a
 You can use the [Dumper](samples/Dumper) deployment to assist in your application development. It creates simple functions that just dump their input contents to a log. This is useful for understanding the events that are being published by this application.
 
 ## Sample applications
-- [**Echo Action**](samples/EchoAction) - An example application which listens to action selected events, and generates a set of sample cards.
+- [**Invitation Command**](samples/InviteCommand) - An example application which handles an invitation command from the user and allows them to invite any member of the space to an event.
 
 ## Deployment
 You can deploy this code using a number of different methods. I've provided instructions for the following:

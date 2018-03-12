@@ -21,7 +21,7 @@ var _ = require ('lodash');
  */
 
 function generateCards(cards, prefix) {
-  if (typeof cards !== "array")
+  if (!cards.hasOwnProperty("length"))
     cards = [cards];
   var results = [];
   cards.forEach(card => {

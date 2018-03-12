@@ -1,0 +1,23 @@
+packages:
+  Invitation: #this is a package name
+    actions:
+      CommandSelected: # this is a action name
+        function: CommandSelected.js
+        runtime: nodejs:8
+        inputs:
+          limit: 10
+      ButtonSelected: # this is a action name
+        function: ButtonSelected.js
+        runtime: nodejs:8
+    sequences:
+      CommandSelectedSequence:
+        actions: CommandSelected, WatsonWorkspace/TargetedMessage
+      ButtonSelectedSequence:
+        actions: ButtonSelected, WatsonWorkspace/SendMessage
+    rules:
+      CommandSelectedRule:
+        trigger: WWActionSelected
+        action: CommandSelectedSequence
+      ButtonSelectedRule:
+        trigger: WWButtonSelected
+        action: ButtonSelectedSequence
