@@ -26,12 +26,28 @@ packages:
       TargetedMessage:
         function: TargetedMessage.js
         runtime: nodejs:8
-      Echo: # this is a action name
+      Echo:
         function: Echo.js
+        runtime: nodejs:8
+      IsMessage:
+        function: IsMessage.js
+        runtime: nodejs:8
+      IsAnnotation:
+        function: IsAnnotation.js
+        runtime: nodejs:8
+      MessageDumper:
+        function: dumper.js
+        runtime: nodejs:8
+      AnnotationDumper:
+        function: dumper.js
         runtime: nodejs:8
     sequences:
       EchoAppSequence:
         actions: Echo, WatsonWorkspace/SendMessage
+      MessageDumpSequence:
+        actions: IsMessage, MessageDumper
+      AnnotationDumpSequence:
+        actions: IsAnnotation, AnnotationDumper
     triggers:
       WWApplicationEvents:
       WWWebhookEvents:
@@ -41,3 +57,21 @@ packages:
       EchoAppRule:
         trigger: WWWebhookEvents
         action: EchoAppSequence
+      DumpWebhookMessage:
+        trigger: WWWebhookEvents
+        action: MessageDumpSequence
+      DumpWebhookAnnotation:
+        trigger: WWWebhookEvents
+        action: AnnotationDumpSequence
+      DumpAnnotationMessage:
+        trigger: WWApplicationEvents
+        action: MessageDumpSequence
+      DumpAnnotationAnnotation:
+        trigger: WWApplicationEvents
+        action: AnnotationDumpSequence
+      DumpActionAnnotation:
+        trigger: WWActionSelected
+        action: AnnotationDumpSequence
+      DumpButtonAnnotation:
+        trigger: WWButtonSelected
+        action: AnnotationDumpSequence
