@@ -1,13 +1,20 @@
 packages:
   ToMessageHub: #this is a package name
+    inputs:
+      IBMMessageHub:
+        type: json
+        value:
+          <PASTE YOUR MESSAGE HUB CREDENTIALS HERE>,
+          "Topic": "WWEvents"
+        }
     actions:
-      Send: # this is a action name
+      SendMessage: # this is a action name
         function: ToMessageHub.js
         runtime: nodejs:8
-    sequences:
-      SendMessageHubSequence:
-        actions: Send, MessageHub/SendMessage
     rules:
-      EchoRule:
+      SendWebhookEvents:
         trigger: WWWebhookEvents
-        action: SendMessageHubSequence
+        action: SendMessage
+      SendApplicationEvents:
+        trigger: WWApplicationEvents
+        action: SendMessage

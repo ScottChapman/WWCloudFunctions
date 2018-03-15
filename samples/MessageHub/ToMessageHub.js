@@ -3,28 +3,20 @@
  * Include your credentials below, and specify the event topic to publish on.
  */
 
-/*
- * Customize below
- */
-var credentials = /* Paste your IBM MessageHub credentials here */
-var EventTopic = "WWEvents";
-/*
- * End customization
- */
-
 var openwhisk = require('openwhisk');
+var _ = require("lodash");
 
 function main(params) {
     var ow = openwhisk();
     return ow.actions.invoke({
        name: '/whisk.system/messaging/messageHubProduce',
        params: {
-           topic: params.IBMMessageHub.EventTopic,
-           value: JSON.stringify(params),
+           topic: params.IBMMessageHub.Topic,
+           value: JSON.stringify(_.omit(params,"IBMMessageHub")),
            kafka_brokers_sasl: params.IBMMessageHub.Credentials.kafka_brokers_sasl,
            user: params.IBMMessageHub.Credentials.user,
            password: params.IBMMessageHub.Credentials.password,
-           blocking: false
+           blocking: true
        }
     });
 }
