@@ -22,6 +22,7 @@ function main(params) {
     return {
       spaceId: params.spaceId,
       title: "From Echo Bot",
+      actor: { name: "Cloud Functions"},
       text: "Why yes I can!"
     }
   } else {

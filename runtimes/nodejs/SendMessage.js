@@ -28,6 +28,16 @@ function main(message) {
       name: samePackage("Token"),
       blocking: true
     }).then(token => {
+      var annotation = _.merge({
+        type: 'generic',
+        version: 1.0,
+        color: '#6CB7FB',
+        title: "title",
+        text: "text",
+        actor: {
+          name: 'IBM Cloud Function Bot',
+        }
+      },_.omit(message,["spaceId","WatsonWorkspace"]));
       request.post(
         'https://api.watsonwork.ibm.com/v1/spaces/' + message.spaceId + '/messages', {
           headers: {
@@ -37,16 +47,7 @@ function main(message) {
           body: {
             type: 'appMessage',
             version: 1.0,
-            annotations: [{
-              type: 'generic',
-              version: 1.0,
-              color: '#6CB7FB',
-              title: message.title,
-              text: message.text,
-              actor: {
-                name: 'IBM Cloud Function Bot',
-              }
-            }]
+            annotations: [ annotation ]
           }
         }, (err, res) => {
           if (err || res.statusCode !== 201) {
