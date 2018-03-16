@@ -21,7 +21,7 @@ function main(params) {
   return new Promise((resolve,reject) => {
     if (params.hasOwnProperty("annotationType") && params.annotationType !== "generic") {
       if (params.hasOwnProperty("filterFor")) {
-        if (params.filterFor === params.annotationType) {
+        if (_.isMatch(params,params.filterFor)) {
           resolve(_.omit(params,"filterFor"));
         }
         else {
