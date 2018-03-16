@@ -10,11 +10,10 @@ function main(params) {
   if (tokenExpiration < Date.now())
     return refresh(params);
   else
-    return new Promise((resolve, reject) => {
-      resolve(_.merge(params, {
-        jwt: currentToken
+    return Promise.resolve(_.merge(_.omit(params, "WatsonWorkspace"), {
+        jwt: currentToken,
+        source: "cache"
       }));
-    })
 }
 
 function expires(token) {
@@ -46,6 +45,7 @@ function refresh(params) {
         currentToken = res.body.access_token;
         tokenExpiration = expires(currentToken);
         resolve(_.merge(_.omit(params, "WatsonWorkspace"), {
+          source: "refresh",
           jwt: currentToken
         }));
       }
