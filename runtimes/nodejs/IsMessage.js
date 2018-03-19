@@ -19,6 +19,7 @@ var _ = require("lodash");
 
 function main(params) {
   return new Promise((resolve,reject) => {
+    params = _.omit(params,"WatsonWorkspace");
     if (params.type.startsWith("message-") && !params.type.startsWith("message-annotation-")) {
       resolve(params);
     }
@@ -30,3 +31,5 @@ function main(params) {
     }
   });
 }
+
+exports.main = main;

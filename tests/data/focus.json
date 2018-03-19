@@ -1,0 +1,50 @@
+{
+    "annotationPayload": {
+        "extractedInfo": {
+            "dates": [],
+            "entities": [],
+            "keywords": []
+        },
+        "payload": null,
+        "focusVersion": 5,
+        "context": null,
+        "applicationId": "CLE",
+        "hidden": false,
+        "phrase": "Can we meet tomorrow?",
+        "confidence": 1,
+        "version": "5",
+        "updated": null,
+        "tokenClientId": null,
+        "createdBy": null,
+        "actions": null,
+        "category": "Schedule",
+        "end": 21,
+        "lensId": "CLE",
+        "type": "message-focus",
+        "start": 0,
+        "annotationId": null,
+        "updatedBy": null,
+        "created": null,
+        "lens": "Question"
+    },
+    "spaceName": "ScottsSpace",
+    "messageId": "5aafb85be4b0622c1ac83d6d",
+    "appEvent": false,
+    "message": {
+        "content": "Can we meet tomorrow?",
+        "id": "5aafb85be4b0622c1ac83d6d",
+        "created": "2018-03-19T13:17:15.079+0000",
+        "createdBy": {
+            "displayName": "Scott Chapman",
+            "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+            "emailAddresses": null,
+            "photoUrl": "/photos/d76b3ac0-8f0a-1028-9874-db07163b51b2"
+        }
+    },
+    "time": "Mon Mar 19 2018 13:17:52 GMT+0000 (UTC)",
+    "userId": "toscana-aip-nlc-consumer-client-id",
+    "type": "message-annotation-added",
+    "annotationId": "5aafb85be4b0efdca969c899",
+    "spaceId": "582754d0e4b0037e37b25ff5",
+    "annotationType": "message-focus"
+}

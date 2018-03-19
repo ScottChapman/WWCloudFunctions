@@ -1,0 +1,55 @@
+{
+    "annotationPayload": {
+        "lastUpdatedMessage": {
+            "messageId": "5aafdd2be4b0ab2a6b289e5f",
+            "published": 1521474859651
+        },
+        "momentVersion": 6,
+        "hidden": false,
+        "participants": [{
+                "authorId": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+                "messageCount": 8
+            },
+            {
+                "authorId": "e798f199-42f2-4323-b96f-63467945e0db",
+                "messageCount": 6,
+                "source": "generic-annotation",
+                "actorName": "Cloud Functions"
+            }
+        ],
+        "algorithm": "timegap",
+        "momentId": "7405efae04d15e02d990437ac6ec856893020587",
+        "startMessage": {
+            "messageId": "5aafd3b8e4b01759605919a5",
+            "published": 1521472440735
+        },
+        "momentSummary": {
+            "phrases": [],
+            "mostRelevantMessage": {
+                "messageId": "5aafd43de4b081bf4bb6a2ba",
+                "published": 1521472573044
+            }
+        },
+        "spaceId": "582754d0e4b0037e37b25ff5"
+    },
+    "spaceName": "ScottsSpace",
+    "messageId": "5aafd3b8e4b01759605919a5",
+    "appEvent": false,
+    "message": {
+        "content": "can you echo something?",
+        "id": "5aafd3b8e4b01759605919a5",
+        "created": "2018-03-19T15:14:00.735+0000",
+        "createdBy": {
+            "displayName": "Scott Chapman",
+            "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+            "emailAddresses": null,
+            "photoUrl": "/photos/d76b3ac0-8f0a-1028-9874-db07163b51b2"
+        }
+    },
+    "time": "Mon Mar 19 2018 15:54:54 GMT+0000 (UTC)",
+    "userId": "toscana-service-moment-identification-client-id",
+    "type": "message-annotation-edited",
+    "annotationId": "5aafd3b9e4b00f508fc1869d",
+    "spaceId": "582754d0e4b0037e37b25ff5",
+    "annotationType": "conversation-moment"
+}

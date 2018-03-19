@@ -1,0 +1,42 @@
+{
+    "annotationPayload": {
+        "language": "en",
+        "taxonomy": [
+            {
+                "confident": false,
+                "label": "/society/dating",
+                "score": 0.6191
+            },
+            {
+                "confident": false,
+                "label": "/art and entertainment/movies and tv/comedies",
+                "score": 0.4081
+            },
+            {
+                "confident": false,
+                "label": "/technology and computing/internet technology/chat",
+                "score": 0.138783
+            }
+        ]
+    },
+    "spaceName": "ScottsSpace",
+    "messageId": "5aafb85be4b0622c1ac83d6d",
+    "appEvent": false,
+    "message": {
+        "content": "Can we meet tomorrow?",
+        "id": "5aafb85be4b0622c1ac83d6d",
+        "created": "2018-03-19T13:17:15.079+0000",
+        "createdBy": {
+            "displayName": "Scott Chapman",
+            "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+            "emailAddresses": null,
+            "photoUrl": "/photos/d76b3ac0-8f0a-1028-9874-db07163b51b2"
+        }
+    },
+    "time": "Mon Mar 19 2018 13:17:51 GMT+0000 (UTC)",
+    "userId": "toscana-aip-nlc-consumer-client-id",
+    "type": "message-annotation-added",
+    "annotationId": "5aafb85be4b0efdca969c898",
+    "spaceId": "582754d0e4b0037e37b25ff5",
+    "annotationType": "message-nlp-taxonomy"
+}

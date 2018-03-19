@@ -20,18 +20,8 @@ var _ = require("lodash");
 function main(params) {
   return new Promise((resolve,reject) => {
     params = _.omit(params,"WatsonWorkspace");
-    if (params.hasOwnProperty("annotationType") && params.annotationType !== "generic") {
-      if (params.hasOwnProperty("filterFor")) {
-        if (_.isMatch(params,params.filterFor)) {
-          resolve(_.omit(params,"filterFor"));
-        }
-        else {
-          reject(params);
-        }
-      }
-      else {
-        resolve(params);
-      }
+    if (params.hasOwnProperty("annotationType") && params.annotationType == "conversation-moment") {
+      resolve(params);
     }
     else {
       reject(params);

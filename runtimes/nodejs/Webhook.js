@@ -120,6 +120,7 @@ function closeAction(annotation, params, ow) {
 
 function main(params) {
 	return new Promise((resolve, reject) => {
+		console.log(JSON.stringify(params));
 		var ow = openwhisk(
 		    _.get(params,"WatsonWorkspace.OWArgs",{})
 		);
@@ -128,6 +129,11 @@ function main(params) {
 			body: JSON.parse(Buffer.from(params.__ow_body, "base64").toString()),
 			headers: params.__ow_headers
 		};
+
+		// separate Workspace paramaters
+		var workspaceParams = params.WatsonWorkspace;
+		_.omit(params,"WatsonWorkspace");
+
 		if (!validateSender(params, req)) {
 			reject({
 				statusCode: 401,
@@ -139,7 +145,7 @@ function main(params) {
 				response: req.body.challenge
 			};
 			var strBody = JSON.stringify(body);
-			var validationToken = crypto.createHmac("sha256", params.WatsonWorkspace.WebhookSecret).update(strBody).digest("hex");
+			var validationToken = crypto.createHmac("sha256", worksapceParams.WebhookSecret).update(strBody).digest("hex");
 			resolve({
 				statusCode: 200,
 				headers: {
@@ -151,7 +157,7 @@ function main(params) {
 		} else {
 
 			// Clean up the event
-			cleanUpEvent(req.body,params.WatsonWorkspace);
+			cleanUpEvent(req.body,workspaceParams);
 
 			if (_.get(req.body, "annotationType") === "actionSelected" && req.body.appEvent) {
 				var triggerName = "WWActionSelected";
@@ -165,7 +171,7 @@ function main(params) {
 					catch (err) {
 						req.body.annotationPayload.actionId = action;
 					}
-					closeAction(req.body, params.WatsonWorkspace,ow);
+					closeAction(req.body, params.workspaceParams,ow);
 				}
 				// Send event to topic
 				ow.triggers.invoke({
@@ -191,7 +197,7 @@ function main(params) {
 			}
 			else {
 				// Expand Event
-				expandEvent(req.body, params.WatsonWorkspace, ow).then(body => {
+				expandEvent(req.body, workspaceParams, ow).then(body => {
 
 					// Send event to topic
 					ow.triggers.invoke({
