@@ -120,8 +120,6 @@ function closeAction(annotation, params, ow) {
 
 function main(params) {
     return new Promise((resolve, reject) => {
-        console.log(JSON.stringify(params));
-        console.dir(_.get(params,"WatsonWorkspace.OWArgs",{}));
         var ow = openwhisk(
             _.get(params,"WatsonWorkspace.OWArgs",{})
         );
