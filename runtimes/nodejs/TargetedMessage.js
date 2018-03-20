@@ -80,3 +80,8 @@ function main(params) {
       }
   });
 }
+
+exports.main = main;
+exports.setOpenwhisk = function(obj) {
+  openwhisk = obj;
+}

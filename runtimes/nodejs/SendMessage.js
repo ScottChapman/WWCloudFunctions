@@ -65,15 +65,3 @@ exports.main = main;
 exports.setOpenwhisk = function(obj) {
   openwhisk = obj;
 }
-
-var message = {
-      spaceId: "582754d0e4b0037e37b25ff5",
-      title: "From OW Ttest",
-      text: "This is a sample message!"
-}
-
-main(message).then(resp => {
-    console.dir(resp);
-}).catch(err => {
-    console.dir(err)
-})

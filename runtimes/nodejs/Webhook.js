@@ -237,28 +237,3 @@ function validateSender(params, req) {
     var calculated = crypto.createHmac("sha256", params.WatsonWorkspace.WebhookSecret).update(req.rawBody).digest("hex");
     return ob_token == calculated;
 }
-
-var message = {
-  "WatsonWorkspace": {
-    "AppId": "e798f199-42f2-4323-b96f-63467945e0db",
-    "AppSecret": "yE9XgOFjiGPLOSBeiGLN0lnUN-No",
-    "WebhookSecret": "9qzzzci3nwws96ta4ev4rybap2y7s9hc",
-    "OWArgs": {
-      "ignore_certs": true
-    }
-  },
-  "__ow_headers": {
-    "x-outbound-token": "28f2cbaacbb3ae1cbd4a1789070a0ce7030114f10a1128c4a9071446d2570c5f"
-  },
-  "data": {
-    "type": "verification",
-    "challenge": "gfbhi1np1x6hwvtcr69l5cg04iv8xasl"
-  },
-  "__ow_body": "eyJ0eXBlIjoidmVyaWZpY2F0aW9uIiwiY2hhbGxlbmdlIjoiZ2ZiaGkxbnAxeDZod3Z0Y3I2OWw1Y2cwNGl2OHhhc2wifQ=="
-}
-
-main(message).then(resp => {
-    console.dir(resp);
-}).catch(err => {
-    console.dir(err);
-})
