@@ -22,7 +22,7 @@ function samePackage(action) {
 function main(message) {
   return new Promise(function(success, failure) {
     var ow = openwhisk(
-        // _.get(message,"WatsonWorkspace.OWArgs",{})
+        _.get(message,"WatsonWorkspace.OWArgs",{})
     );
     ow.actions.invoke({
       name: samePackage("Token"),
@@ -65,3 +65,15 @@ exports.main = main;
 exports.setOpenwhisk = function(obj) {
   openwhisk = obj;
 }
+
+var message = {
+      spaceId: "582754d0e4b0037e37b25ff5",
+      title: "From OW Ttest",
+      text: "This is a sample message!"
+}
+
+main(message).then(resp => {
+    console.dir(resp);
+}).catch(err => {
+    console.dir(err)
+})
