@@ -21,6 +21,7 @@ function samePackage(action) {
 
 function main(message) {
   return new Promise(function(success, failure) {
+    console.log(JSON.stringify(message));
     var ow = openwhisk(
         _.get(message,"WatsonWorkspace.OWArgs",{})
     );
