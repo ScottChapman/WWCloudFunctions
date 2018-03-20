@@ -1,0 +1,20 @@
+{
+            "annotations": [{
+                "actor": {
+                    "name": "Cloud Functions"
+                },
+                "text": "Why yes I can!",
+                "color": "#6CB7FB",
+                "version": 1,
+                "createdBy": "e798f199-42f2-4323-b96f-63467945e0db",
+                "title": "From Echo Bot",
+                "type": "generic",
+                "annotationId": "5aafdd2be4b0ab2a6b289e5e",
+                "created": "2018-03-19T15:54:19.651+0000"
+            }],
+            "version": 1,
+            "id": "5aafdd2be4b0ab2a6b289e5f",
+            "createdBy": "e798f199-42f2-4323-b96f-63467945e0db",
+            "type": "appMessage",
+            "created": "2018-03-19T15:54:19.651+0000"
+}

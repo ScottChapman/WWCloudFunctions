@@ -22,7 +22,7 @@ function samePackage(action) {
 function main(message) {
   return new Promise(function(success, failure) {
     var ow = openwhisk(
-        _.get(message,"WatsonWorkspace.OWArgs",{})
+        // _.get(message,"WatsonWorkspace.OWArgs",{})
     );
     ow.actions.invoke({
       name: samePackage("Token"),
@@ -59,4 +59,9 @@ function main(message) {
       failure(err);
     })
   })
+}
+
+exports.main = main;
+exports.setOpenwhisk = function(obj) {
+  openwhisk = obj;
 }
