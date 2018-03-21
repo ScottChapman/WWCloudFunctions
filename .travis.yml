@@ -1,6 +1,6 @@
 matrix:
   include:
-    - language: scala
+    language: scala
     sudo: required
     scala:
     - 2.11.6
@@ -18,7 +18,7 @@ matrix:
     script:
     - "./tools/travis/build.sh"
 
-    - language: node_js
+    language: node_js
     node_js:
     - "stable"
     script:
