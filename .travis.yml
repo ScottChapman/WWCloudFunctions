@@ -2,6 +2,9 @@ sudo: required
 language: scala
 scala:
 - 2.11.6
+language: node_js
+node_js:
+- "stable"
 services:
 - docker
 env:
