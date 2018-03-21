@@ -1,5 +1,11 @@
 {
-  "createTargetedMessage": {
-    "successful": true
+  "response": {
+    "result": {
+      "data": {
+        "createTargetedMessage": {
+          "successful": true
+        }
+      }
+    }
   }
 }

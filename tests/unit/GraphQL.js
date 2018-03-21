@@ -2,8 +2,8 @@ var should = require("chai").should();
 var fs = require("fs");
 var graphQL = require("../../runtimes/nodejs/GraphQL.js");
 var nock = require("nock");
-var sinon = require("sinon");
 var openwhisk = require("openwhisk");
+var utils = require("./utils/Util.js");
 
 var message = {
   WatsonWorkspace: {
@@ -16,16 +16,9 @@ var message = {
 var tokenResponse = JSON.parse(fs.readFileSync("../data/token.json"));
 var queryResponse = JSON.parse(fs.readFileSync("../data/graphql_response.json"));
 
-var stub = sinon.stub();
-stub.withArgs().returns({
-  actions: {
-    invoke: function (obj) {
-      return Promise.resolve(tokenResponse)}
-  }
-});
-graphQL.setOpenwhisk(stub);
+graphQL.setOpenwhisk(utils.openWhiskStub);
 
-process.env.__OW_ACTION_NAME = "/scottchapman@us.ibm.com_WskDeploy/WatsonWorkspace/SendMessage";
+process.env.__OW_ACTION_NAME = "/scottchapman@us.ibm.com_WskDeploy/WatsonWorkspace/GraphQL";
 
 describe('GraphQL', function() {
   describe('main - GraphQL', function() {

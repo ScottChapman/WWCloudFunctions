@@ -160,7 +160,7 @@ function main(params) {
 
             if (_.get(req.body, "annotationType") === "actionSelected" && req.body.appEvent) {
                 var triggerName = "WWActionSelected";
-        var prefix = "BUTTON_SELECTED: ";
+                var prefix = "BUTTON_SELECTED: ";
                 if (req.body.annotationPayload.actionId.startsWith(prefix)) {
                     triggerName = "WWButtonSelected";
                     var action = req.body.annotationPayload.actionId.substr(prefix.length)
@@ -236,4 +236,9 @@ function validateSender(params, req) {
     var ob_token = req.headers["x-outbound-token"];
     var calculated = crypto.createHmac("sha256", params.WatsonWorkspace.WebhookSecret).update(req.rawBody).digest("hex");
     return ob_token == calculated;
+}
+
+exports.main = main;
+exports.setOpenwhisk = function(obj) {
+  openwhisk = obj;
 }
