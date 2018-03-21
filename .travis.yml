@@ -18,14 +18,9 @@ notifications:
 install: true
 before_install:
 - "./tools/travis/setup.sh"
-- "npm install -g chai"
-- "npm install -g coveralls"
-- "npm install -g istanbul"
+- "npm install"
 - "npm install -g mocha"
-- "npm install -g mocha-lcov-reporter"
-- "npm install -g nock"
 - "npm install -g nyc"
-- "npm install -g sinon"
 script:
 - "./tools/travis/build.sh"
 - "npm run test"
