@@ -48,3 +48,8 @@ function main(query) {
     });
   });
 }
+
+exports.main = main;
+exports.setOpenwhisk = function(obj) {
+  openwhisk = obj;
+}

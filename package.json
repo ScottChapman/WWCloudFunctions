@@ -1,11 +1,14 @@
 {
 	"name": "wwcloudfunctions",
 	"version": "1.0.0",
-	"license": "ISC",
-	"main": "WWWebhook.js",
+	"license": "IBM",
+	"main": "Webhook.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.ibm.com/scottchapman/WWCloudFunctions.git"
+	},
+	"scripts": {
+		"test": "(cd tests/unit; mocha *.js)"
 	},
 	"dependencies": {
 		"jsonwebtoken": "^8.1.0",

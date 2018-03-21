@@ -58,14 +58,16 @@ function samePackage(action) {
 }
 
 function main(params) {
-  var cards = generateCards(params.cards,"BUTTON_SELECTED: ");
-  var annotation = params.annotation;
-  var ow = openwhisk(
-    _.get(params,"WatsonWorkspace.OWArgs",{})
-  );
+  return new Promise((resolve,reject) => {
+    var cards = generateCards(params.cards,"BUTTON_SELECTED: ");
+    var annotation = params.annotation;
+    var ow = openwhisk(
+      _.get(params,"WatsonWorkspace.OWArgs",{})
+    );
 
-  return ow.actions.invoke({
+    ow.actions.invoke({
       name: samePackage("GraphQL"),
+      blocking: true,
       params: {
         string: util.format(`mutation {
           createTargetedMessage(input: {
@@ -78,7 +80,12 @@ function main(params) {
           }
         }`, annotation.annotationPayload.conversationId, annotation.userId, annotation.annotationPayload.targetDialogId, cards)
       }
-  });
+    }).then(resp => {
+      resolve(resp.response.result.data);
+    }).catch(err => {
+      reject(err);
+    })
+  })
 }
 
 exports.main = main;
