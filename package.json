@@ -8,7 +8,7 @@
 		"url": "https://github.ibm.com/scottchapman/WWCloudFunctions.git"
 	},
 	"scripts": {
-		"unit": "(cd tests/unit; mocha *.js)",
+		"unit": "(cd test/unit; mocha *.js)",
 		"old-coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
 		"cover": "nyc --reporter=text --reporter=lcov npm test",
 		"test": "nyc npm run unit",
