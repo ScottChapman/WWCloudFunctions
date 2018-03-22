@@ -17,18 +17,18 @@ describe('Token', function() {
       var auth = nock("https://api.watsonwork.ibm.com")
       .post("/oauth/token")
       .reply(200,authResp);
-			return token.main(credentials).then(resp => {
-				resp.should.have.property("source","refresh");
-			})
+      return token.main(credentials).then(resp => {
+        resp.should.have.property("source","refresh");
+      })
     });
 
     it('should return cached token', function() {
       var auth = nock("https://api.watsonwork.ibm.com")
       .post("/oauth/token")
       .reply(200,authResp);
-			return token.main(credentials).then(resp => {
-				resp.should.have.property("source","cache");
-			})
+      return token.main(credentials).then(resp => {
+        resp.should.have.property("source","cache");
+      })
     });
   });
 });

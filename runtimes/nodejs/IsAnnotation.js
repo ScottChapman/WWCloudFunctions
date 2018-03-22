@@ -15,7 +15,6 @@
  *
  */
 
- 
 var _ = require("lodash");
 
 function main(params) {
