@@ -2,6 +2,7 @@
  */
 
 var request = require('request');
+
 var currentToken;
 var tokenExpiration = 0;
 

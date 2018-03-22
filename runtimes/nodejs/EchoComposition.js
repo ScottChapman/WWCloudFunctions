@@ -5,11 +5,11 @@ composer.if(params =>
       params.content.toLowerCase().startsWith("can you echo") &&
       params.hasOwnProperty("spaceId")
   },
-	composer.sequence(params => {
-		return {
-			spaceId: params.spaceId,
-			title: "From Composer Bot",
-			text: "Of course I can!"
-		};
-	},"WatsonWorkspace/SendMessage")
+  composer.sequence(params => {
+    return {
+      spaceId: params.spaceId,
+      title: "From Composer Bot",
+      text: "Of course I can!"
+    };
+  },"WatsonWorkspace/SendMessage")
 );
