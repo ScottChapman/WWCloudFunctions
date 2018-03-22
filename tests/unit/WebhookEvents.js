@@ -12,7 +12,6 @@ var WatsonWorkspace = {
 }
 
 var graphQLResp = JSON.parse(fs.readFileSync("../data/raw/webhook/graphql_message.json"));
-util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
 
 webhook.setOpenwhisk(util.openWhiskStub);
 
@@ -21,6 +20,8 @@ process.env.__OW_ACTION_NAME = "/scottchapman@us.ibm.com_WskDeploy/WatsonWorkspa
 describe('Webhook', function() {
   describe('main - Webhook Events', function() {
     it('should return successful message created event', function() {
+      util.reject(false);
+      util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
       var body = JSON.parse(fs.readFileSync("../data/raw/webhook/message_created.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
@@ -30,6 +31,8 @@ describe('Webhook', function() {
     });
 
     it('should return successful annotation created event', function() {
+      util.reject(false);
+      util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
       var body = JSON.parse(fs.readFileSync("../data/raw/webhook/keywords_annotation.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {

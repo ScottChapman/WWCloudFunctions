@@ -11,8 +11,6 @@ var failed = JSON.parse(fs.readFileSync("../data/failed_auth.json"));
 var graphQLResp = JSON.parse(fs.readFileSync("../data/graphql_response.json"));
 var response = JSON.parse(fs.readFileSync("../data/targeted_response.json"));
 
-util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
-util.addRejectAction("WatsonWorkspace/GraphQL", failed);
 
 targetedMessage.setOpenwhisk(util.openWhiskStub);
 
@@ -22,12 +20,14 @@ describe('TargetedMessage', function() {
   describe('main - TargetedMessage', function() {
     it('should return successfully send targetted message with card array', function() {
         util.reject(false);
+        util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
         return targetedMessage.main(messageCardArray).then(resp => {
             resp.should.be.deep.equal(response);
         })
     });
 
     it('should return successfully send targetted message single card', function() {
+        util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
         util.reject(false);
         return targetedMessage.main(message).then(resp => {
             resp.should.be.deep.equal(response);
@@ -35,6 +35,7 @@ describe('TargetedMessage', function() {
     });
 
     it('should fail on bad token', function() {
+        util.addRejectAction("WatsonWorkspace/GraphQL", failed);
         util.reject(true);
         return targetedMessage.main(message).catch(resp => {
             resp.message.should.equal("Bad credentials");
