@@ -31,6 +31,17 @@ describe('SendMessage', function() {
       })
     });
 
+    it('should fail Send Message', function() {
+      utils.reject(false);
+      var auth = nock("https://api.watsonwork.ibm.com")
+        .post("/v1/spaces/" + message.spaceId + "/messages")
+        .once()
+        .reply(401,sentMessageResponse);
+      return sendMessage.main(message).catch(resp => {
+        resp.should.be.equal(401);
+      })
+    });
+
     it('should fail on bad token', function() {
         utils.reject(true);
         return sendMessage.main(message).catch(resp => {

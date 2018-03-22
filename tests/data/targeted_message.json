@@ -50,6 +50,11 @@
           }
         },
         "style": "PRIMARY"
+      } ,
+      {
+        "text": "Invite",
+        "payload": "something",
+        "style": "PRIMARY"
       }
     ],
     "title": "Invitation",

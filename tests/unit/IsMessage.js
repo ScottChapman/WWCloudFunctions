@@ -5,15 +5,15 @@ var isMessage = require("../../runtimes/nodejs/IsMessage.js");
 describe('IsMessage', function() {
   describe('main - with focus', function() {
 
-    var message = JSON.parse(fs.readFileSync("../data/message.json"));
     it('should return message', function() {
+      var message = JSON.parse(fs.readFileSync("../data/message.json"));
       return isMessage.main(message).then(resp => {
         resp.should.be.deep.equal(message);
       })
     });
 
-    message = JSON.parse(fs.readFileSync("../data/generic_annotation.json"));
     it('should return message (generic annotation)', function() {
+      var message = JSON.parse(fs.readFileSync("../data/generic_annotation.json"));
       return isMessage.main(message).then(resp => {
         resp.should.be.deep.equal(message);
       })

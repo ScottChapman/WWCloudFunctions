@@ -21,7 +21,18 @@ process.env.__OW_ACTION_NAME = "/scottchapman@us.ibm.com_WskDeploy/WatsonWorkspa
 
 describe('GraphQL', function() {
   describe('main - GraphQL', function() {
-    it('should return data', function() {
+    it('String response should return data', function() {
+        utils.reject(false);
+        var auth = nock("https://api.watsonwork.ibm.com")
+          .post("/graphql")
+          .once()
+          .reply(200,queryResponse);
+        return graphQL.main(JSON.stringify(message)).then(resp => {
+            resp.should.be.deep.equal(queryResponse);
+        })
+    });
+
+    it('Object response should return data', function() {
         utils.reject(false);
         var auth = nock("https://api.watsonwork.ibm.com")
           .post("/graphql")
