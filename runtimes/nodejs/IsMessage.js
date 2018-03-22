@@ -17,7 +17,6 @@
 
 var _ = require("lodash");
 
-
 function main(params) {
   return new Promise((resolve,reject) => {
     params = _.omit(params,"WatsonWorkspace");

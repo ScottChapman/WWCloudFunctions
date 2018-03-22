@@ -1,8 +1,0 @@
-{
-    "access_token": "FakeToken",
-    "token_type": "bearer",
-    "expires_in": 3599,
-    "id": "someID",
-    "jti": "someJTI",
-    "scope": "transcript_read profile_update message_create space_list message_read file_upload space_change file_download space_read membership_list profile_read"
-}

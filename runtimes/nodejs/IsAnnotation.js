@@ -26,7 +26,7 @@ function main(params) {
           resolve(_.omit(params,"filterFor"));
         }
         else {
-          reject(params);
+          reject(_.omit(params,"filterFor"));
         }
       }
       else {

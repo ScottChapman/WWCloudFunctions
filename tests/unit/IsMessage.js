@@ -12,6 +12,13 @@ describe('IsMessage', function() {
       })
     });
 
+    message = JSON.parse(fs.readFileSync("../data/generic_annotation.json"));
+    it('should return message (generic annotation)', function() {
+      return isMessage.main(message).then(resp => {
+        resp.should.be.deep.equal(message);
+      })
+    });
+
     var taxonomyAnnotation = JSON.parse(fs.readFileSync("../data/taxonomy.json"));
     it('should reject annotation', function() {
       return isMessage.main(taxonomyAnnotation).catch(resp => {

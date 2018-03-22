@@ -12,6 +12,22 @@ describe('IsAnnotation', function() {
       })
     });
 
+    it('should reject annotation not being filtered for', function() {
+      taxonomyAnnotation.filterFor = {annotationType: "generic"};
+      return isAnnotation.main(taxonomyAnnotation).catch(resp => {
+        delete taxonomyAnnotation.filterFor;
+        resp.should.be.deep.equal(taxonomyAnnotation);
+      })
+    });
+
+    it('should return annotation being filtered for', function() {
+      taxonomyAnnotation.filterFor = {annotationType: "message-nlp-taxonomy"};
+      return isAnnotation.main(taxonomyAnnotation).then(resp => {
+        delete taxonomyAnnotation.filterFor;
+        resp.should.be.deep.equal(taxonomyAnnotation);
+      })
+    });
+
     var message = JSON.parse(fs.readFileSync("../data/message.json"));
     it('should reject message', function() {
       return isAnnotation.main(message).catch(resp => {

@@ -16,14 +16,23 @@ exports.generateEvent = function(body,params) {
   return(message);
 }
 
-var tokenResponse = JSON.parse(fs.readFileSync("../data/token.json"));
+var tokenResolveResponse = JSON.parse(fs.readFileSync("../data/token.json"));
+var tokenRejectResponse = JSON.parse(fs.readFileSync("../data/failed_auth.json"));
 
-var actions = {
-  "WatsonWorkspace/Token": tokenResponse
+var resolveActions = {
+  "WatsonWorkspace/Token": tokenResolveResponse
 }
 
+var rejectActions = {
+  "WatsonWorkspace/Token": tokenRejectResponse
+}
+
+var reject = false;
 function InvokeAction(obj) {
-  return Promise.resolve(actions[obj.name]);
+  if (reject)
+    return Promise.reject(rejectActions[obj.name]);
+  else
+    return Promise.resolve(resolveActions[obj.name]);
 }
 
 var stub = sinon.stub();
@@ -33,8 +42,16 @@ stub.withArgs().returns({
   }
 });
 
-exports.addAction = function(action, obj) {
-  actions[action] = obj;
+exports.addResolveAction = function(action, obj) {
+  resolveActions[action] = obj;
+}
+
+exports.addRejectAction = function(action, obj) {
+  rejectActions[action] = obj;
 }
 
 exports.openWhiskStub = stub;
+
+exports.reject = function(rej) {
+  reject = rej;
+}

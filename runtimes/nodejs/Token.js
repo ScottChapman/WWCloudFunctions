@@ -43,3 +43,4 @@ function refresh(params) {
 }
 
 exports.main = main;
+exports.reset = function() { tokenExpiration = 0; }

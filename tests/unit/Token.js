@@ -14,8 +14,10 @@ var authResp = JSON.parse(fs.readFileSync("../data/auth.json"));
 describe('Token', function() {
   describe('main - Token', function() {
     it('should return refreshed token', function() {
+      nock.cleanAll();
       var auth = nock("https://api.watsonwork.ibm.com")
       .post("/oauth/token")
+      .once()
       .reply(200,authResp);
       return token.main(credentials).then(resp => {
         resp.should.have.property("source","refresh");
@@ -23,11 +25,19 @@ describe('Token', function() {
     });
 
     it('should return cached token', function() {
-      var auth = nock("https://api.watsonwork.ibm.com")
-      .post("/oauth/token")
-      .reply(200,authResp);
       return token.main(credentials).then(resp => {
         resp.should.have.property("source","cache");
+      })
+    });
+
+    it('should reject bad result', function() {
+      token.reset();
+      var auth = nock("https://api.watsonwork.ibm.com")
+      .post("/oauth/token")
+      .once()
+      .reply(401,{status: "failed"});
+      return token.main(credentials).catch(resp => {
+        resp.body.should.have.property("status","failed");
       })
     });
   });

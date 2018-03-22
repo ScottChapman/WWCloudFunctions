@@ -1,0 +1,33 @@
+{
+    "annotationPayload": {
+        "actor": {
+            "name": "IBM Cloud Function Bot"
+        },
+        "text": "This is a sample message!",
+        "color": "#6CB7FB",
+        "version": 1,
+        "title": "From OW Ttest",
+        "type": "generic"
+    },
+    "spaceName": "ScottsSpace",
+    "messageId": "5ab3b62ce4b03f29ffe3c80a",
+    "appEvent": true,
+    "message": {
+        "content": null,
+        "id": "5ab3b62ce4b03f29ffe3c80a",
+        "created": "2018-03-22T13:57:00.453+0000",
+        "createdBy": {
+            "displayName": "WWCloudFunctions",
+            "id": "e798f199-42f2-4323-b96f-63467945e0db",
+            "emailAddresses": null,
+            "photoUrl": null
+        }
+    },
+    "time": "Thu Mar 22 2018 13:57:40 GMT+0000 (UTC)",
+    "userId": "e798f199-42f2-4323-b96f-63467945e0db",
+    "type": "message-annotation-added",
+    "annotationId": "5ab3b62ce4b03f29ffe3c809",
+    "spaceId": "582754d0e4b0037e37b25ff5",
+    "userName": "WWCloudFunctions",
+    "annotationType": "generic"
+}

@@ -21,12 +21,21 @@ process.env.__OW_ACTION_NAME = "/scottchapman@us.ibm.com_WskDeploy/WatsonWorkspa
 describe('SendMessage', function() {
   describe('main - SendMessage', function() {
     it('should return Sent Message', function() {
+      utils.reject(false);
       var auth = nock("https://api.watsonwork.ibm.com")
-      .post("/v1/spaces/" + message.spaceId + "/messages")
-      .reply(201,sentMessageResponse);
-            return sendMessage.main(message).then(resp => {
-                resp.should.be.deep.equal(sentMessageResponse);
-            })
+        .post("/v1/spaces/" + message.spaceId + "/messages")
+        .once()
+        .reply(201,sentMessageResponse);
+      return sendMessage.main(message).then(resp => {
+        resp.should.be.deep.equal(sentMessageResponse);
+      })
+    });
+
+    it('should fail on bad token', function() {
+        utils.reject(true);
+        return sendMessage.main(message).catch(resp => {
+            resp.message.should.equal("Bad credentials");
+        })
     });
   });
 });

@@ -32,27 +32,29 @@
     "userName": "Scott Chapman",
     "annotationType": "actionSelected"
   },
-  "cards": {
-    "subtitle": "Special Event",
-    "text": "Invitation for Scott Chapman",
-    "buttons": [
-      {
-        "text": "Invite",
-        "payload": {
-          "member": {
-            "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
-            "email": "scottchapman@us.ibm.com",
-            "displayName": "Scott Chapman"
+  "cards": [
+    {
+      "subtitle": "Special Event",
+      "text": "Invitation for Scott Chapman",
+      "buttons": [
+        {
+          "text": "Invite",
+          "payload": {
+            "member": {
+              "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+              "email": "scottchapman@us.ibm.com",
+              "displayName": "Scott Chapman"
+            },
+            "response": {
+              "title": "Invited!",
+              "text": "You've invited Scott Chapman."
+            }
           },
-          "response": {
-            "title": "Invited!",
-            "text": "You've invited Scott Chapman."
-          }
-        },
-        "style": "PRIMARY"
-      }
-    ],
-    "title": "Invitation",
-    "type": "INFORMATION"
-  }
+          "style": "PRIMARY"
+        }
+      ],
+      "title": "Invitation",
+      "type": "INFORMATION"
+    }
+  ]
 }
