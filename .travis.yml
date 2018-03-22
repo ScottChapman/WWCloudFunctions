@@ -16,12 +16,12 @@ env:
 install: true
 before_install:
 - "./tools/travis/setup.sh"
+script:
+- "./tools/travis/build.sh"
 - npm install
 - npm install -g coveralls
 - npm install -g mocha
 - npm install -g nyc
-script:
-- "./tools/travis/build.sh"
 - npm run test
 after_success:
 - npm run coveralls
