@@ -123,9 +123,10 @@ function main(params) {
         var ow = openwhisk(
             _.get(params,"WatsonWorkspace.OWArgs",{})
         );
+        var rawBody =Buffer.from(params.__ow_body, "base64").toString();
         var req = {
-            rawBody: Buffer.from(params.__ow_body, "base64").toString(),
-            body: JSON.parse(Buffer.from(params.__ow_body, "base64").toString()),
+            rawBody: rawBody,
+            body: JSON.parse(rawBody),
             headers: params.__ow_headers
         };
 

@@ -18,8 +18,6 @@ var challenge = {
 
 var message = util.generateEvent(challenge,WatsonWorkspace);
 
-var tokenResponse = JSON.parse(fs.readFileSync("../data/token.json"));
-
 webhook.setOpenwhisk(util.openWhiskStub);
 
 process.env.__OW_ACTION_NAME = "/scottchapman@us.ibm.com_WskDeploy/WatsonWorkspace/Webhook";

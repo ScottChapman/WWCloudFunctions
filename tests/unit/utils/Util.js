@@ -2,6 +2,10 @@ var crypto = require("crypto");
 var sinon = require("sinon");
 var fs = require("fs");
 
+exports.decodeBody = function(body) {
+  return JSON.parse(Buffer.from(body, "base64").toString());
+}
+
 exports.generateEvent = function(body,params) {
   var message = {
     WatsonWorkspace: params,
@@ -35,10 +39,21 @@ function InvokeAction(obj) {
     return Promise.resolve(resolveActions[obj.name]);
 }
 
+function InvokeTrigger(obj) {
+  if (reject)
+    return Promise.reject({status: "failed"});
+  else
+    return Promise.resolve({status: "success"});
+}
+
+
 var stub = sinon.stub();
 stub.withArgs().returns({
   actions: {
     invoke: InvokeAction
+  },
+  triggers: {
+    invoke: InvokeTrigger
   }
 });
 

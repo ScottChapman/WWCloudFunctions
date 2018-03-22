@@ -1,0 +1,13 @@
+
+{
+  "spaceName": "ScottsSpace",
+  "spaceId": "582754d0e4b0037e37b25ff5",
+  "annotationPayload": "{\"type\":\"generic\",\"version\":1,\"color\":\"#6CB7FB\",\"title\":\"From OW Ttest\",\"text\":\"This is a sample message!\",\"actor\":{\"name\":\"IBM Cloud Function Bot\"}}",
+  "messageId": "5ab3e0e4e4b068880e35e1cd",
+  "annotationType": "generic",
+  "annotationId": "5ab3e0e4e4b068880e35e1cc",
+  "time": 1521737956824,
+  "type": "message-annotation-added",
+  "userName": "WWCloudFunctions",
+  "userId": "e798f199-42f2-4323-b96f-63467945e0db"
+}

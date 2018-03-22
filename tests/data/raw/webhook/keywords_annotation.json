@@ -1,0 +1,11 @@
+{
+  "spaceName": "ScottsSpace",
+  "spaceId": "582754d0e4b0037e37b25ff5",
+  "annotationPayload": "{\"language\":\"en\",\"keywords\":[{\"relevance\":0.91615,\"text\":\"test\"}]}",
+  "messageId": "5ab3e27be4b0f06c7f8da41b",
+  "annotationType": "message-nlp-keywords",
+  "annotationId": "5ab3e27be4b0819d6a9b48e8",
+  "time": 1521738363902,
+  "type": "message-annotation-added",
+  "userId": "toscana-aip-nlc-consumer-client-id"
+}

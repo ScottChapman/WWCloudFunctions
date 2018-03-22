@@ -14,7 +14,8 @@ var request = require('request');
 var _ = require('lodash');
 
 function samePackage(action) {
-  return (process.env.__OW_ACTION_NAME.replace(/\/[^\/]+$/,"") + "/" + action).replace(/^\/[^\/]+\//,"");
+  // return (process.env.__OW_ACTION_NAME.replace(/\/[^\/]+$/,"") + "/" + action).replace(/^\/[^\/]+\//,"");
+  return "WatsonWorkspace/" + action;
 }
 
 function main(query) {
@@ -35,8 +36,7 @@ function main(query) {
           },
           body: query.string
         }, (err, response) => {
-          if (response.hasOwnProperty("body") && typeof response.body === "string")
-            response.body = JSON.parse(response.body);
+          response.body = JSON.parse(response.body);
           if (err || response.statusCode !== 200 || response.body.hasOwnProperty("errors")) {
             failure(response.body.errors);
           } else {
