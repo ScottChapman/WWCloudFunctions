@@ -54,4 +54,4 @@ source $DEPLOYDIR/packages/installCatalog.sh $AUTH_KEY $EDGE_HOST $WSK_CLI
 
 # Test
 cd $ROOTDIR/WWCloudFunctions
-./gradlew :tests:test
+./gradlew :test:test

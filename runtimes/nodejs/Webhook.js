@@ -60,7 +60,7 @@ function expandEvent(body, params, ow) {
               if (body.type.startsWith("message-annotation"))
                 body.appEvent = resp.response.result.data.message.createdBy.id === params.AppId;
 
-              resolve(_.merge(data, resp.response.result.data));
+              resolve(_.merge(body, resp.response.result.data));
             }).catch(err => {
               reject(err);
             });
