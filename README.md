@@ -30,6 +30,8 @@ The code for the template is located [here](runtimes/nodejs). To create a very b
   - `bx wsk action get WatsonWorkspace/Webhook --url`
 - Paste this into your App as your Webhook URL. NOTE: URL decode any coding (e.g. change %40 => @). Add the Webhook Secret to your PackageParmeters.json and update with
   - `bx wsk package update WatsonWorkspace -P PackageParameters.json`.
+- Deploy the GraphQL function
+  - `bx wsk action create WatsonWorkspace/GraphQL GraphQL.js --kind nodejs:8`
 - Create the triggers for the events.
   - `bx wsk trigger create WWApplicationEvents`
   - `bx wsk trigger create WWWebhookEvents`
@@ -42,8 +44,6 @@ This example also includes IBM Cloud Functions for sending messages and running 
   - `bx wsk action create WatsonWorkspace/Token Token.js --kind nodejs:8`
 - To deploy the SendMessage function run
   - `bx wsk action create WatsonWorkspace/SendMessage SendMessage.js --kind nodejs:8`
-- To deploy the GraphQL function
-  - `bx wsk action create WatsonWorkspace/GraphQL GraphQL.js --kind nodejs:8`
 - To deploy the TargetedMessage function
   - `bx wsk action create WatsonWorkspace/TargetedMessage TargetedMessage.js --kind nodejs:8`
 

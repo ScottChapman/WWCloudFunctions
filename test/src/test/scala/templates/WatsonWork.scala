@@ -261,7 +261,7 @@ def cleanUp() {
     println("Running SendMessage test")
     val message = Map(
       "spaceId" -> JsString("582754d0e4b0037e37b25ff5"),
-      "title" -> JsString("From OW Ttest"),
+      "title" -> JsString("From OW Test"),
       "text" -> JsString("This is a sample message!")
     )
     withActivation(wskrest.activation, wskrest.action.invoke("WatsonWorkspace/SendMessage",parameters = message)) { activation =>
