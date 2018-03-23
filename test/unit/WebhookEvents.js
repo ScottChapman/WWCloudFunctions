@@ -40,5 +40,29 @@ describe('Webhook', function() {
         resp.body.status.should.equal("OK!");
       })
     });
+
+    it('should return successful action selected event', function() {
+      util.reject(false);
+      util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
+      var body = JSON.parse(fs.readFileSync("../data/raw/webhook/action_selected.json"));
+      var message = util.generateEvent(body,WatsonWorkspace);
+      return webhook.main(message).then(resp => {
+        resp.statusCode.should.equal(200);
+        resp.body.status.should.equal("OK!");
+      })
+    });
+
+    it('should return successful button selected event', function() {
+      util.reject(false);
+      var targetedMessage = JSON.parse(fs.readFileSync("../data/targeted_response.json"));
+      util.addResolveAction("WatsonWorkspace/TargetedMessage", targetedMessage);
+      util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
+      var body = JSON.parse(fs.readFileSync("../data/raw/webhook/button_selected.json"));
+      var message = util.generateEvent(body,WatsonWorkspace);
+      return webhook.main(message).then(resp => {
+        resp.statusCode.should.equal(200);
+        resp.body.status.should.equal("OK!");
+      })
+    });
   });
 });

@@ -88,33 +88,22 @@ function cleanUpEvent(event, params) {
 }
 
 function closeAction(annotation, params, ow) {
-    var card = {
-      type: 'INFORMATION',
-      title: 'Action Completed',
-      text: "You can close this action.",
-      buttons: []
-    };
+  var card = {
+    type: 'INFORMATION',
+    title: 'Action Completed',
+    text: "You can close this action.",
+    buttons: []
+  };
 
-    /* istanbul ignore else  */
-    if (_.has(annotation,"annotationPayload.actionId.response")) {
-        _.merge(card, annotation.annotationPayload.actionId.response);
-    }
+  /* istanbul ignore else  */
+  if (_.has(annotation,"annotationPayload.actionId.response")) {
+    _.merge(card, annotation.annotationPayload.actionId.response);
+  }
 
-    ow.actions.invoke ({
-        name: samePackage("TargetedMessage"),
-        blocking: true,
-        params: {cards: card, annotation: annotation}
-    }).then(resp => {
-        ow.actions.invoke ({
-            name: samePackage("GraphQL"),
-            blocking: true,
-            params: resp.response.result
-        }).then(resp => {
-        })
-    }).catch(err => {
-        console.dir(err);
-    })
-
+  ow.actions.invoke ({
+    name: samePackage("TargetedMessage"),
+    params: {cards: card, annotation: annotation}
+  });
 }
 
 function main(params) {
@@ -186,7 +175,7 @@ function main(params) {
                             status: "OK!"
                         }
                     });
-                }).catch(err => {
+                }).catch(/* istanbul ignore next */err => {
                     reject({
                         statusCode: 401,
                         message: "Error firing trigger",
@@ -212,14 +201,14 @@ function main(params) {
                                 status: "OK!"
                             }
                         });
-                    }).catch(err => {
+                    }).catch(/* istanbul ignore next */err => {
                         reject({
                           statusCode: 401,
                           message: "Error firing trigger",
                           error: err
                         });
                     });
-                }).catch(err => {
+                }).catch(/* istanbul ignore next */err => {
                     reject({
                       statusCode: 401,
                       message: "Error expanding event",

@@ -1,0 +1,47 @@
+{
+  "cards": {
+    "type": "INFORMATION",
+    "title": "Invited!",
+    "text": "You've invited Scott Chapman.",
+    "buttons": [
+
+    ]
+  },
+  "annotation": {
+    "annotationPayload": {
+      "referralMessageId": "a67207a0-2620-11e8-928c-f1f45453ff65",
+      "targetAppId": "e798f199-42f2-4323-b96f-63467945e0db",
+      "actionId": {
+        "member": {
+          "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+          "email": "scottchapman@us.ibm.com",
+          "displayName": "Scott Chapman"
+        },
+        "response": {
+          "title": "Invited!",
+          "text": "You've invited Scott Chapman."
+        }
+      },
+      "version": "1.0",
+      "updated": 1521813127750,
+      "conversationId": "582754d0e4b0037e37b25ff5",
+      "tokenClientId": "toscana-web-client-id",
+      "createdBy": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+      "targetDialogId": "a67207a0-2620-11e8-928c-f1f45453ff65",
+      "type": "actionSelected",
+      "annotationId": "5ab50687e4b09cf3e7325d14",
+      "updatedBy": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+      "created": 1521813127750
+    },
+    "spaceName": "ScottsSpace",
+    "messageId": "5ab50687e4b09cf3e7325d13",
+    "appEvent": true,
+    "time": "Fri Mar 23 2018 13:52:08 GMT+0000 (UTC)",
+    "userId": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+    "type": "message-annotation-added",
+    "annotationId": "5ab50687e4b09cf3e7325d14",
+    "spaceId": "582754d0e4b0037e37b25ff5",
+    "userName": "Scott Chapman",
+    "annotationType": "actionSelected"
+  }
+}
