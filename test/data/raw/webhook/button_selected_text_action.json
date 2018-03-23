@@ -1,0 +1,12 @@
+{
+  "spaceName": "ScottsSpace",
+  "spaceId": "582754d0e4b0037e37b25ff5",
+  "annotationPayload": "{\"type\":\"actionSelected\",\"annotationId\":\"5ab50471e4b0db0d156129fc\",\"type\":\"actionSelected\",\"version\":\"1.0\",\"created\":1521812593339,\"createdBy\":\"d76b3ac0-8f0a-1028-9874-db07163b51b2\",\"updated\":1521812593339,\"updatedBy\":\"d76b3ac0-8f0a-1028-9874-db07163b51b2\",\"tokenClientId\":\"toscana-web-client-id\",\"conversationId\":\"582754d0e4b0037e37b25ff5\",\"targetDialogId\":\"a67207a0-2620-11e8-928c-f1f45453ff65\",\"referralMessageId\":\"a67207a0-2620-11e8-928c-f1f45453ff65\",\"actionId\":\"BUTTON_SELECTED: something\",\"targetAppId\":\"some_id\"}",
+  "messageId": "5ab50471e4b0db0d156129fb",
+  "annotationType": "actionSelected",
+  "annotationId": "5ab50471e4b0db0d156129fc",
+  "time": 1521812593339,
+  "type": "message-annotation-added",
+  "userName": "Scott Chapman",
+  "userId": "d76b3ac0-8f0a-1028-9874-db07163b51b2"
+}

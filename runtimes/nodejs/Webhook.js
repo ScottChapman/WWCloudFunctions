@@ -61,7 +61,7 @@ function expandEvent(body, params, ow) {
                 body.appEvent = resp.response.result.data.message.createdBy.id === params.AppId;
 
               resolve(_.merge(body, resp.response.result.data));
-            }).catch(err => {
+            }).catch(/* istanbul ignore next */err => {
               reject(err);
             });
         } else {

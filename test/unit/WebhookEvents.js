@@ -19,9 +19,12 @@ process.env.__OW_ACTION_NAME = "/scottchapman@us.ibm.com_WskDeploy/WatsonWorkspa
 
 describe('Webhook', function() {
   describe('main - Webhook Events', function() {
-    it('should return successful message created event', function() {
+    before(() => {
       util.reject(false);
       util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
+    })
+
+    it('should return successful message created event', function() {
       var body = JSON.parse(fs.readFileSync("../data/raw/webhook/message_created.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
@@ -31,8 +34,6 @@ describe('Webhook', function() {
     });
 
     it('should return successful annotation created event', function() {
-      util.reject(false);
-      util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
       var body = JSON.parse(fs.readFileSync("../data/raw/webhook/keywords_annotation.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
@@ -42,8 +43,6 @@ describe('Webhook', function() {
     });
 
     it('should return successful action selected event', function() {
-      util.reject(false);
-      util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
       var body = JSON.parse(fs.readFileSync("../data/raw/webhook/action_selected.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
@@ -53,11 +52,20 @@ describe('Webhook', function() {
     });
 
     it('should return successful button selected event', function() {
-      util.reject(false);
       var targetedMessage = JSON.parse(fs.readFileSync("../data/targeted_response.json"));
       util.addResolveAction("WatsonWorkspace/TargetedMessage", targetedMessage);
-      util.addResolveAction("WatsonWorkspace/GraphQL", graphQLResp);
       var body = JSON.parse(fs.readFileSync("../data/raw/webhook/button_selected.json"));
+      var message = util.generateEvent(body,WatsonWorkspace);
+      return webhook.main(message).then(resp => {
+        resp.statusCode.should.equal(200);
+        resp.body.status.should.equal("OK!");
+      })
+    });
+
+    it('should return successful button selected text action event', function() {
+      var targetedMessage = JSON.parse(fs.readFileSync("../data/targeted_response.json"));
+      util.addResolveAction("WatsonWorkspace/TargetedMessage", targetedMessage);
+      var body = JSON.parse(fs.readFileSync("../data/raw/webhook/button_selected_text_action.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
         resp.statusCode.should.equal(200);

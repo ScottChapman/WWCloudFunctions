@@ -20,8 +20,12 @@ process.env.__OW_ACTION_NAME = "/scottchapman@us.ibm.com_WskDeploy/WatsonWorkspa
 
 describe('SendMessage', function() {
   describe('main - SendMessage', function() {
-    it('should return Sent Message', function() {
+    
+    beforeEach(() => {
       utils.reject(false);
+    })
+
+    it('should return Sent Message', function() {
       var auth = nock("https://api.watsonwork.ibm.com")
         .post("/v1/spaces/" + message.spaceId + "/messages")
         .once()
@@ -32,7 +36,6 @@ describe('SendMessage', function() {
     });
 
     it('should fail Send Message', function() {
-      utils.reject(false);
       var auth = nock("https://api.watsonwork.ibm.com")
         .post("/v1/spaces/" + message.spaceId + "/messages")
         .once()
