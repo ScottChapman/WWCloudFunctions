@@ -19,7 +19,6 @@ var _ = require("lodash");
 
 function main(params) {
   return new Promise((resolve,reject) => {
-    params = _.omit(params,"WatsonWorkspace");
     if (params.hasOwnProperty("annotationType") && params.annotationType !== "generic") {
       if (params.hasOwnProperty("filterFor")) {
         if (_.isMatch(params,params.filterFor)) {

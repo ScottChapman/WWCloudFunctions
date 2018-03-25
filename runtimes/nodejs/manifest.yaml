@@ -1,33 +1,54 @@
 packages:
   WatsonWorkspace: #this is a package name
-    inputs:
-      WatsonWorkspace:
-        type: json
-        value: {
-          "AppId": "${WW_APP_ID}",
-          "AppSecret": "${WW_APP_SECRET}",
-          "WebhookSecret": "${WW_WEBHOOK_SECRET}"
-        }
     actions:
       Webhook: # this is a action name
+        inputs:
+          WatsonWorkspace:
+            type: json
+            value: {
+              "AppId": "${WW_APP_ID}",
+              "AppSecret": "${WW_APP_SECRET}",
+              "WebhookSecret": "${WW_WEBHOOK_SECRET}"
+            }
         function: Webhook.js
         runtime: nodejs:8
         web-export: raw
         # raw-http: true
       Token:
+        inputs:
+          WatsonWorkspace:
+            type: json
+            value: {
+              "AppId": "${WW_APP_ID}",
+              "AppSecret": "${WW_APP_SECRET}",
+              "WebhookSecret": "${WW_WEBHOOK_SECRET}"
+            }
         function: Token.js
         runtime: nodejs:8
       GraphQL:
+        inputs:
+          WatsonWorkspace:
+            type: json
+            value: {
+              "AppId": "${WW_APP_ID}",
+              "AppSecret": "${WW_APP_SECRET}",
+              "WebhookSecret": "${WW_WEBHOOK_SECRET}"
+            }
         function: GraphQL.js
         runtime: nodejs:8
       SendMessage:
+        inputs:
+          WatsonWorkspace:
+            type: json
+            value: {
+              "AppId": "${WW_APP_ID}",
+              "AppSecret": "${WW_APP_SECRET}",
+              "WebhookSecret": "${WW_WEBHOOK_SECRET}"
+            }
         function: SendMessage.js
         runtime: nodejs:8
       TargetedMessage:
         function: TargetedMessage.js
-        runtime: nodejs:8
-      Echo:
-        function: Echo.js
         runtime: nodejs:8
       IsMessage:
         function: IsMessage.js
@@ -35,14 +56,25 @@ packages:
       IsAnnotation:
         function: IsAnnotation.js
         runtime: nodejs:8
-    sequences:
-      EchoAppSequence:
-        actions: IsMessage, Echo, WatsonWorkspace/SendMessage
+      IsFocus:
+        function: IsFocus.js
+        runtime: nodejs:8
+      IsMoment:
+        function: IsMoment.js
+        runtime: nodejs:8
     triggers:
       WWApplicationEvents:
       WWWebhookEvents:
       WWActionSelected:
       WWButtonSelected:
+  WWEchoApp:
+    actions:
+      Echo:
+        function: Echo.js
+        runtime: nodejs:8
+    sequences:
+      EchoAppSequence:
+        actions: WatsonWorkspace/IsMessage, Echo, WatsonWorkspace/SendMessage
     rules:
       EchoAppRule:
         trigger: WWWebhookEvents
