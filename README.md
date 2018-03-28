@@ -10,6 +10,7 @@ You can use the [Dumper](samples/Dumper) deployment to assist in your applicatio
 
 ## Sample applications
 - [**Invitation Command**](samples/InviteCommand) - An example application which handles an invitation command from the user and allows them to invite any member of the space to an event.
+- [**Weather Bot**](samples/Weather) - An app that leverages the Watson cognitive capabilities of Watson Work to be able to give weather conditions and forecasts.
 
 ## Deployment
 You can deploy this code using a number of different methods. I've provided instructions for the following:

@@ -1,0 +1,13 @@
+packages:
+  Forecast: #this is a package name
+    actions:
+      WeatherForecast: # this is a action name
+        function: WeatherForecast.js
+        runtime: nodejs:8
+    sequences:
+      ForecastSequence:
+        actions: WatsonWorkspace/IsFocus, WeatherForecast, WatsonWorkspace/SendMessage
+    rules:
+      WeatherRule:
+        trigger: WWWebhookEvents
+        action: ForecastSequence
