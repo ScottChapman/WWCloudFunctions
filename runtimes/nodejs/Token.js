@@ -32,7 +32,7 @@ function refresh(params) {
         reject(err || res);
       } else {
         currentToken = res.body.access_token;
-        tokenExpiration = Date.now() + (res.body.expires_in * 1000);
+        tokenExpiration = Date.now() + ((res.body.expires_in - 2) * 1000);
         resolve({
           source: "refresh",
           jwt: currentToken
