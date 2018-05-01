@@ -1,0 +1,464 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test
+compile options:
+7 items
+0 -> -deprecation
+1 -> -unchecked
+2 -> -feature
+3 -> -unchecked
+4 -> -deprecation
+5 -> -Xfatal-warnings
+6 -> -Ywarn-unused-import
+javac options:
+11 items
+00 -> -source
+01 -> 1.8
+02 -> -target
+03 -> 1.8
+04 -> -d
+05 -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test
+06 -> -encoding
+07 -> UTF-8
+08 -> -g
+09 -> -proc:none
+10 -> -XDuseUnsharedTable=true
+compiler version:
+1 items
+0 -> 2.11.11
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+16 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$1$$anonfun$apply$1$$anonfun$apply$2.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$1$$anonfun$apply$1.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$1.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$2$$anonfun$apply$3$$anonfun$apply$4.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$2$$anonfun$apply$3.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$2.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$3$$anonfun$apply$5$$anonfun$apply$6.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$3$$anonfun$apply$5.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$3.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$4$$anonfun$apply$7$$anonfun$apply$8.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$4$$anonfun$apply$7.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$4.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$5$$anonfun$apply$9$$anonfun$apply$10.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$5$$anonfun$apply$9.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$5.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests.class
+binary dependencies:
+26 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jce.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-http-core_2.11/10.0.10/a9d8d525836439cf296303abf7d73625728609db/akka-http-core_2.11-10.0.10.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/9ce04e34240f674bc72680f8b843b1457383161a/commons-codec-1.9.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/.gradle/caches/modules-2/files-2.1/io.spray/spray-json_2.11/1.3.3/960e398a2b6a57dd67faf2c98561a125ca93080a/spray-json_2.11-1.3.3.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.11/e283d2b7fde6504f6a86458b1f6af465353907cc/scala-library-2.11.11.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scalactic/scalactic_2.11/3.0.1/3c444d143879dc172fa555cea08fd0de6fa2f34f/scalactic_2.11-3.0.1.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scalatest/scalatest_2.11/3.0.1/40a1842e7f0b915d87de1cb69f9c6962a65ee1fd/scalatest_2.11-3.0.1.jar
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/ActivationResponse.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/ActivationResult.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/BaseActivation.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/TestHelpers.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/TestUtils.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/Wsk$.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/Wsk.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskProps$.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskProps.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskTestHelpers.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/DeleteFromCollectionRest.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/RestResult.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRest.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestAction.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestActivation.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestPackage.class
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> /Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestTrigger.class
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+1 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> whisk.core.entity.ByteSize
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+16 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$1
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$1$$anonfun$apply$1
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$1$$anonfun$apply$1$$anonfun$apply$2
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$2
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$2$$anonfun$apply$3
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$2$$anonfun$apply$3$$anonfun$apply$4
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$3
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$3$$anonfun$apply$5
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$3$$anonfun$apply$5$$anonfun$apply$6
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$4
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$4$$anonfun$apply$7
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$4$$anonfun$apply$7$$anonfun$apply$8
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$5
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$5$$anonfun$apply$9
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages.WatsonWorkTests$$anonfun$5$$anonfun$apply$9$$anonfun$apply$10
+used names:
+251 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> +
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> ->
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> <byname>
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> <init>
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> <refinement>
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> <repeated>
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> A
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> ActivationResponse
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> ActivationResult
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Any
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> AnyShouldWrapper
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Array
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> ArrowAssoc
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Assertion
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> AssetCleaner
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> B
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Base64
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> BaseActivation
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> BeforeAndAfterAll
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> BehaviorWord
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> BigDecimal
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Boolean
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Byte
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> ByteSize
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> DatatypeConverter
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> DefaultJsonProtocol
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Double
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Duration
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> E
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Emptiness
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> EmptyWord
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Equality
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Exception
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> File
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> FlatSpec
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Function1
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Function2
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Int
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> IntJsonFormat
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> ItVerbString
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> ItWord
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JUnitRunner
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JsArray
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JsBoolean
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JsField
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JsNumber
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JsObject
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JsString
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JsValue
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> JsonReader
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Key
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Long
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Mac
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Map
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> MatcherFactory1
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> NotWord
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Nothing
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> OPT
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Option
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Position
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Predef
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Prettifier
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Product
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> RestResult
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> ResultOfNotWordForAny
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> RunResult
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> RunWith
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> SecretKeySpec
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Serializable
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Some
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> StatusCode
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> String
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> StringJsonFormat
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> System
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> T
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> TYPECLASS1
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> TestHelpers
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> TestUtils
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Tuple2
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Unit
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Vector
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WatsonWorkTests
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WatsonWorkspaceParams
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> Wsk
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WskProps
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WskRest
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WskRestAction
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WskRestActivation
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WskRestPackage
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WskRestTrigger
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> WskTestHelpers
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> action
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> activation
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> apache
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> apply
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> asJsObject
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> be
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> behavior
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> binary
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> bind
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> cleanUp
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> codec
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> common
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> commons
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> compactPrint
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> convertTo
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> convertToAnyShouldWrapper
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> create
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> crypto
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> data
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> decode
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> decodeBase64
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> default
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> delete
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> doFinal
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> e
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> emptinessOfOption
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> empty
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> enablers
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> encode
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> encodeBase64
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> equal
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> equalsIgnoreCase
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> expected
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> fields
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> generateHMAC
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> generateRequest
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> get
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> getBytes
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> getInstance
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> getenv
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> graphQLFile
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> here
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> in
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> init
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> invoke
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> io
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> it
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> java
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> javax
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> json
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> junit
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> lang
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> mac
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> message
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> not
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> of
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> org
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> output
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> package
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> packages
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> payload
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> pkg
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> preHashString
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> printHexBinary
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> println
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> rawBody
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> request
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> resp
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> response
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> rest
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> result
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> runner
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> scala
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> scalactic
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> scalatest
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> secret
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> sendMessageFile
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> sharedSecret
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> should
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> source
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> spec
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> spray
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> statusCode
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> toLowerCase
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> toString
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> token
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> tokenFile
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> trigger
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> txt
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> webhookFile
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> withActivation
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> withAssetCleaner
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> wsk
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> wskprops
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> wskrest
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$1
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$10
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$11
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$12
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$13
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$14
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$15
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$16
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$17
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$18
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$19
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$2
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$20
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$21
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$22
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$23
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$24
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$25
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$26
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$27
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$28
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$29
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$3
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$30
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$31
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$32
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$33
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$34
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$35
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$36
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$37
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$38
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$39
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$4
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$40
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$41
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$42
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$43
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$44
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$45
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$46
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$47
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$48
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$49
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$5
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$50
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$51
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$52
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$53
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$54
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$55
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$56
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$57
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$58
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$59
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$6
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$60
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$61
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$62
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$63
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$64
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$7
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$8
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> x$9
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> xml
+product stamps:
+16 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$1$$anonfun$apply$1$$anonfun$apply$2.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$1$$anonfun$apply$1.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$1.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$2$$anonfun$apply$3$$anonfun$apply$4.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$2$$anonfun$apply$3.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$2.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$3$$anonfun$apply$5$$anonfun$apply$6.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$3$$anonfun$apply$5.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$3.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$4$$anonfun$apply$7$$anonfun$apply$8.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$4$$anonfun$apply$7.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$4.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$5$$anonfun$apply$9$$anonfun$apply$10.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$5$$anonfun$apply$9.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests$$anonfun$5.class -> lastModified(1525109329000)
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/build/classes/scala/test/packages/WatsonWorkTests.class -> lastModified(1525109329000)
+source stamps:
+1 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> hash(4002b0ecb883adfebe5f3d691c447c649bc3cb36)
+binary stamps:
+26 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jce.jar -> lastModified(1504666617000)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1504666619000)
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-http-core_2.11/10.0.10/a9d8d525836439cf296303abf7d73625728609db/akka-http-core_2.11-10.0.10.jar -> lastModified(1518725643000)
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/9ce04e34240f674bc72680f8b843b1457383161a/commons-codec-1.9.jar -> lastModified(1506002891000)
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/io.spray/spray-json_2.11/1.3.3/960e398a2b6a57dd67faf2c98561a125ca93080a/spray-json_2.11-1.3.3.jar -> lastModified(1518725641000)
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar -> lastModified(1518725671000)
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.11/e283d2b7fde6504f6a86458b1f6af465353907cc/scala-library-2.11.11.jar -> lastModified(1518725652000)
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scalactic/scalactic_2.11/3.0.1/3c444d143879dc172fa555cea08fd0de6fa2f34f/scalactic_2.11-3.0.1.jar -> lastModified(1518725670000)
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scalatest/scalatest_2.11/3.0.1/40a1842e7f0b915d87de1cb69f9c6962a65ee1fd/scalatest_2.11-3.0.1.jar -> lastModified(1518725670000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/ActivationResponse.class -> lastModified(1525109317000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/ActivationResult.class -> lastModified(1525109317000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/BaseActivation.class -> lastModified(1525109317000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/TestHelpers.class -> lastModified(1525109317000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/TestUtils.class -> lastModified(1525109324000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/Wsk$.class -> lastModified(1525109317000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/Wsk.class -> lastModified(1525109317000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskProps$.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskProps.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskTestHelpers.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/DeleteFromCollectionRest.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/RestResult.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRest.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestAction.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestActivation.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestPackage.class -> lastModified(1525109318000)
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestTrigger.class -> lastModified(1525109318000)
+class names:
+26 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jce.jar -> javax.crypto.spec.SecretKeySpec
+/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar -> javax.xml.bind.DatatypeConverter
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/com.typesafe.akka/akka-http-core_2.11/10.0.10/a9d8d525836439cf296303abf7d73625728609db/akka-http-core_2.11-10.0.10.jar -> akka.http.scaladsl.model.StatusCode
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/9ce04e34240f674bc72680f8b843b1457383161a/commons-codec-1.9.jar -> org.apache.commons.codec.binary.Base64
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/io.spray/spray-json_2.11/1.3.3/960e398a2b6a57dd67faf2c98561a125ca93080a/spray-json_2.11-1.3.3.jar -> spray.json.JsValue
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar -> org.junit.runner.RunWith
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.11.11/e283d2b7fde6504f6a86458b1f6af465353907cc/scala-library-2.11.11.jar -> scala.Tuple2
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scalactic/scalactic_2.11/3.0.1/3c444d143879dc172fa555cea08fd0de6fa2f34f/scalactic_2.11-3.0.1.jar -> org.scalactic.Equality$
+/Users/scottchapman/.gradle/caches/modules-2/files-2.1/org.scalatest/scalatest_2.11/3.0.1/40a1842e7f0b915d87de1cb69f9c6962a65ee1fd/scalatest_2.11-3.0.1.jar -> org.scalatest.BeforeAndAfterAll
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/ActivationResponse.class -> common.ActivationResponse
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/ActivationResult.class -> common.ActivationResult
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/BaseActivation.class -> common.BaseActivation
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/TestHelpers.class -> common.TestHelpers
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/TestUtils.class -> common.TestUtils
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/Wsk$.class -> common.Wsk$
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/Wsk.class -> common.Wsk
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskProps$.class -> common.WskProps$
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskProps.class -> common.WskProps
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/WskTestHelpers.class -> common.WskTestHelpers
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/DeleteFromCollectionRest.class -> common.rest.DeleteFromCollectionRest
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/RestResult.class -> common.rest.RestResult
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRest.class -> common.rest.WskRest
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestAction.class -> common.rest.WskRestAction
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestActivation.class -> common.rest.WskRestActivation
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestPackage.class -> common.rest.WskRestPackage
+/Users/scottchapman/Workspaces/incubator-openwhisk/tests/build/classes/scala/test/common/rest/WskRestTrigger.class -> common.rest.WskRestTrigger
+internal apis:
+1 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwYA8kywAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAA9zcgAgeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2hbDvUidjhXzwIAAkkABGhhc2hMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7eHAsb90kdAAjY29udmVydFRvU3RyaW5nU2hvdWxkV3JhcHBlckZvclZlcmJzcQB+AAsMkWCEdAAZY29udmVydFRvU3RyaW5nQ2FuV3JhcHBlcnNxAH4ACyNQBct0ABljb252ZXJ0VG9BbnlTaG91bGRXcmFwcGVyc3EAfgAL37Zp4nQAImNvbnZlcnROdW1lcmljVG9QbHVzT3JNaW51c1dyYXBwZXJzcQB+AAu1acAqdAASY29udmVydFRvRXF1YWxpemVyc3EAfgALKiGrE3QAKGNvbnZlcnRUb0luQW5kSWdub3JlTWV0aG9kc0FmdGVyVGFnZ2VkQXNzcQB+AAs7bQX/dAAnc2hvcnRoYW5kU2hhcmVkVGVzdFJlZ2lzdHJhdGlvbkZ1bmN0aW9uc3EAfgAL6UWFNXQAFWNvbnZlcnRUb1JlZ2V4V3JhcHBlcnNxAH4AC+Wtcnp0ABV1bmNvbnN0cmFpbmVkRXF1YWxpdHlzcQB+AAuAa22/dAAhY29udmVydFRvU3RyaW5nTXVzdFdyYXBwZXJGb3JWZXJic3EAfgALO/zwjnQAG2NvbnZlcnRUb0luQW5kSWdub3JlTWV0aG9kc3NxAH4AC5r3FQ90ABxjb252ZXJ0VG9TdHJpbmdTaG91bGRXcmFwcGVyc3EAfgALdJQwv3QAK2NvbnZlcnRTeW1ib2xUb0hhdmVQcm9wZXJ0eU1hdGNoZXJHZW5lcmF0b3JzcQB+AAtym/BOdAAId3NrcHJvcHNzcQB+AAuJoldwdAAhc2hvcnRoYW5kVGVzdFJlZ2lzdHJhdGlvbkZ1bmN0aW9udXEAfgAJAAABCHNxAH4AC6g/rh90AAtpbk9yZGVyT25seXNxAH4ACynfNFl0AAZhc3NlcnRzcQB+AAuE5CSPdAAeUmVzdWx0T2ZTdGFydFdpdGhXb3JkRm9yU3RyaW5nc3EAfgALH8QHnXQAB3N1Y2NlZWRzcQB+AAvEF6h8dAASUGx1c09yTWludXNXcmFwcGVyc3EAfgALJQkUWXQABm5vdGlmeXNxAH4ACzcoSxd0AAZBc3NldHNzcQB+AAso+ylYdAAmbG93UHJpb3JpdHlDb252ZXJzaW9uQ2hlY2tlZENvbnN0cmFpbnRzcQB+AAs7OUpWdAAJc2hvdWxkTm90c3EAfgAL0WbfHXQABXJlZ2V4c3EAfgALxCdNunQABkFuV29yZHNxAH4AC+ccqBh0AAZlbmNvZGVzcQB+AAuWyz8YdAADd3Nrc3EAfgAL/lnBjnQAEEFzc2VydGlvbnNIZWxwZXJzcQB+AAs1tbAHdAAGY2FuY2Vsc3EAfgAL5hLQOnQAEWV4ZWN1dGUkZGVmYXVsdCQyc3EAfgALlbGxWHQACWludGVyY2VwdHNxAH4AC1qyqXF0AARmYWlsc3EAfgALX6E5SnQAFEl0VmVyYlN0cmluZ1RhZ2dlZEFzc3EAfgALZTOaT3QABG5hbWVzcQB+AAsFITNYdAACaW5zcQB+AAvLFVj0dAAcSGF2ZVByb3BlcnR5TWF0Y2hlckdlbmVyYXRvcnNxAH4ACwK3uwR0AAVBV29yZHNxAH4ACwHA9sJ0AARoYXZlc3EAfgALk/WwEHQAFGFzc2VydERvZXNOb3RDb21waWxlc3EAfgAL+UixDnQAEWV4ZWN1dGUkZGVmYXVsdCQ0c3EAfgALquWZDHQAIlJlc3VsdE9mQ29udGFpbldvcmRGb3JDb2xsZWN0ZWRBbnlzcQB+AAsl53cOdAACaXNzcQB+AAtdEl4gdAAHZXhlY3V0ZXNxAH4ACw+LJIF0AAR3YWl0c3EAfgALjq0WR3QAEHdpdGhBc3NldENsZWFuZXJzcQB+AAuxou8ndAAORGV0ZXJtaW5lZFdvcmRzcQB+AAtg3m22dAALdGVzdERhdGFGb3JzcQB+AAtdnqnldAATY3JlYXRlQ2F0Y2hSZXBvcnRlcnNxAH4AC87wIBF0AAI8PXNxAH4AC3KfB8x0AAlzdHlsZU5hbWVzcQB+AAvIKvpNdAANbGVmdFNpZGVWYWx1ZXNxAH4AC8CfuFl0ABNhdExlYXN0T25lRWxlbWVudE9mc3EAfgAL86Vn2HQADSRhc0luc3RhbmNlT2ZzcQB+AAs7cup2dAAFZW1wdHlzcQB+AAuTS4lXdAAJc3RhcnRXaXRoc3EAfgALbfCLtnQABHNpemVzcQB+AAu/sw7bdAARZXhlY3V0ZSRkZWZhdWx0JDNzcQB+AAvMU+fSdAAHd3NrcmVzdHNxAH4ACzR2JQx0ABRSZXN1bHRPZkNvbGxlY3RlZEFueXNxAH4AC5ykAa90AA1hbGxFbGVtZW50c09mc3EAfgALrXW7vXQABWV4aXN0c3EAfgAL2z0IgXQAD1dhdHNvbldvcmtUZXN0c3NxAH4AC9J6ZKR0AAljb25maWdNYXBzcQB+AAue4YTqdAAJVmFsdWVXb3Jkc3EAfgALgqrUBHQABmVxdWFsc3NxAH4AC3G5jkF0AAxhdExlYXN0T25lT2ZzcQB+AAuKZLswdAAHYXRMZWFzdHNxAH4AC5JwkWp0AAh0aHJvd25CeXNxAH4ACwmlGSh0ACxjb252ZXJ0RXF1aXZhbGVuY2VUb0FUb0JDb252ZXJzaW9uQ29uc3RyYWludHNxAH4AC1dQ96l0AAxBc3NldENsZWFuZXJzcQB+AAtPHXENdAAPZGVmYXVsdEVxdWFsaXR5c3EAfgAL1f4rLHQAImNvbnZlcnRFcXVpdmFsZW5jZVRvQVRvQkNvbnN0cmFpbnRzcQB+AAt8CzWudAAcUmVzdWx0T2ZFbmRXaXRoV29yZEZvclN0cmluZ3NxAH4AC1Fa/Rh0AARtdXN0c3EAfgALc1tqgnQAA2FsbHNxAH4ACz2V3bt0AAR0YWdzc3EAfgALJRD8YXQADGFzSW5zdGFuY2VPZnNxAH4AC/7elsR0AAE8c3EAfgALi8c4+nQABWFsZXJ0c3EAfgAL0ORqWnQAB2luT3JkZXJzcQB+AAuSW6S4dAAKcHJldHRpZmllcnNxAH4AC9m0Gf10AANydW5zcQB+AAvOW4v8dAARRGVjaWRlZEJ5RXF1YWxpdHlzcQB+AAvS2L/BdAAFZXZlcnlzcQB+AAui00jqdAAJYWZ0ZXJFYWNoc3EAfgALNM4K7XQABnNjb3Blc3NxAH4AC6vtImF0AANwb3NzcQB+AAvfnpr1dAAJYmVmb3JlQWxsc3EAfgALT1BT4HQACndpdGhHcm91cHNzcQB+AAstYVw2dAAMc3luY2hyb25pemVkc3EAfgALEenUrXQAAml0c3EAfgALJ7W8ZHQAB0tleVdvcmRzcQB+AAsmmLkidAARdGhlU2FtZUVsZW1lbnRzQXNzcQB+AAuYd/nRdAAOYXNzZXJ0Q29tcGlsZXNzcQB+AAvc3X1BdAAKZGV0ZXJtaW5lZHNxAH4AC7klEmp0ACN3aXRoQWN0aXZhdGlvbnNGcm9tRW50aXR5JGRlZmF1bHQkNHNxAH4AC8Uw2xB0AAFhc3EAfgALB3E+HHQADGFzc2VydFRocm93c3NxAH4AC62d7SF0AA5sZWZ0U2lkZVN0cmluZ3NxAH4AC4ib9YJ0AA0kaXNJbnN0YW5jZU9mc3EAfgALvVIa6HQABHRyYXBzcQB+AAsH+GAUdAAVdGVzdERhdGFGb3IkZGVmYXVsdCQyc3EAfgALIxal6nQAEkluQW5kSWdub3JlTWV0aG9kc3NxAH4AC83B2n10ABhnZXRBZGRpdGlvbmFsVGVzdFN1YmplY3RzcQB+AAs0E4BWdAAMYXNzZXJ0UmVzdWx0c3EAfgALlxMKc3QAHlJlc3VsdE9mTm90V29yZEZvckNvbGxlY3RlZEFueXNxAH4ACzrBkyh0AAI+PXNxAH4AC/rAFz90AAxvbmVFbGVtZW50T2ZzcQB+AAuwApOIdAAXU3RyaW5nQ2FuV3JhcHBlckZvclZlcmJzcQB+AAvfOnSadAAEdGV4dHNxAH4AC//mGxB0ACVSZXN1bHRPZkluY2x1ZGVXb3JkRm9yQ29sbGVjdGVkU3RyaW5nc3EAfgALG2XCSnQALGNvbnZlcnRFcXVpdmFsZW5jZVRvQlRvQUNvbnZlcnNpb25Db25zdHJhaW50c3EAfgALeO/ri3QAHGRpc3Bvc2VBZGRpdGlvbmFsVGVzdFN1YmplY3RzcQB+AAtcHprDdAAHY29udGFpbnNxAH4AC8t0yx10AAZkZWNvZGVzcQB+AAugVSdUdAAEdGhleXNxAH4AC8I6MLx0AAdjb21waWxlc3EAfgAL1EgmbHQAEWV4ZWN1dGUkZGVmYXVsdCQ3c3EAfgAL3Z0EwHQAB2V4YWN0bHlzcQB+AAs7z9PVdAARdGhlU2FtZUluc3RhbmNlQXNzcQB+AAtD0oxldAAnUmVzdWx0T2ZTdGFydFdpdGhXb3JkRm9yQ29sbGVjdGVkU3RyaW5nc3EAfgALWiK5q3QAEWluT3JkZXJFbGVtZW50c09mc3EAfgALkAoHYXQAC0RlY2lkZWRXb3Jkc3EAfgALtNqvo3QAFXR5cGVDaGVja2VkQ29uc3RyYWludHNxAH4ACwDU9WV0AA9nZW5lcmF0ZVJlcXVlc3RzcQB+AAtGFmqvdAADIT09c3EAfgAL1RrSKXQABmF0TW9zdHNxAH4ACyD2Ith0AARpbmZvc3EAfgALgIwg8XQAC25vRXhjZXB0aW9uc3EAfgALMm4ypXQACW5vdGlmeUFsbHNxAH4AC+Zhk5V0AAxJdFZlcmJTdHJpbmdzcQB+AAtr8mvIdAALd2l0aEZpeHR1cmVzcQB+AAvKW/UkdAAHcnVuVGVzdHNxAH4AC4UjlRR0AApiZWZvcmVFYWNoc3EAfgALWI3Ax3QAHVJlc3VsdE9mQmVXb3JkRm9yQ29sbGVjdGVkQW55c3EAfgAL/NR4VnQAA2tleXNxAH4AC3YI40R0AAxpc0luc3RhbmNlT2ZzcQB+AAuy36kfdAAId2l0aENsdWVzcQB+AAu0iC5vdAAQYXNzZXJ0aW9uc0hlbHBlcnNxAH4ACy2YnN50ABFleGVjdXRlJGRlZmF1bHQkNnNxAH4AC/zpYdR0ABh3aXRoQWN0aXZhdGlvbiRkZWZhdWx0JDNzcQB+AAvX/MUIdAAIdGFnZ2VkQXNzcQB+AAuoxqcNdAAPYXNzZXJ0VHlwZUVycm9yc3EAfgALbdkOjXQAC3dpdGhDbGVhbmVyc3EAfgALtx0h33QAJVJlc3VsdE9mRW5kV2l0aFdvcmRGb3JDb2xsZWN0ZWRTdHJpbmdzcQB+AAuAD5gxdAAGbWFya3Vwc3EAfgAL91nMG3QAD3JlbW92ZUNMSUhlYWRlcnNxAH4AC1NW6OV0AAhsZWZ0U2lkZXNxAH4ACynMxyF0ABh3aXRoQWN0aXZhdGlvbiRkZWZhdWx0JDVzcQB+AAs09+endAAGPGluaXQ+c3EAfgALy1VIxnQAC21hY3JvQXNzdW1lc3EAfgALnkYf7HQAD3J1bk5lc3RlZFN1aXRlc3NxAH4AC8r94lV0ACN3aXRoQWN0aXZhdGlvbnNGcm9tRW50aXR5JGRlZmF1bHQkNXNxAH4AC4H+Awl0ABlSZXN1bHRPZkhhdmVXb3JkRm9yRXh0ZW50c3EAfgALRvkgH3QAA2NhbnNxAH4AC8f2j1F0AAViZWluZ3NxAH4AC+xMpAh0AAVlcXVhbHNxAH4AC8zWGL10AAZJdFdvcmRzcQB+AAuBJOeWdAAIYXJlRXF1YWxzcQB+AAvgWs7rdAAGbm9uZU9mc3EAfgALlYIgb3QABWFwcGx5c3EAfgALccClxHQACXdpdGhHcm91cHNxAH4AC0JVzr90AAVhZnRlcnNxAH4AC84Y4JN0AAlFcXVhbGl6ZXJzcQB+AAsKy5LjdAAKYWZ0ZXJCZWluZ3NxAH4AC7hzvSd0ABtuZXdBc3NlcnRpb25GYWlsZWRFeGNlcHRpb25zcQB+AAtGTVEfdAAEbm90ZXNxAH4ACx6YEkR0AAI9PXNxAH4AC2+X8Ch0AB9JbkFuZElnbm9yZU1ldGhvZHNBZnRlclRhZ2dlZEFzc3EAfgALOwjDAXQAAmJ5c3EAfgAL1pq1NnQABnNvcnRlZHNxAH4AC3IlCRR0AApmdWxseU1hdGNoc3EAfgAL2TDk13QABWNsb25lc3EAfgALuNMCFHQADEJlaGF2aW9yV29yZHNxAH4AC/Z0Inp0AA53aXRoQWN0aXZhdGlvbnNxAH4ACz+Sz4J0ABl3aXRoQWN0aXZhdGlvbnNGcm9tRW50aXR5c3EAfgALxrN0JnQAE1N0cmluZ1Nob3VsZFdyYXBwZXJzcQB+AAsbdO1rdAAGc2hvdWxkc3EAfgALqeJI1nQAEEFueVNob3VsZFdyYXBwZXJzcQB+AAv/gFdSdAAXRGV0ZXJtaW5lZEJ5RXF1aXZhbGVuY2VzcQB+AAsyfmjpdAADbm90c3EAfgALWCmbx3QAH1Jlc3VsdE9mQmVXb3JkRm9yQ29sbGVjdGVkQXJyYXlzcQB+AAtR0aqWdAAJZGVmaW5lZEF0c3EAfgALMToYunQADG5lc3RlZFN1aXRlc3NxAH4AC+6jzlh0AAZhc3N1bWVzcQB+AAuBu91bdAAGJGluaXQkc3EAfgALJ8cbP3QAB2RlZmluZWRzcQB+AAvoqz1UdAAdZ2V0SlNPTkZyb21SZXNwb25zZSRkZWZhdWx0JDJzcQB+AAs4Xv0TdAAgbG93UHJpb3JpdHlUeXBlQ2hlY2tlZENvbnN0cmFpbnRzcQB+AAufKHLDdAAHaW5jbHVkZXNxAH4AC3F2HDZ0AAhUaGV5V29yZHNxAH4ACw38wop0AAxyZWdpc3RlclRlc3RzcQB+AAsnefvzdAAJdHlwZUNoZWNrc3EAfgALoYI/Z3QAEWV4ZWN1dGUkZGVmYXVsdCQ1c3EAfgALcTEgHnQAAz09PXNxAH4AC9dt99R0ABhuZXdUZXN0Q2FuY2VsZWRFeGNlcHRpb25zcQB+AAuuPV8rdAAHbWVzc2FnZXNxAH4AC45uBqx0AAh0b1N0cmluZ3NxAH4AC8h2Xft0AAl0ZXN0TmFtZXNzcQB+AAvkzPptdAAPeWVPbGRlVGVzdE5hbWVzc3EAfgALRDMr53QAAmFuc3EAfgALtaJh4nQABmxlbmd0aHNxAH4AC4lG0Qd0ABh3aXRoQWN0aXZhdGlvbiRkZWZhdWx0JDRzcQB+AAsRFnCcdAAYU3RyaW5nTXVzdFdyYXBwZXJGb3JWZXJic3EAfgALWgBuZ3QAEWV4ZWN1dGUkZGVmYXVsdCQxc3EAfgALIGjy9XQAAmJlc3EAfgALY83flHQAAiE9c3EAfgALhyJCcXQAEndpdGhQcmludE9uRmFpbHVyZXNxAH4AC6evBA90ACJSZXN1bHRPZkhhdmVXb3JkRm9yQ29sbGVjdGVkRXh0ZW50c3EAfgALQJuyPXQAH1Jlc3VsdE9mRnVsbHlNYXRjaFdvcmRGb3JTdHJpbmdzcQB+AAvs5OqRdAAyaW52b2tlQmVmb3JlQWxsQW5kQWZ0ZXJBbGxFdmVuSWZOb1Rlc3RzQXJlRXhwZWN0ZWRzcQB+AAtBET2cdAAMbWF0Y2hQYXR0ZXJuc3EAfgALuwR8J3QAFXdpdGhDbGVhbmVyJGRlZmF1bHQkM3NxAH4AC2QLXaJ0ABhJZ25vcmVWZXJiU3RyaW5nVGFnZ2VkQXNzcQB+AAsYvVfHdAAIZ2V0Q2xhc3NzcQB+AAufWdrgdAATcmVnaXN0ZXJJZ25vcmVkVGVzdHNxAH4ACxRojop0AAZiZWhhdmVzcQB+AAsJ8CsndAAIcnVuVGVzdHNzcQB+AAuD97iddAAIYmVoYXZpb3JzcQB+AAv6tmkzdAARcGVuZGluZ1VudGlsRml4ZWRzcQB+AAt4AIrcdAASYXRNb3N0T25lRWxlbWVudE9mc3EAfgALXEfRk3QAGHRoZVNhbWVFbGVtZW50c0luT3JkZXJBc3NxAH4AC+kMTWl0ABdUaGVTYW1lSW5zdGFuY2VBc1BocmFzZXNxAH4AC1ZRmR90AA5UaGV5VmVyYlN0cmluZ3NxAH4AC/FN3Yx0AA1hcmVFcXVpdmFsZW50c3EAfgALaDKYwnQAB2JldHdlZW5zcQB+AAuHIzM+dAAjd2l0aEFjdGl2YXRpb25zRnJvbUVudGl0eSRkZWZhdWx0JDZzcQB+AAsNt6MGdAAIYWZ0ZXJBbGxzcQB+AAtOLjXYdAAHZGVjaWRlZHNxAH4AC20C6+50ABRSZXN1bHRPZkJlV29yZEZvckFueXNxAH4AC3qJrhF0ABFleHBlY3RlZFRlc3RDb3VudHNxAH4ACzs2OKt0ABNnZXRKU09ORnJvbVJlc3BvbnNlc3EAfgALvqSqunQAB2VuZFdpdGhzcQB+AAv+OP5FdAAMbm9FbGVtZW50c09mc3EAfgALg87dJ3QACHJlcnVubmVyc3EAfgALpw3vJnQAC3Nob3VsZEVxdWFsc3EAfgALUgfUlnQACVJlZ2V4V29yZHNxAH4AC2SwmW10AAxUaGVBZnRlcldvcmRzcQB+AAtGSTEndAAiY29udmVydEVxdWl2YWxlbmNlVG9CVG9BQ29uc3RyYWludHNxAH4AC0KYNoh0AA92YWxpZGF0ZVJlcXVlc3RzcQB+AAuS8pxQdAAFb25lT2ZzcQB+AAs0l0h/dAACbmVzcQB+AAsMnfJZdAAWVGhleVZlcmJTdHJpbmdUYWdnZWRBc3NxAH4ACy8TwYh0AAJub3NxAH4AC3yTW1x0AAdjbGVhblVwc3EAfgAL3Q1CBnQAKFJlc3VsdE9mRnVsbHlNYXRjaFdvcmRGb3JDb2xsZWN0ZWRTdHJpbmdzcQB+AAsgvJDjdAALZG9Db2xsZWN0ZWRzcQB+AAvThLPldAARQ2hlY2tpbmdFcXVhbGl6ZXJzcQB+AAsHWRwHdAAId3JpdGFibGVzcQB+AAtNJFyodAAHcGVuZGluZ3NxAH4AC9zqzTl0AAV2YWx1ZXNxAH4AC6Y8kfd0AAZpZ25vcmVzcQB+AAsyouJudAAMZ2VuZXJhdGVITUFDc3EAfgALuNToVXQACHNob3VsZEJlc3EAfgALbFdA7XQAHFJlc3VsdE9mSW5jbHVkZVdvcmRGb3JTdHJpbmdzcQB+AAuU4XlMdAAQSWdub3JlVmVyYlN0cmluZ3NxAH4AC/mm3dh0AAttYWNyb0Fzc2VydHNxAH4AC0a3R2t0AAJlcXNxAH4ACw/Kky10ABpjb252ZXJ0VG9DaGVja2luZ0VxdWFsaXplcnNxAH4ACwUoyN10AAJvZnNxAH4ACx3bzWB0AAIrLXNxAH4AC3wBG9x0AAlOb0FyZ1Rlc3RzcQB+AAuO493KdAAjd2l0aEFjdGl2YXRpb25zRnJvbUVudGl0eSRkZWZhdWx0JDNzcQB+AAtA0Uf8dAAKSWdub3JlV29yZHNxAH4AC8F7gJR0AAE+c3EAfgALqu67/3QACHJlYWRhYmxlc3EAfgALclimBHQAAiMjc3EAfgALj4c50nQAGlN0cmluZ1Nob3VsZFdyYXBwZXJGb3JWZXJic3EAfgALpdkWuHQACGZpbmFsaXplc3EAfgALSabZLnQAG2NvbnZlcnNpb25DaGVja2VkQ29uc3RyYWludHNxAH4AC7FYYtV0AAthdE1vc3RPbmVPZnNxAH4ACx8agZN0AAVhbGxPZnNxAH4AC5TlhoR0AAhoYXNoQ29kZXNxAH4AC/fUf2h0AAdzdWl0ZUlkc3EAfgALTw7AcnQACXN1aXRlTmFtZXNxAH4AC6mZEX10AAxSZWdleFdyYXBwZXJzcQB+AAtbYTz6dAADdGhlc3EAfgALB2HuvHQABG9ubHlzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgJFeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADHhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAABc3IAFHhzYnRpLmFwaS5Bbm5vdGF0aW9u3g6BovZcCrICAAJbAAlhcmd1bWVudHN0AB9bTHhzYnRpL2FwaS9Bbm5vdGF0aW9uQXJndW1lbnQ7TAAEYmFzZXQAEEx4c2J0aS9hcGkvVHlwZTt4cHVyAB9bTHhzYnRpLmFwaS5Bbm5vdGF0aW9uQXJndW1lbnQ7UZ2mjzglD3gCAAB4cAAAAAFzcgAceHNidGkuYXBpLkFubm90YXRpb25Bcmd1bWVudNZFsdgDGxd8AgACTAAEbmFtZXEAfgAMTAAFdmFsdWVxAH4ADHhwcQB+AgV0AChjbGFzc09mW29yZy5zY2FsYXRlc3QuanVuaXQuSlVuaXRSdW5uZXJdc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgAMTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHQAB1J1bldpdGhzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+Al1zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAARzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgAMeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQAA29yZ3NxAH4CaXQABWp1bml0c3EAfgJpdAAGcnVubmVyc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AmpzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABhwYWNrYWdlcy5XYXRzb25Xb3JrVGVzdHN1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAhDbGFzc0RlZnVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAAJ0ABBzY2FsYS5kZXByZWNhdGVkdAAnc2NhbGEucmVmbGVjdC5tYWNyb3MuaW50ZXJuYWwubWFjcm9JbXBsc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cQB+Al1zcQB+AoBzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4CRUwACWluaGVyaXRlZHEAfgJFTAAHcGFyZW50c3EAfgJFeHEAfgJec3EAfgKAdXEAfgJAAAAAAHNxAH4CgHVxAH4CQAAAAABzcQB+AoB1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAHHNxAH4CW3QAEUJlZm9yZUFuZEFmdGVyQWxsc3EAfgJhc3EAfgJkdXEAfgJnAAAAA3NxAH4CaXQAA29yZ3NxAH4CaXQACXNjYWxhdGVzdHEAfgJyc3EAfgJbdAAOV3NrVGVzdEhlbHBlcnNzcQB+AmFzcQB+AmR1cQB+AmcAAAACc3EAfgJpdAAGY29tbW9ucQB+AnJzcQB+Alt0AAhNYXRjaGVyc3EAfgKRc3EAfgJbdAAKRXhwbGljaXRseXNxAH4CYXNxAH4CZHVxAH4CZwAAAANzcQB+Aml0AANvcmdzcQB+Aml0AAlzY2FsYWN0aWNxAH4CcnNxAH4CW3QADE1hdGNoZXJXb3Jkc3NxAH4CYXNxAH4CZHVxAH4CZwAAAARzcQB+Aml0AANvcmdzcQB+Aml0AAlzY2FsYXRlc3RzcQB+Aml0AAV3b3Jkc3EAfgJyc3EAfgJbdAAJVG9sZXJhbmNlcQB+AqNzcQB+Alt0AAtUZXN0SGVscGVyc3EAfgKac3EAfgJbdAAaQmVmb3JlQW5kQWZ0ZXJFYWNoVGVzdERhdGFxAH4CkXNxAH4CW3QAClN1aXRlTWl4aW5xAH4CkXNxAH4CW3QACEZsYXRTcGVjcQB+ApFzcQB+Alt0AAxGbGF0U3BlY0xpa2VxAH4CkXNxAH4CW3QAC0RvY3VtZW50aW5ncQB+ApFzcQB+Alt0AAhBbGVydGluZ3EAfgKRc3EAfgJbdAAJTm90aWZ5aW5ncQB+ApFzcQB+Alt0AAlJbmZvcm1pbmdxAH4CkXNxAH4CW3QAB0NhblZlcmJxAH4CrHNxAH4CW3QACE11c3RWZXJicQB+AqxzcQB+Alt0AApTaG91bGRWZXJicQB+AqxzcQB+Alt0ABBUZXN0UmVnaXN0cmF0aW9ucQB+ApFzcQB+Alt0AAlUZXN0U3VpdGVxAH4CkXNxAH4CW3QABVN1aXRlcQB+ApFzcQB+Alt0AAxTZXJpYWxpemFibGVzcQB+AmFzcQB+AmR1cQB+AmcAAAACc3EAfgJpdAAFc2NhbGFxAH4CcnNxAH4CW3EAfgLWc3EAfgJhc3EAfgJkdXEAfgJnAAAAA3NxAH4CaXQABGphdmFzcQB+Aml0AAJpb3EAfgJyc3EAfgJbdAAKQXNzZXJ0aW9uc3EAfgKRc3EAfgJbdAAMVHJpcGxlRXF1YWxzcQB+AqNzcQB+Alt0ABNUcmlwbGVFcXVhbHNTdXBwb3J0cQB+AqNzcQB+Alt0AAZPYmplY3RzcQB+AmFzcQB+AmR1cQB+AmcAAAADc3EAfgJpcQB+AuFzcQB+Aml0AARsYW5ncQB+AnJzcQB+Alt0AANBbnlxAH4C13VyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAABc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AAx4cHQACHBhY2thZ2Vzc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFjF5mHr3VyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADEwAD3NvdXJjZURpcmVjdG9yeXEAfgAMeHB0AE0vVXNlcnMvc2NvdHRjaGFwbWFuL1dvcmtzcGFjZXMvV1dDbG91ZEZ1bmN0aW9ucy90ZXN0L2J1aWxkL2NsYXNzZXMvc2NhbGEvdGVzdHQAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFEACsOy4g63+vl89aRxEfGSbw8s2
+external apis:
+1 items
+whisk.core.entity.ByteSize -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwkmCIZQAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAhzcgAgeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2hbDvUidjhXzwIAAkkABGhhc2hMAARuYW1ldAASTGphdmEvbGFuZy9TdHJpbmc7eHDAe3RxdAAQcHVyZWNvbmZpZ1JlYWRlcnNxAH4AC9eze3t0AAdTaXplSW50c3EAfgALXYcwhnQADGNhbkJ1aWxkRnJvbXNxAH4AC3QytLx0ABBTaXplT3B0aW9uU3RyaW5nc3EAfgAL6qn4YnQAClNpemVTdHJpbmdzcQB+AAu1yHVRdAAIb3JkZXJpbmdzcQB+AAtAvkq8dAANbWtPcmRlcmluZ09wc3NxAH4ACzKaEfZ0AAhTaXplTG9uZ3VxAH4ACQAAANRzcQB+AAvtlEpkdAAMaXRlcmF0b3JGcm9tc3EAfgALCf8NmnQACnRvSXRlcmFibGVzcQB+AAuOi3TQdAAKd2l0aEZpbHRlcnNxAH4ACzgwvcF0AA10b1RyYXZlcnNhYmxlc3EAfgALGkFS43QABm5vdGlmeXNxAH4ACx0TjUl0AAd1bmFwcGx5c3EAfgALpCA0TnQABGZpbmRzcQB+AAsT3ZbvdAAEc3BhbnNxAH4AC0raNHl0AAdmbGF0dGVuc3EAfgALmayLH3Q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0aW9uc3EAfgALiplFQXQAB2lzRW1wdHlzcQB+AAvhT5BddAACbmVzcQB+AAuGALmddAACbHRzcQB+AAtPCIrEdAAEaW5pdHNxAH4AC+SLF9x0AAJndHNxAH4ACxAbTEJ0AAhyZXZlcnNlZHNxAH4AC5VbfLV0AANPcHNzcQB+AAsqCbUAdAAKcmVkdWNlTGVmdHNxAH4AC0BOkJR0AAJlcXNxAH4ACxmxcKN0AAdjb21wYXJlc3EAfgALLRNcE3QAD3Byb2R1Y3RJdGVyYXRvcnNxAH4ACzNldKR0AANzdW1zcQB+AAu0AfYtdAAOdGhpc0NvbGxlY3Rpb25zcQB+AAutpCPydAABPnNxAH4AC4NwqnB0AAIjI3NxAH4AC0sQvol0AAlTaXplVW5pdHNzcQB+AAskXd0RdAAIc2NhbkxlZnRzcQB+AAuGEsMCdAAIZmluYWxpemVzcQB+AAtMgXsodAAOcHJvZHVjdEVsZW1lbnRzcQB+AAuvF56adAAIaGFzaENvZGVzcQB+AAvoRe6XdAAJcmFuZ2VJbXBsc3EAfgALYTGVcnQABnppcEFsbHNxAH4AC9+ogGh0AAdwcm9kdWN0c3EAfgALr+gtvHQABHZpZXdzcQB+AAth+K56dAACTUJzcQB+AAv9TYnpdAAEZ3RlcXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAVzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+Ac94cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgAMeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABt3aGlzay5jb3JlLmVudGl0eS5TaXplVW5pdHN1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAIXhzYnRpLmFwaS5BYnN0cmFjdExhenkkU3RyaWN0TGF6eQ1mHGspFiq4AgABTAAFdmFsdWV0ABJMamF2YS9sYW5nL09iamVjdDt4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AedzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4Bz0wACWluaGVyaXRlZHEAfgHPTAAHcGFyZW50c3EAfgHPeHEAfgHsc3EAfgHndXEAfgHKAAAAAHNxAH4B53VxAH4BygAAAABzcQB+Aed1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAABXNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVT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
+source infos:
+1 items
+/Users/scottchapman/Workspaces/WWCloudFunctions/test/src/test/scala/templates/WatsonWork.scala -> 
+AAAAAAAAAAA=
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABYxeZh691cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATS9Vc2Vycy9zY290dGNoYXBtYW4vV29ya3NwYWNlcy9XV0Nsb3VkRnVuY3Rpb25zL3Rlc3QvYnVpbGQvY2xhc3Nlcy9zY2FsYS90ZXN0dAABLw==
