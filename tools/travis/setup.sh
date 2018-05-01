@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 SCRIPTDIR=$(cd $(dirname "$0") && pwd)
 HOMEDIR="$SCRIPTDIR/../../../"
@@ -19,9 +19,5 @@ git clone --depth 1 https://github.com/apache/incubator-openwhisk.git openwhisk
 git clone --depth 1 https://github.com/apache/incubator-openwhisk-package-deploy $DEPLOYDIR
 
 cd openwhisk
-
-# use runtimes.json that defines python-jessie & IBM Node.js 8
-rm -f ansible/files/runtimes.json
-cp $HOMEDIR/WWCloudFunctions/ansible/files/runtimes.json ansible/files/runtimes.json
 
 ./tools/travis/setup.sh

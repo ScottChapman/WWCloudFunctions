@@ -20,21 +20,12 @@ TERM=dumb ./gradlew \
 :core:controller:install \
 :core:invoker:install \
 :tests:install \
-distDocker -PdockerImagePrefix=${IMAGE_PREFIX}
-
-docker pull ibmfunctions/action-nodejs-v8
-docker tag ibmfunctions/action-nodejs-v8 ${IMAGE_PREFIX}/action-nodejs-v8
-
-docker pull ibmfunctions/action-python-v3
-docker tag ibmfunctions/action-python-v3 ${IMAGE_PREFIX}/action-python-v3
-
-docker pull ibmfunctions/action-swift-v4.1
-docker tag ibmfunctions/action-swift-v4.1 ${IMAGE_PREFIX}/action-swift-v4.1
+distDocker
 
 cd $WHISKDIR/ansible
 
 # Deploy Openwhisk
-ANSIBLE_CMD="ansible-playbook -i environments/local -e docker_image_prefix=${IMAGE_PREFIX}"
+ANSIBLE_CMD="ansible-playbook -i environments/local"
 
 $ANSIBLE_CMD setup.yml
 $ANSIBLE_CMD prereq.yml
