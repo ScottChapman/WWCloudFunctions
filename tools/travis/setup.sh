@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 SCRIPTDIR=$(cd $(dirname "$0") && pwd)
 HOMEDIR="$SCRIPTDIR/../../../"
@@ -22,6 +22,6 @@ cd openwhisk
 
 # use runtimes.json that defines python-jessie & IBM Node.js 8
 rm -f ansible/files/runtimes.json
-cp $HOMEDIR/template-hello-world/ansible/files/runtimes.json ansible/files/runtimes.json
+cp $HOMEDIR/WWCloudFunctions/ansible/files/runtimes.json ansible/files/runtimes.json
 
 ./tools/travis/setup.sh

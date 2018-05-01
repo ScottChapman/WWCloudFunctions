@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 # Build script for Travis-CI.
 
 SCRIPTDIR=$(cd $(dirname "$0") && pwd)
@@ -58,12 +58,12 @@ EDGE_HOST=$(grep '^edge.host=' $WHISKPROPS_FILE | cut -d'=' -f2)
 
 # Place this template in correct location to be included in packageDeploy
 mkdir -p $PACKAGESDIR/preInstalled/ibm-functions
-cp -r $ROOTDIR/template-hello-world $PACKAGESDIR/preInstalled/ibm-functions/
+cp -r $ROOTDIR/WWCloudFunction $PACKAGESDIR/preInstalled/ibm-functions/
 
 # Install the deploy package
 cd $PACKAGESDIR/packageDeploy/packages
 source $PACKAGESDIR/packageDeploy/packages/installCatalog.sh $AUTH_KEY $EDGE_HOST $WSK_CLI
 
 # Test
-cd $ROOTDIR/template-hello-world
+cd $ROOTDIR/WWCloudFunctions
 ./gradlew :tests:test
