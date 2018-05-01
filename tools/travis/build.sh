@@ -58,7 +58,7 @@ EDGE_HOST=$(grep '^edge.host=' $WHISKPROPS_FILE | cut -d'=' -f2)
 
 # Place this template in correct location to be included in packageDeploy
 mkdir -p $PACKAGESDIR/preInstalled/ibm-functions
-cp -r $ROOTDIR/WWCloudFunction $PACKAGESDIR/preInstalled/ibm-functions/
+cp -r $ROOTDIR/WWCloudFunctions $PACKAGESDIR/preInstalled/ibm-functions/
 
 # Install the deploy package
 cd $PACKAGESDIR/packageDeploy/packages
