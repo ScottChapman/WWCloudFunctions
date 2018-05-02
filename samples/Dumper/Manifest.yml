@@ -1,28 +1,28 @@
 packages:
-  WatsonWorkspaceDumper: #this is a package name
+  Dump: #this is a package name
     actions:
-      ApplicationEventDumper:
+      ApplicationEventDump:
         function: dumper.js
         runtime: nodejs:8
-      WebhookEventDumper:
+      WebhookEventDump:
         function: dumper.js
         runtime: nodejs:8
-      ActionSelectedDumper:
+      ActionSelectedDump:
         function: dumper.js
         runtime: nodejs:8
-      ButtonSelectedDumper:
+      ButtonSelectedDump:
         function: dumper.js
         runtime: nodejs:8
     rules:
       ApplicationEventDumpRule:
         trigger: WWApplicationEvents
-        action: ApplicationEventDumper
+        action: ApplicationEventDump
       WebhookEventDumpRule:
         trigger: WWWebhookEvents
-        action: WebhookEventDumper
+        action: WebhookEventDump
       ActionSelectedDumpRule:
         trigger: WWActionSelected
-        action: ActionSelectedDumper
+        action: ActionSelectedDump
       ButtonSelectedEventDumpRule:
         trigger: WWButtonSelected
-        action: ButtonSelectedDumper
+        action: ButtonSelectedDump

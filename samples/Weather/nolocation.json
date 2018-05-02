@@ -1,0 +1,72 @@
+{
+    "annotationPayload": {
+        "extractedInfo": {
+            "dates": [],
+            "entities": [
+                {
+                    "count": null,
+                    "source": "Conversation",
+                    "location": [
+                        24,
+                        32
+                    ],
+                    "text": "2018-03-27",
+                    "relevance": null,
+                    "type": "sys-date"
+                }
+            ],
+            "keywords": [
+                {
+                    "text": "littleton ma",
+                    "relevance": 0.95335
+                },
+                {
+                    "text": "weather",
+                    "relevance": 0.440134
+                }
+            ]
+        },
+        "payload": "{\"text\":[],\"nodes_visited\":[],\"warning\":\"No dialog node condition matched to true in the last dialog round - context.nodes_visited is empty. Falling back to the root node in the next round.\",\"log_messages\":[{\"level\":\"warn\",\"msg\":\"No dialog node condition matched to true in the last dialog round - context.nodes_visited is empty. Falling back to the root node in the next round.\"}]}",
+        "focusVersion": 5,
+        "context": "{\"conversation_id\":\"55a293b3-800b-44c3-a202-55ed030e384c\",\"system\":{\"dialog_stack\":[{\"dialog_node\":\"root\"}],\"dialog_turn_counter\":1.0,\"dialog_request_counter\":1.0}}",
+        "applicationId": "97c901ba-a965-4a7c-91db-ff46b0e5b418",
+        "hidden": false,
+        "phrase": "what's the weather like tomorrow in littleton ma?",
+        "confidence": 0.9644787788391114,
+        "version": "5",
+        "updated": null,
+        "tokenClientId": null,
+        "createdBy": null,
+        "actions": [],
+        "category": null,
+        "end": 49,
+        "lensId": "49cc1d00-1af6-11e7-967f-81356dcb242f",
+        "type": "message-focus",
+        "start": 0,
+        "annotationId": null,
+        "updatedBy": null,
+        "created": null,
+        "lens": "WeatherForcast"
+    },
+    "spaceName": "ScottsSpace",
+    "messageId": "5ab95757e4b01e83216ab092",
+    "appEvent": false,
+    "message": {
+        "content": "what's the weather like tomorrow in littleton ma?",
+        "id": "5ab95757e4b01e83216ab092",
+        "created": "2018-03-26T20:25:59.685+0000",
+        "createdBy": {
+            "displayName": "Scott Chapman",
+            "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+            "emailAddresses": null,
+            "photoUrl": "/photos/d76b3ac0-8f0a-1028-9874-db07163b51b2"
+        }
+    },
+    "time": "Mon Mar 26 2018 20:26:05 GMT+0000 (UTC)",
+    "userId": "toscana-service-watson-conversation-client-id",
+    "type": "message-annotation-added",
+    "annotationId": "5ab95758e4b0821e5010d43e",
+    "spaceId": "582754d0e4b0037e37b25ff5",
+    "WeatherURL": "https://909597b2-beff-4001-8e8b-3f86f5a5c318:M4fdOsPcZZ@twcservice.mybluemix.net",
+    "annotationType": "message-focus"
+}
