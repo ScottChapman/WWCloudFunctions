@@ -13,7 +13,6 @@ packages:
         function: Webhook.js
         runtime: nodejs:8
         web-export: raw
-        # raw-http: true
       Token:
         inputs:
           WatsonWorkspace:

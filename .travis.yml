@@ -15,9 +15,9 @@ env:
   - secure: hUFlNXEibuvITrJxHXt3tgEmooCoej+EFQ+Dco+uFXu4FJYuFJuJiEc39SRikRL7XLSKp1MLj0Z2u1RsdbyJOdAksCoVlWk6Tj3d2hK85nSkjGQ54poz0yAgKccu+ApqIjPmZIlDAS2Zq1aXGkOiY9QKJrgSXqsKenn3fs2X0NGKIhW7TBU3iVy94e+b/L6xISX+uFOdm2ctM99hTm6c1pbDe+TMQz8Y2UgWYN54hCBkfFmwjTOPCQZKCPeiV3xwiKG4Y8U10RppBZtUkssn2+M0Xgs1HkTYKKM4jDVW/8S7ZOiko96Y63mvjSYcT0eGIAOe3ilwPtx2ed3DPLHvx6Z4ZzPPM63ZeGulLSbmVN/l3+/rpcn0QMjEXy8O9KnYONUPLW81SXAxi5zFYgw3QZcClWck2gVPVUb0JtHVZT85TWIgeUqAGuUTyvJfzRikBmmHOQhUGYncB58iyxHuGYj0v3jBbjDbVtHLJbmrTDhxe7ZFEGk+AA1Phaw8F8hIi93IKpcGlvghkrV83+OGXL5siw0Css8AgsiYeS+9DbwHAnI+ov1KblEyUdrJQ/84QT9DmbtfxBFlnPcBylHPnp9ceZ66SkmvRLwzWkzh7YYrI5qjkRiNRm9RhD86ufnrXEzJm9DTHB2koNBTa1YPW1s+6EjDpPsSPbbEKfOgEUE=
 install: true
 before_install:
-- "./tools/travis/setup.sh"
+# - "./tools/travis/setup.sh"
 script:
-- "./tools/travis/build.sh"
+# - "./tools/travis/build.sh"
 - npm install
 - npm install -g coveralls
 - npm install -g mocha
