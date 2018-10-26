@@ -11,8 +11,8 @@ var message = {
   },
   spaceId: "someSpaceId"
 }
-var tokenResponse = JSON.parse(fs.readFileSync("../data/token.json"));
-var sentMessageResponse = JSON.parse(fs.readFileSync("../data/created_message.json"));
+var tokenResponse = JSON.parse(fs.readFileSync(__dirname + "/../data/token.json"));
+var sentMessageResponse = JSON.parse(fs.readFileSync(__dirname + "/../data/created_message.json"));
 
 sendMessage.setOpenwhisk(utils.openWhiskStub);
 

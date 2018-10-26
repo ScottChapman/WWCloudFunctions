@@ -31,22 +31,22 @@ function generateCards(cards, prefix) {
       if (typeof button.payload === "object")
         payload = JSON.stringify(button.payload).replace(/\"/g,"\\\"");
       buttonArray.push(util.format(`{
-                            text: "%s",
-                            payload: "%s",
-                            style: %s
-                        }`,button.text,prefix + payload,button.style));
+          text: "%s",
+          payload: "%s",
+          style: %s
+        }`,button.text,prefix + payload,button.style));
     })
     results.push(util.format(`{
       type: CARD,
       cardInput: {
-          type: %s,
-          informationCardInput: {
-              title: "%s",
-              subtitle: "%s",
-              text: "%s",
-              date: "%s",
-              buttons:  %s
-          }
+        type: %s,
+        informationCardInput: {
+          title: "%s",
+          subtitle: "%s",
+          text: "%s",
+          date: "%s",
+          buttons:  %s
+        }
       }
     }`, card.type, card.title, card.subtitle, card.text, Date.now(), '[' + buttonArray.join(', ') + ']'));
   });
@@ -57,35 +57,31 @@ function samePackage(action) {
   return (process.env.__OW_ACTION_NAME.replace(/\/[^\/]+$/,"") + "/" + action).replace(/^\/[^\/]+\//,"");
 }
 
-function main(params) {
-  return new Promise((resolve,reject) => {
-    var cards = generateCards(params.cards,"BUTTON_SELECTED: ");
-    var annotation = params.annotation;
-    var ow = openwhisk(
-      _.get(params,"WatsonWorkspace.OWArgs",{})
-    );
+async function main(params) {
+  var cards = generateCards(params.cards,"BUTTON_SELECTED: ");
+  var annotation = params.annotation;
+  var ow = openwhisk(
+    _.get(params,"WatsonWorkspace.OWArgs",{})
+  );
 
-    ow.actions.invoke({
-      name: samePackage("GraphQL"),
-      blocking: true,
-      params: {
-        string: util.format(`mutation {
-          createTargetedMessage(input: {
-            conversationId: "%s"
-            targetUserId: "%s"
-            targetDialogId: "%s"
-            attachments: %s
-          }) {
-            successful
-          }
-        }`, annotation.annotationPayload.conversationId, annotation.userId, annotation.annotationPayload.targetDialogId, cards)
-      }
-    }).then(resp => {
-      resolve(resp.response.result.data);
-    }).catch(err => {
-      reject(err);
-    })
-  })
+  resp = await ow.actions.invoke({
+    name: samePackage("GraphQL"),
+    blocking: true,
+    result: true,
+    params: {
+      string: util.format(`mutation {
+        createTargetedMessage(input: {
+          conversationId: "%s"
+          targetUserId: "%s"
+          targetDialogId: "%s"
+          attachments: %s
+        }) {
+        successful
+        }
+      }`, annotation.annotationPayload.conversationId, annotation.userId, annotation.annotationPayload.targetDialogId, cards)
+    }
+  });
+  return (resp.data);
 }
 
 exports.main = main;

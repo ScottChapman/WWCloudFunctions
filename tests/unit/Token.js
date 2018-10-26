@@ -9,7 +9,7 @@ var credentials = {
     AppSecret: "some_secret"
   }
 }
-var authResp = JSON.parse(fs.readFileSync("../data/auth.json"));
+var authResp = JSON.parse(fs.readFileSync(__dirname + "/../data/auth.json"));
 
 describe('Token', function() {
   describe('main - Token', function() {

@@ -5,7 +5,7 @@ var isAnnotation = require("../../runtimes/nodejs/IsAnnotation.js");
 describe('IsAnnotation', function() {
   describe('main - with focus', function() {
 
-    var taxonomyAnnotation = JSON.parse(fs.readFileSync("../data/taxonomy.json"));
+    var taxonomyAnnotation = JSON.parse(fs.readFileSync(__dirname + "/../data/taxonomy.json"));
     it('should return annotation', function() {
       return isAnnotation.main(taxonomyAnnotation).then(resp => {
         resp.should.be.deep.equal(taxonomyAnnotation);
@@ -28,7 +28,7 @@ describe('IsAnnotation', function() {
       })
     });
 
-    var message = JSON.parse(fs.readFileSync("../data/message.json"));
+    var message = JSON.parse(fs.readFileSync(__dirname + "/../data/message.json"));
     it('should reject message', function() {
       return isAnnotation.main(message).catch(resp => {
         resp.should.be.deep.equal(message);

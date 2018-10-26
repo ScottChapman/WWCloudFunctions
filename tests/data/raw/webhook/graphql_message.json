@@ -1,18 +1,14 @@
 {
-  "response": {
-    "result": {
-      "data": {
-        "message": {
-          "content": "This is a test",
-          "id": "5ab3e27be4b0f06c7f8da41b",
-          "created": "2018-03-22T17:06:03.529+0000",
-          "createdBy": {
-              "displayName": "Scott Chapman",
-              "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
-              "emailAddresses": null,
-              "photoUrl": "/photos/d76b3ac0-8f0a-1028-9874-db07163b51b2"
-          }
-        }
+  "data": {
+    "message": {
+      "content": "This is a test",
+      "id": "5ab3e27be4b0f06c7f8da41b",
+      "created": "2018-03-22T17:06:03.529+0000",
+      "createdBy": {
+          "displayName": "Scott Chapman",
+          "id": "d76b3ac0-8f0a-1028-9874-db07163b51b2",
+          "emailAddresses": null,
+          "photoUrl": "/photos/d76b3ac0-8f0a-1028-9874-db07163b51b2"
       }
     }
   }

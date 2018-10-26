@@ -11,7 +11,7 @@ var WatsonWorkspace = {
   WebhookSecret: "some_other_secret"
 }
 
-var graphQLResp = JSON.parse(fs.readFileSync("../data/raw/webhook/graphql_message.json"));
+var graphQLResp = JSON.parse(fs.readFileSync(__dirname + "/../data/raw/webhook/graphql_message.json"));
 
 webhook.setOpenwhisk(util.openWhiskStub);
 
@@ -25,7 +25,7 @@ describe('Webhook', function() {
     })
 
     it('should return successful message created event', function() {
-      var body = JSON.parse(fs.readFileSync("../data/raw/webhook/message_created.json"));
+      var body = JSON.parse(fs.readFileSync(__dirname + "/../data/raw/webhook/message_created.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
         resp.statusCode.should.equal(200);
@@ -34,7 +34,7 @@ describe('Webhook', function() {
     });
 
     it('should return successful annotation created event', function() {
-      var body = JSON.parse(fs.readFileSync("../data/raw/webhook/keywords_annotation.json"));
+      var body = JSON.parse(fs.readFileSync(__dirname + "/../data/raw/webhook/keywords_annotation.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
         resp.statusCode.should.equal(200);
@@ -43,7 +43,7 @@ describe('Webhook', function() {
     });
 
     it('should return successful action selected event', function() {
-      var body = JSON.parse(fs.readFileSync("../data/raw/webhook/action_selected.json"));
+      var body = JSON.parse(fs.readFileSync(__dirname + "/../data/raw/webhook/action_selected.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
         resp.statusCode.should.equal(200);
@@ -52,9 +52,9 @@ describe('Webhook', function() {
     });
 
     it('should return successful button selected event', function() {
-      var targetedMessage = JSON.parse(fs.readFileSync("../data/targeted_response.json"));
+      var targetedMessage = JSON.parse(fs.readFileSync(__dirname + "/../data/targeted_response.json"));
       util.addResolveAction("WatsonWorkspace/TargetedMessage", targetedMessage);
-      var body = JSON.parse(fs.readFileSync("../data/raw/webhook/button_selected.json"));
+      var body = JSON.parse(fs.readFileSync(__dirname + "/../data/raw/webhook/button_selected.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
         resp.statusCode.should.equal(200);
@@ -63,9 +63,9 @@ describe('Webhook', function() {
     });
 
     it('should return successful button selected text action event', function() {
-      var targetedMessage = JSON.parse(fs.readFileSync("../data/targeted_response.json"));
+      var targetedMessage = JSON.parse(fs.readFileSync(__dirname + "/../data/targeted_response.json"));
       util.addResolveAction("WatsonWorkspace/TargetedMessage", targetedMessage);
-      var body = JSON.parse(fs.readFileSync("../data/raw/webhook/button_selected_text_action.json"));
+      var body = JSON.parse(fs.readFileSync(__dirname + "/../data/raw/webhook/button_selected_text_action.json"));
       var message = util.generateEvent(body,WatsonWorkspace);
       return webhook.main(message).then(resp => {
         resp.statusCode.should.equal(200);

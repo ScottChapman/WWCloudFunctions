@@ -28,7 +28,7 @@ message.WatsonWorkspace = WatsonWorkspace
 var body = util.decodeBody(message.__ow_body);
 console.log(JSON.stringify(body,null,2));
 
-var tokenResponse = JSON.parse(fs.readFileSync("../data/token.json"));
+var tokenResponse = JSON.parse(fs.readFileSync(__dirname + "/../../data/token.json"));
 
 webhook.setOpenwhisk(util.openWhiskStub);
 

@@ -20,8 +20,8 @@ exports.generateEvent = function(body,params) {
   return(message);
 }
 
-var tokenResolveResponse = JSON.parse(fs.readFileSync("../data/token.json"));
-var tokenRejectResponse = JSON.parse(fs.readFileSync("../data/failed_auth.json"));
+var tokenResolveResponse = JSON.parse(fs.readFileSync(__dirname + "/../../data/token.json"));
+var tokenRejectResponse = JSON.parse(fs.readFileSync(__dirname + "/../../data/failed_auth.json"));
 
 var resolveActions = {
   "WatsonWorkspace/Token": tokenResolveResponse

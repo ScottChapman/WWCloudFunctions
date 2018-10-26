@@ -11,6 +11,7 @@
 
 var openwhisk = require('openwhisk');
 var request = require('request');
+const {promisify} = require('util');
 var _ = require('lodash');
 
 function samePackage(action) {
@@ -18,35 +19,27 @@ function samePackage(action) {
   return "WatsonWorkspace/" + action;
 }
 
-function main(query) {
-  return new Promise(function(success, failure) {
-    var ow = openwhisk(
-        _.get(query,"WatsonWorkspace.OWArgs",{})
-    );
-    ow.actions.invoke({
-      name: samePackage('Token'),
-      blocking: true
-    }).then(token => {
-      request.post(
-        'https://api.watsonwork.ibm.com/graphql', {
-          headers: {
-            'Content-Type': 'application/graphql',
-            'Authorization': 'Bearer ' + token.response.result.jwt,
-            'x-graphql-view': 'TYPED_ANNOTATIONS,BETA,PUBLIC'
-          },
-          body: query.string
-        }, (err, response) => {
-          response.body = JSON.parse(response.body);
-          if (err || response.statusCode !== 200 || response.body.hasOwnProperty("errors")) {
-            failure(response.body.errors);
-          } else {
-            success(response.body);
-          }
-        });
-    }).catch(err => {
-      failure(err);
-    });
+async function main(query) {
+  var postPromise = promisify(request.post)
+  var ow = openwhisk(
+      _.get(query,"WatsonWorkspace.OWArgs",{})
+  );
+  var token = await ow.actions.invoke({
+    name: samePackage('Token'),
+    result: true,
+    blocking: true
   });
+  var response = await postPromise(
+    'https://api.watsonwork.ibm.com/graphql', {
+      headers: {
+        'Content-Type': 'application/graphql',
+        'Authorization': 'Bearer ' + token.jwt,
+        'x-graphql-view': 'TYPED_ANNOTATIONS,BETA,PUBLIC'
+      },
+    body: query.string
+  });
+  response.body = JSON.parse(response.body);
+  return response.body;
 }
 
 exports.main = main;

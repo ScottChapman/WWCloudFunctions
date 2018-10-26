@@ -13,7 +13,7 @@ var message = {
   string: "query {message(id: \"5ab264b8e4b0d55dce2190ad\") {content id created createdBy {displayName id emailAddresses photoUrl}}}"
 }
 
-var queryResponse = JSON.parse(fs.readFileSync("../data/graphql_response.json"));
+var queryResponse = JSON.parse(fs.readFileSync(__dirname + "/../data/graphql_response.json"));
 
 graphQL.setOpenwhisk(utils.openWhiskStub);
 

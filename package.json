@@ -30,5 +30,10 @@
     "nock": "^9.2.3",
     "nyc": "^11.6.0",
     "sinon": "^4.4.6"
+  },
+  "nyc": {
+    "include": [
+      "runtimes/nodejs/*.js"
+    ]
   }
 }
