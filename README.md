@@ -4,7 +4,7 @@ To get started you might want to create a new space in your organization. Here a
 - Install [Cloud Functions CLI](https://console.bluemix.net/openwhisk/learn/cli)
 - To create a new space run
   - `bx cf create-space WatsonWorkspace`
-- It will return a `cf` command to set your target to your new space. You'll just want to add `bx` to the front of it since `cf` is a subcommand of `bx`
+- It will return a `cf` command to set your target to your new space. You'll just want to replace `cf` with `bx`.
 
 You can use the [Dumper](samples/Dumper) deployment to assist in your application development. It creates simple functions that just dump their input contents to a log. This is useful for understanding the events that are being published by this application.
 
